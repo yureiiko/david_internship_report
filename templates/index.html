@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Test</h1>
+        <form action="" method="post">
+            <p>Entrez l'id d'une personne : </p>
+            <input type="text" name="text">
+            <input type="submit" name="submit">
+        </form>
+
+        {% block content %}
+
+        {% for n in posts['name'] %}
+        <p>{{n}}</p>
+        {% endfor %}
+
+        {% endblock %}
+    </body>
+</html>
