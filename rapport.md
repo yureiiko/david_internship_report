@@ -144,7 +144,7 @@ Dans cette partie, nous allons évoqué le travail effecuté durant le stage en 
 
 ## <orange>II.A Présentation du Projet</orange>
 
-Le stage s'est déroulé dans le cadre du projet de recherche **Polluscope** dont l'équipe ADAM du laboratoire DAVID est en charge depuis le 1er septembre 2016 jusqu'à la date limite du projet, le 31 décembre 2022. Celui-ci à pour objectif de mesurer l'exposition à la pollution de la population française au quotidien.
+Le stage s'est déroulé dans le cadre du projet de recherche **Polluscope** (voir [sitographie](#sitographie)) dont l'équipe ADAM du laboratoire DAVID est en charge depuis le 1er septembre 2016 jusqu'à la date limite du projet, le 31 décembre 2022. Celui-ci à pour objectif de mesurer l'exposition à la pollution de la population française au quotidien.
 
 ![](pollu.jpg)
 
@@ -684,6 +684,10 @@ if __name__ == "__main__" :
 <div style="page-break-after: always"></div>
 
 # Sitographie
+
+Site Internet du laboratoire DAVID : https://www.david.uvsq.fr/accueil/
+
+Site de présentation du projet Polluscope : http://polluscope.uvsq.fr/index.php/fr/
 
 Lien utilisés pour l'apprentisage de Python Flask : \
 - https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
