@@ -9,8 +9,8 @@
   - [<orange>I.C Structure de l'organisme d'accueil</orange>](#orangeic-structure-de-lorganisme-daccueilorange)
   - [<orange>I.D Présentation de l'équipe de travail</orange>](#orangeid-présentation-de-léquipe-de-travailorange)
   - [<orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>](#orangeie-étude-de-lenvironnement-économique-de-lorganisme-daccueilorange)
-    - [<violet>Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violetanalyse-pestel-de-lenvironnement-du-laboratoire-davidviolet)
-    - [<violet>Analyse SWOT du laboratoire DAVID</violet>](#violetanalyse-swot-du-laboratoire-davidviolet)
+    - [<violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet)
+    - [<violet>2) Analyse SWOT du laboratoire DAVID</violet>](#violet2-analyse-swot-du-laboratoire-davidviolet)
 - [<red>II. Présentation du travail accompli durant le stage</red>](#redii-présentation-du-travail-accompli-durant-le-stagered)
   - [<orange>II.A Présentation du Projet</orange>](#orangeiia-présentation-du-projetorange)
   - [<orange>II.B Description du travail réalisé</orange>](#orangeiib-description-du-travail-réaliséorange)
@@ -25,7 +25,7 @@
     - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)
   - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange)
   - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange)
-    - [<violet>Résultats</violet>](#violetrésultatsviolet)
+  - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange)
 - [Annexes](#annexes)
     - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml)
     - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy)
@@ -39,7 +39,9 @@
     - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml)
     - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy)
     - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)
+- [Joural des mises à jour de la plateforme de données Polluscope](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope)
 - [Sitographie](#sitographie)
+- [Bibliographie](#bibliographie)
 
 <div style="page-break-after: always"></div>
 
@@ -64,18 +66,20 @@ Dans un premier temps nous verrons une présentation du laboratoire DAVID de l'U
 
 Dans cette partie, nous allons voir une présentation générale du laboratoire avant d'évoquer sa dimension juridique suivie de sa structure organisationnelle, d'une présentation de l'équipe avec laquelle j'ai effectué le stage pour finir avec une étude de l'environnement économique du laboratoire.
 
+issue du prisme. laboratoire projet ciblé sur données et algo, centrer ville intelligente
+
 ## <orange>I.A Historique</orange>
 
 <img src="logoDavid.jpg" heigh="220" width="230">
 
-Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000).
+Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialiser en algoritmique et en science de la donnée dont l'objectif est de concevoir une ville écologiquement responsable.
 
 <img src="campus.png" heigh="220" width="230">
 
 ## <orange>I.B Présentation juridique de l'organisme d'accueil</orange>
 
 Le laboratoire regroupe 60 chercheurs et doctorants spécialisés dans la recherche en informatique et plus particulièrement dans les domaines du big data, de la sécurité des données, de l'algorithmique, des réseaux de télécommunication et travail en interdisciplinarité avec la fédération **SIHS** (Sciences Informatiques, Humaines et Sociales) du CNRS dans l'objectif de concevoir une ville durable et intelligente. \
-La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projet en cours et du coût de ceux-ci. On estime qu'un projet de recherche peut générer entre ... et ... € de financement de la part de l’État et que ...% de cet somme sera versé dans la conduite de ce premier et dans la gratification des employés ayant contribuer à sa réalisation.
+La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projet en cours et du coût de ceux-ci. Dans le cas du projet de recherche Polluscope (voir [Présentation du projet](#orangeiia-présentation-du-projetorange)), celui-ci à généré une aide financière de 172 721 € provenant de l'État et des financements 694 988 € provenant des partenaires du laboratoire dans le cadre du projet.
 
 ## <orange>I.C Structure de l'organisme d'accueil</orange>
 
@@ -93,17 +97,22 @@ Dans le cadre de mon stage, j'ai travaillé au sein de l'équipe ALMOST sous la 
 
 Elle fait parti des membres permanents de l'équipe au même titre **TAHER Yehia** (Maître de conférence), **YEH Laurent** (Maître de conférence). J'ai remarqué que parmi les membres permanents de l'équipe ADAM se trouvent **PREDA Nicoleta** et **LOYER Yann**, deux professeurs rencontrés durant mes études à l'IUT informatique de Vélizy.
 
-Au sein de l'équipe, se trouvent également des étudiants doctorant ou post doctorant dont **BOUHAMOUM Redouane** un autre professeur de l'IUT de Vélizy. Par ailleurs, pendant la période de mon stage, deux membres du groupe de doctorants, **EL HAFYANI Hafsa** et **ZUO Jingwei**, ont soutenu leurs thèses devant un jury et obtenu le titre de Docteur en informatique. Quand le sujet de thèse est attribué à l'étudiant préparant un doctorat, il rejoint un des projets dont l'équipe est en charge. Celui-ci dépend du sujet de la thèse, de sa compatibilité avec celle-ci, et ce que l'étudiant peut apporter avec son travail de recherche.
+Au sein de l'équipe, se trouvent également des étudiants doctorant ou post doctorant dont **BOUHAMOUM Redouane** un autre professeur de l'IUT de Vélizy. Par ailleurs, pendant la période de mon stage, deux membres du groupe de doctorants, **EL HAFYANI Hafsa** et **ZUO Jingwei**, ont soutenu leurs thèses devant un jury et obtenu le titre de Docteur en informatique. Quand le sujet de thèse est attribué à l'étudiant préparant un doctorat, il rejoint un des projets dont l'équipe est en charge. Celui-ci dépend du sujet de la thèse, de sa compatibilité avec celle-ci, et ce que l'étudiant peut apporter au projet avec ses travaux de recherche.
+
+Aussi, dans le cadre de certains projet ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs étude. J'ai fait parti de cette catégorie en rejoignant le laboratoire, au même titre que **BADRA Riham**, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique.
+
+Étant donnée que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.
 
 <div style="page-break-after: always"></div>
 
 ## <orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>
 
-### <violet>Analyse PESTEL de l'environnement du laboratoire DAVID</violet>
+Cette partie est entièrement dédiée à la présentation de l'environnement économique du laboratoire DAVID.
 
+### <violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>
+
+L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont résumée dans la matrice PESTEL ci-dessous. \
 <und>PESTEL :</und> Politique, Économique, Socio-culturel, Technologique, Environnemental, Légal
-
-L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont résumée dans le tableau ci-dessous.
 
 |Dimension  |Opportunité    |Menace |
 |---|---|---|
@@ -111,26 +120,27 @@ L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont ré
 |Économique||- pénurie mondiale de composants informatiques en raison de la crise du Covid-19<br>- les fortes dettes de l'État réduisent les possibilités de financement|
 |Socio-culturel|- prise de conscience de l'importance des principes du développement durable<br>- prise de conscience des enjeux environnementaux ||
 |Technologique|- amélioration constante des technologies de l'information pour le public et les entreprises<br>- la quantité de donnée augmente constamment et des travaux de recherche sont nécessaire pour optimiser leur traitement<br>- de plus en plus d'appareils interagissent grâce à internet|- pénurie mondiale de composants informatiques en raison de la crise du Covid-19|
-|Environnemental|- la dégradation de l'environnement nécessite des recherche pour en connaître les conséquences et les moyens de les diminuer|- on sait depuis peu de temps que le stockage massif de données est un important facteur de pollution de la planète<br>- la production d'ordinateur a des conséquences néfastes sur l'environnement|
+|Environnemental|- la dégradation de l'environnement nécessite des recherche pour en connaître les conséquences et les moyens de les diminuer|- on sait depuis peu de temps que le stockage massif de données est facteur d'augmentation de la pollution<br>- la production d'ordinateur a des conséquences néfastes sur l'environnement|
 |Légale|||
 
 **Tableau 1 :** Matrice PESTEL de l'environnement du laboratoire DAVID
 
-**Commentaires :** \
 L'actualité sur le plan technologique est globalement favorable au bon fonctionnement du laboratoire car l'utilisation massive des réseaux de télécommunication et des bases de données nécessite des travaux de recherche pour les rendre toujours plus performants. Néanmoins, d'un point de vue économique, étant donné les fortes dettes de l'état français, celui-ci possède moins d'argent pouvant être investi dans la recherche scientifique. De plus, les enjeux écologiques actuels nécessite des travaux de recherche pour prévenir les conséquences de la pollution de l'air ou pour réduire l'impact des nouvelles technologies sur l'environnement.
 
 <div style="page-break-after: always"></div>
 
-### <violet>Analyse SWOT du laboratoire DAVID</violet>
+### <violet>2) Analyse SWOT du laboratoire DAVID</violet>
 
 <und>SWOT :</und> Strengths, Weaknesses, Opportunities, Threats (Forces, Faiblesses, Opportunités, Menaces)
 
+L'ensemble des forces, faiblesses, opportunités et menaces du laboratoire DAVID sont résumés dans le tableau suivant et proviennent majoritairement du document d'évaluation HCERES de 2018 (voir [Bibliographie](#bibliographie)).
+
 |Aspect |Description    |
 |---|---|
-|**Forces**|- spécialisation du laboratoire dans le domaine de l'informatique<br>- le laboratoire est en lien avec plusieurs centres de recherches de l'UVSQ et du territoire français<br>- le laboratoire est en lien avec des universités à l'échelle international (Liban, Chine ...) et accueil des étudiants et doctorants venus du monde entier|
-|**Faiblesses**|- effectif réduit par rapport à d'autres laboratoires de recherches|
+|**Forces**|- spécialisation du laboratoire dans le domaine de l'informatique<br>- le laboratoire est en lien avec plusieurs centres de recherches de l'UVSQ et du territoire français<br>- le laboratoire est en lien avec des universités à l'échelle international (Liban, Chine ...) et accueil des étudiants et doctorants venus du monde entier<br>- les activités de recherche du laboratoire se basent sur plusieurs thèmes liés à des défis sociétaux actuellement majeurs<br>- collaboration avec des acteurs territoriaux au niveau des communautés d'agglomération, du département des Yvelines et de la région Ile-de-France|
+|**Faiblesses**|- effectif réduit par rapport à d'autres laboratoires de recherches<br>- peu de moyens et absence de soutien politique de la part de l'UVSQ<br>- difficulté pour les membres du laboratoire à investir dans des projets de recherche|
 |**Opportunités**|- le laboratoire de recherche **NIWC** (Naval Information Warafare Center) des États-Unis est à la recherches d'étudiants, doctorants et chercheurs compétents dans les domaines de l'informatiques, essentiellement dans le big data<br>- la <und>loi de programmation de la recherche</und> promet 3% du PIB consacré à la recherche et une meilleure organisation de celle-ci|
-|**Menaces**|- depuis mai 2021 et l'apparition du <und>Plan National de Recherche</und>, le gouvernement sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés par l’État|
+|**Menaces**|- depuis mai 2021 et l'apparition du <und>Plan National de Recherche</und>, le gouvernement sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés par l’État<br>- baisse de motivation des membres du laboratoire dans l'investissement pour l'obtention des moyens de recherche|
 
 En France, les principaux organismes de recherche sont l'**INRA** (Institut National de la Recherche Agronomique), l'**INSERM** (Institut National de la Santé Et de la Recherche Médicale) et le **CNRS** (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde.
 
@@ -148,22 +158,22 @@ Le stage s'est déroulé dans le cadre du projet de recherche **Polluscope** (vo
 
 ![](pollu.jpg)
 
-Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit de un à quatre capteurs de pollution et une tablette dans certains cas pour relever leurs activité ainsi que leur position géographique. Les capteurs sont conçu pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargés et déposées sur le site internet du projet pour être analysées et mise sous différentes formes. \
+Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit de un ou plusieurs capteurs de pollution et une tablette dans certains cas pour relever leurs activité ainsi que leur position géographique. Les capteurs sont conçu pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargés et déposées sur le site internet du projet pour être analysées et mise sous différentes formes. \
 Dans certaines conditions, des stations fixes sont utilisées pour mesurer la pollution de l'air ambiant. Toutefois, dans la mesure où celles-ci sont difficiles à déplacer, elles sont surtout utilisées comme témoins de la pollution dans des zones rurales ou peu urbanisées.
 
 ## <orange>II.B Description du travail réalisé</orange>
 
 Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
-Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. \
+Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme en utilisant la technologie Docker. \
 La dernière partie de mon travail sera de <und>créer une application mobile</und> selon un modèle similaire à celui du site internet évoqué précédemment.
 
-Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai télécharger sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de connaître mon exposition à la pollution au cours d'une journée de stage.
+Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de connaître mon exposition à la pollution au cours d'une journée de stage.
 
 <div style="page-break-after: always"></div>
 
 ## <orange>II.C Description des problèmes à traiter et des solutions</orange>
 
-Cette section du rapport est entièrement consacrée à la description détaillée des problème rencontré durant la refactorisation de la plateforme de données Polluscope qui constitue mon travail le plus important durant le stage. Cette partie présente également les solutions découvertes ou mises au points pour résoudre ces problèmes.
+Cette section du rapport est entièrement consacrée à la description détaillée des problèmes rencontrés durant la refactorisation de la plateforme de données Polluscope qui constitue mon travail le plus important durant le stage. Cette partie présente également les solutions découvertes ou mises au points pour résoudre ces problèmes.
 
 Dans cette partie, les références aux portions code présents en annexes sont entre parenthèses.
 
@@ -401,12 +411,14 @@ Aussi, pour faciliter le déploiement de l'application sur le serveur du laborat
 
 Comme évoquer auparavant ma première tâche à été de créer un programme générant automatiquement des rapports en <und>Markdown</und> avant de les convertir au format PDF. Étant déjà familiarisée avec ce premier je n'ai pas eu besoin d'apprendre la structure d'un fichier Markdown. En revanche, il a été nécessaire que je trouve des fonctions en Python permettant l'exportation du fichier au format souhaité.
 
-Dans le cadre de la refactorisation de la plateforme Polluscope, je n'avais jusqu'alors jamais créé de site internet avec le framework Flask. Il a donc été nécessaire que j'apprenne et comprenne son fonctionnement avant de commencer à produire le code de la plateforme. Sachant cela et étant donnée que mes seules contraintes étaient l'utilisation d'un langage spécifique et l'achèvement de ce travail avant la fin du stage, j'ai utilisé une méthode de travail semblable à la méthode agile. Cela signifie les membres de l'équipe encadrant mon travail me demandaient régulièrement des retours sur l'avancée de mon travail en me suggérant des modifications ou des améliorations. Par exemple, cette méthode m'a permis de recevoir les retours de mes encadrants concernant une méthode de vérification d'insertion de données que j'avais créé. \
+Dans le cadre de la refactorisation de la plateforme Polluscope, je n'avais jusqu'alors jamais créé de site internet avec le framework Flask. Il a donc été nécessaire que j'apprenne et comprenne son fonctionnement avant de commencer à produire le code de la plateforme. Sachant cela et étant donnée que mes seules contraintes étaient l'utilisation d'un langage spécifique et l'achèvement de ce travail avant la fin du stage, j'ai utilisé une méthode de travail semblable à la méthode agile. Cela signifie les membres de l'équipe encadrant mon travail me demandaient régulièrement des retours sur l'avancée de mon travail en me suggérant des modifications ou des améliorations. Par exemple, cette méthode m'a permis de recevoir les retours de mes encadrants concernant une méthode de vérification d'insertion de données que j'avais créé et qui nécessitait des modification (voir [Étape 8 du développement de la plateforme](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)). \
 J'ai donc débuté mon travail de développement en contruisant des pages simples et en ajoutant des fonctionnalités au fur et à mesure de mon apprentissage. Toutefois, ayant déjà travaillé avec le langage Python, créer des applications web et étant désireux d'apprendre à utiliser de nouvelles technologies et préparé à cette éventualité, cette tâche s'est avéré être passionnante.
+
+Une autre partie de mon travail a été de déployer la plateforme de données Polluscope sur le serveur du laboratoire en utilisant la technologie **Docker**. Pour comprendre son fonctionnement, j'ai eu recours aux lien présents en [sitographie](#sitographie) et j'ai été aidé par TAHER Yehia. J'ai également eu recours à ma machine virtuelle et à ma clé bootable, toutes deux sous Linux, pour tester le fonctionnement des conteneurs ainsi créés.
 
 On peut constater que la plupart des tâches qui m'ont été confiée nécessite l'utilisation de technologies nouvelles ou peu utilisées. Toutefois, ma formation à l'IUT étant axée sur la pratique de la programmation par le développement et la recherche de documentation, l'utilisation de nouveaux langages ou de technologies de programmation spécifiques ne m'a pas posé de difficultés.
 
-### <violet>Résultats</violet>
+## <orange>II.F Résultats</orange>
 
 Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail. \
 
@@ -683,16 +695,271 @@ if __name__ == "__main__" :
 
 <div style="page-break-after: always"></div>
 
+# Joural des mises à jour de la plateforme de données Polluscope
+
+commit 178435ef86259261af418fc2119bdcc03fb7b2e1 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 15c275d 577f917
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 16 11:13:26 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 15c275dec590bf56b413dc5be79421407b5da889
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 16 11:11:51 2022 +0200
+
+    UPDATES :
+    Addition of the page ```canarinFidas.html```. This page isn't working.
+    Modifiation of all page's header.
+
+commit 577f9173e9e3239bcead009c5e3de49c9ad0e87a
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 13 11:35:56 2022 +0200
+
+    Update README.md
+
+commit b844daeeb08c43e040fcb228dca7be77ee90e489
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 13 11:33:46 2022 +0200
+
+    UPDATES :
+    Addition of the fonctional page ```uploadFidas.html```
+
+commit ee638a00b0615215f5cf793a6cf9e90a1c6b6a1d
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 12 11:42:02 2022 +0200
+
+    Update README.md
+
+commit e86f45c37cc002c5ec3f30d0953f249f89075e57
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu May 12 11:41:25 2022 +0200
+
+    UPDATES :
+    Addition of the fonctional page ```uploadTeom.html```
+
+commit c04c95fbcf3d06a4823708ee6d749374a798933b
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Tue May 10 11:32:28 2022 +0200
+
+    Update README.md
+
+commit e71c28c67f4d31cf1507ca4e273f88851ae97b92
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Tue May 10 11:31:08 2022 +0200
+
+    Update README.md
+
+commit b413aa08ddfb8e8915b53eb73f5fe3dd868d4202
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Tue May 10 11:15:05 2022 +0200
+
+    Update README.md
+
+commit 347520624453265a36c182d4cb4c7cc9f46e3485
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Tue May 10 11:14:08 2022 +0200
+
+    UPDATES :
+    Addition of the fonctional page ```downloadKitData.html```
+
+commit b2555dddc115cbfcc3c86acac32510eacd555524
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 9 16:22:18 2022 +0200
+
+    Update README.md
+
+commit 21589f36cc7404e8475d3f9a31eecab22cbc6b4e
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 9 16:21:14 2022 +0200
+
+    UPDATES :
+    Addition of the fonctional page ```downloadCampaignData.html```
+
+commit a75faaf2c57ce109ddb39399e181d947db841840
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 9 14:58:01 2022 +0200
+
+    Update README.md
+
+commit 821a6e42cf7e0cdce3bf7b82c0657660b1d716f7
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 6 16:41:28 2022 +0200
+
+    Update README.md
+
+commit d2e4e88e4dbb892c003c7fd4d39d6c9f13da9d55
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 6 16:39:56 2022 +0200
+
+    UPDATES :
+    It's nom possible to use the ```downloadAssignedData.html``` page.
+
+commit c9ae60910febb3e647440caeceb4ad4dabc867b8
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 6 12:32:46 2022 +0200
+
+    UPDATES :
+    Minor modifications to fix errors.
+
+commit de5fc91cd81a80a06dce367c17432e0a74b67bec
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu May 5 12:01:50 2022 +0200
+
+    UPDATES :
+    Modifications on ```downloadAssignedData.html```.
+
+commit 030f6f5afcd0cdc65f96680ed0232f605289f6dd
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 5 11:37:47 2022 +0200
+
+    Update README.md
+
+commit 4cf594f5affb2fd1d0cb88946a51247ddfbd55a7
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 5 11:10:43 2022 +0200
+
+    Update README.md
+
+commit 2ba62dca514a828a5a305842a525cf2c1d74c8c2
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 5 11:08:26 2022 +0200
+
+    Add files via upload
+
+commit adbc5a91d2e59bc65d065d01819f44ed78e2e128
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 5 11:06:52 2022 +0200
+
+    Add files via upload
+
+    UPDATE :
+    The way to check if a row was already inserted change. Now the program check in fonction of the device's id and of the date.
+    It's now possible to upload aethalometer, actris, report and to check the history of report uploading.
+
+commit 572ca0e80cb7298128d506449200db9abe14d504
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:35:04 2022 +0200
+
+    Add files via upload
+
+commit 2e847c0528d27a356fea61d06dd840f416458fa0
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:34:31 2022 +0200
+
+    Add files via upload
+
+commit a285b3017d2d1c538e0f4f289d1df3764f897a93
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:33:21 2022 +0200
+
+    Update README.md
+
+commit 9d434b36975f26a4f1e09b07f1c4f890891a6843
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:32:07 2022 +0200
+
+    Add files via upload
+
+    UPDATE
+    It's now possible to load reports, tablet's activity and tablet's events. All history for this loads can be seen by an admin.
+
+commit e9d4405f6b1bd582b243782e4e6edcfef356ec78
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:29:30 2022 +0200
+
+    Add files via upload
+
+commit 885e53518d98a412b0d9a1829428c00fcbcf7718
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 16:28:20 2022 +0200
+
+    Add files via upload
+
+    Update
+    new data folders
+
+commit 9d17074065e3ad05fa1bf50717637f298ddf3766
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 14:33:13 2022 +0200
+
+    Update README.md
+
+commit bc5dcfdadab917203a61ca6b3e428535079f9cc1
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 14:32:55 2022 +0200
+
+    Delete scriptPython directory
+
+commit c1436feacb570ad9e3b3a22917722c6cb4a62bfa
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 2 14:21:26 2022 +0200
+
+    Update README.md
+
+commit 999905ac6ff31a5778cb79f412018484bdbd1ed5
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri Apr 29 17:37:54 2022 +0200
+
+    Update README.md
+
+commit f8759e0e11e6e561271cca86eb392cbd389b18bf
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri Apr 29 17:37:29 2022 +0200
+
+    Create README.md
+
+commit 310e40980ea4cc5bb0b0358d21f631ca0221573f
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri Apr 29 17:33:44 2022 +0200
+
+    Add files via upload
+
+    Updates
+    Kits can be created.
+    It's now possible to create link between campaign, participant and kit. When we associate a kit to a participant the old kit association is erased.
+    The device id seeking is now based on this link.
+    It's also possible to see the history of file uploading.
+
+commit 58d107b8f3dfc7bfc778d2aa3390df5f23852a5d
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Tue Apr 26 16:42:52 2022 +0200
+
+    Add files via upload
+
+    New functionnalities
+    It's possible to add a user, a participant and to upload gps tablet files.
+
+commit 1786bb3707a3c428d0e0e40a0f9cf3e3c9d7c5c4 (origin/pycharm)
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Sun Apr 24 20:58:14 2022 +0200
+
+    Add files via upload
+
+    First Commit
+    It's possible for the user to upload Diams, Cairsens and AE51 measures. The administrator can download uploaded files.
+
+<div style="page-break-after: always"></div>
+
 # Sitographie
 
 Site Internet du laboratoire DAVID : https://www.david.uvsq.fr/accueil/
 
 Site de présentation du projet Polluscope : http://polluscope.uvsq.fr/index.php/fr/
 
-Lien utilisés pour l'apprentisage de Python Flask : \
+Liens utilisés pour l'apprentisage de **Python Flask** : \
 - https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
 - https://pypi.org/project/Flask/
 - https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask
+
+Liens utilisés pour l'apprentissage de la technologie **Docker** : \
+- https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04
+- https://www.youtube.com/watch?v=SXB6KJ4u5vg
+- https://www.youtube.com/watch?v=cWkmqZPWwiw
+
+ # Bibliographie
+
+ - Évaluation HCERES DAVID UVSQ 25 Mai 2018
 
 <style>
     und { text-decoration: underline; }
