@@ -1,6 +1,6 @@
 # Remerciement
 
-Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés.
+Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés. Je veux également remercier l'ensemble des membres du laboratoire DAVID pour m'avoir accueillit et pour tous les moments que l'on a passé ensemble.
 
 <div style="page-break-after: always"></div>
 
@@ -716,7 +716,175 @@ if __name__ == "__main__" :
 
 ## **Journal 1 :** Historique des implémentations de la plateforme de données Polluscope
 
-commit 178435ef86259261af418fc2119bdcc03fb7b2e1 (HEAD -> main, origin/main, origin/HEAD)
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+:
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+
+
+
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:26:44 2022 +0200
+
+    UPDATES :
+    Add the file ```wsgi.py```. That's useful to deploy the web application.
+:...skipping...
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:26:44 2022 +0200
+
+    UPDATES :
+    Add the file ```wsgi.py```. That's useful to deploy the web application.
+
+commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:11:10 2022 +0200
+
+    Update README.md
+
+:...skipping...
+HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:26:44 2022 +0200
+
+    UPDATES :
+    Add the file ```wsgi.py```. That's useful to deploy the web application.
+
+commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:11:10 2022 +0200
+
+    Update README.md
+
+commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
+:...skipping...
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:27:08 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Fri May 20 10:26:44 2022 +0200
+
+    UPDATES :
+    Add the file ```wsgi.py```. That's useful to deploy the web application.
+
+commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:11:10 2022 +0200
+
+    Update README.md
+
+commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 19 15:00:40 2022 +0200
+
+    Update README.md
+
+commit b58b634d18e0ed949765b3ff499b213e557a3fe7
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 19 14:18:20 2022 +0200
+
+    Update README.md
+
+commit 1bb6eeee81813aff19ccc57bbd40db0980a0cac6
+Merge: 978274e 9de06f3
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu May 19 14:14:55 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 978274e53bb1d50ad87712283036093ad37b244c
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu May 19 14:14:25 2022 +0200
+
+    UPDATES :
+    Minor problem correction.
+
+commit 9de06f34c6e752da12d3bbd8f82b68a80926b030
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 19 12:01:37 2022 +0200
+
+    Update README.md
+
+commit d14f5815377b4706eea4ed32122d3f1cbc145e98
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Thu May 19 12:01:12 2022 +0200
+
+    Update README.md
+
+commit a5ae3af39471c6a13e2b611784954c650eb0250e
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 18 17:28:27 2022 +0200
+
+    Update README.md
+
+commit 932ea94e03c32135beff9a6d30064cec52956768
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 18 12:51:57 2022 +0000
+
+    Delete requirement.txt
+
+commit 734a3bf7c37a9c0125bbe0fb3eb0d0fb93bcbcd2
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 18 12:51:44 2022 +0000
+
+    Delete DockerFile
+
+commit d2caa193d0557e089b6b0b2387a1a7321e4bfe5f
+Merge: 178435e e65c939
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 18 12:47:24 2022 +0000
+
+    Merge pull request #1 from yureiiko/docker
+
+    Add files via upload
+
+commit e65c939ba16b0f2a59f37636195406f7c989f4e6
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 18 12:46:54 2022 +0000
+
+    Add files via upload
+
+    First version of docker.
+    Not complete.
+
+commit 178435ef86259261af418fc2119bdcc03fb7b2e1
 Merge: 15c275d 577f917
 Author: yureiiko <pierrefcz@gmail.com>
 Date:   Mon May 16 11:13:26 2022 +0200
@@ -949,7 +1117,7 @@ Date:   Tue Apr 26 16:42:52 2022 +0200
     New functionnalities
     It's possible to add a user, a participant and to upload gps tablet files.
 
-commit 1786bb3707a3c428d0e0e40a0f9cf3e3c9d7c5c4 (origin/pycharm)
+commit 1786bb3707a3c428d0e0e40a0f9cf3e3c9d7c5c4
 Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
 Date:   Sun Apr 24 20:58:14 2022 +0200
 
@@ -957,6 +1125,7 @@ Date:   Sun Apr 24 20:58:14 2022 +0200
 
     First Commit
     It's possible for the user to upload Diams, Cairsens and AE51 measures. The administrator can download uploaded files.
+
 
 <div style="page-break-after: always"></div>
 
