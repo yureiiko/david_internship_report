@@ -1,6 +1,12 @@
-# Sommaire
+# Remerciement
 
-- [Sommaire](#sommaire)
+Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés.
+
+<div style="page-break-after: always"></div>
+
+**Sommaire**
+
+- [Remerciement](#remerciement)
 - [Résumé / Summary](#résumé--summary)
 - [Introduction](#introduction)
 - [<red>I. Présentation de l'organisme d'accueil</red>](#redi-présentation-de-lorganisme-daccueilred)
@@ -35,11 +41,12 @@
     - [**Code 2.3.2 :** fichier ```app.py``` avec passage de paramètre par le dictionnaire ```post```](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)
     - [**Code 2.4.1 :** fichier ```index.html``` avec un lien vers la page comportant l'URL ```page2```](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2)
     - [**Code 2.4.2 :** fichier ```page2.html``` accessible par un lien](#code-242--fichier-page2html-accessible-par-un-lien)
-    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page correspondant au fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)
+    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html)
     - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml)
     - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy)
     - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)
-- [Joural des mises à jour de la plateforme de données Polluscope](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope)
+  - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope)
+  - [**Journal 1 :** Historique des implémentations de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope)
 - [Sitographie](#sitographie)
 - [Bibliographie](#bibliographie)
 
@@ -55,7 +62,7 @@ I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin
 
 # Introduction
 
-Le présent rapport a pour fonction de présenter l'entreprise ayant accepté de m'embaucher pour mon stage de fin d'étude en IUT informatique. \
+Le présent rapport a pour fonction de présenter l'entreprise ayant accepté de m'embaucher pour mon stage de fin d'étude en IUT informatique. L'ensemble des éléments de ce rapports sont accessibles via le dépôt Github présent en [sitographie](#sitographie). \
 J'ai été accepté au **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** en répondant à l'offre de stage <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> de l'équipe ADAM. \
 Ce stage a débuter le 4 avril 2022 et a duré deux mois. Ce stage constitue ma première expérience dans le milieu professionnel en tant que membre actif d'une organisation et a pour objectif de valider mes deux ans d'étude à l'IUT informatique de Vélizy et d'obtenir le Diplôme Universitaire de Technologie en Informatique. \
 Dans un premier temps nous verrons une présentation du laboratoire DAVID de l'UVSQ avant de présenter le travail effectué durant la période de stage puis de finir par une conclusion récapitulant ce que le stage m'a appris et apporté.
@@ -182,9 +189,11 @@ Dans cette partie, les références aux portions code présents en annexes sont 
 Étant donné qu'une première version de la plateforme à été créée en PHP par **TAHER Yehia** et **Ahmad Ktaish**, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créer un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles_ci.
 
 <img src="schemasite.jpg"> \
-**Schéma 1 :** Schéma de la structure de la plateforme de donnée Polluscope
+**Schéma 1 :** Structure de la plateforme de donnée Polluscope
 
-En examinant le code source de la plateforme, on constate qu'il est nécessaire d'avoir un compte enregistré dans la base de donnée pour utiliser les services du site internet. On peut également remarquer qu'un utilisateur peut avoir soit un rôle de participant, soit un rôle d'administrateur et que cela influe sur les actions réalisables par la personne qui se connecte à la plateforme.
+Ce schéma est également disponible en [annexe](#schéma-1--structure-de-la-plateforme-de-données-polluscope).
+
+En examinant le code source de la plateforme, on constate qu'il est nécessaire d'avoir un compte enregistré dans la base de donnée pour utiliser les services du site internet. On peut également remarquer qu'un utilisateur peut avoir soit un rôle de participant, soit un rôle d'administrateur et que cela influe sur les actions réalisables par la personne qui se connecte à la plateforme et donc sur les pages qui lui sont accessibles. Dans le schéma précédant, les pages à gauche sont accessibles pour les participants, celles en bas au centre sont utilisables uniquement par les administrateurs et les autres sont accessibles pour tous les utilisateurs. Sur cette plateforme, seul la page ```login``` est accessible pour le grand public.
 
 ### <violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>
 
@@ -396,11 +405,11 @@ Il s'agit d'une méthode de vérification nécessitant moins de ressouces de l'o
 
 Dans le cadre de mon travail durant ce stage, l'ordinateur personnel que je possède et utilise au quotidien pour mes études et mes activités dans le domaine de l'informatique est devenu mon principal outils de travail. Étant déjà familiarisé avec les environnements de développement créer par **JetBrains** tel que <und>PyCharm</und> mon choix s'est porté sur ceux-ci pour produire les logiciels et applications durant le stage. \
 <img src="jblogo.jpg" heigh="220" width="220"> \
-Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. \
+Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentation est disponible [ici](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope) parmis les annexes \
 <img src="ghlogo.jpg" heigh="220" width="220"> \
 Comme évoqué dans la partie précédente, l'ensemble des données recueillies lors des campagnes de recensement sont stockées sur une base de données <und>PostgreSQL</und> appartenant au laboratoire. Afin de ne pas endommager, effacer ou modifier ces données lors du développement de la nouvelle version de la plateforme Polluscope, j'ai installé ce même système de gestion de base de données sur mon ordinateur personnel. Celle-ci a été utilisée pendant toute la durée de la création du nouveau site web du projet. \
 <img src="pglogo.jpg" heigh="220" width="220"> \
-Tel que spécifié dans le sujet du stage, la plateforme Polluscope doit fonctionner avec le langage <und>Python</und>. Par conséquent, il a été nécessaire d'utiliser le framework <und>Flask</und>. Celui-ci permet le déploiement d'une application web sur un ordinateur en ayant seulement recours au langage Python et ne nécessite pas l'utilisation de logiciels d'hébergement de site internet tel que Apache ou Xampp. \
+Tel que spécifié dans le sujet du stage, la plateforme Polluscope doit fonctionner avec le langage <und>Python</und>. Par conséquent, il a été nécessaire d'utiliser le framework <und>Flask</und>. Celui-ci permet le déploiement d'une application web sur un ordinateur en ayant seulement recours au langage Python et ne nécessite pas l'utilisation de logiciels d'hébergement de site internet tel que Apache pour fonctionner. \
 <img src="pflogo.jpg" heigh="220" width="220"> \
 Aussi, pour faciliter le déploiement de l'application sur le serveur du laboratoire, l'équipe a exigé que l'acquisition des packages nécessaires et la mises en marche de la plateforme se fasse par l'utilisation de la technologie <und>Docker</und>. Cela permet de faire fonctionner le site internet sans avoir à installer les paquets de façon définitive sur le serveur et donc d'économiser de l'espace sur le disque dur de celui-ci. \
 <img src="docklogo.jpg" heigh="220" width="220">
@@ -449,6 +458,10 @@ Concernant le programme de génération automatique de rapport, celui-ci a pu ê
 [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy)
 
 [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)
+
+[**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope)
+
+[**Journal 1 :** Historique des implémentation de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope)
 
 <div style="page-break-after: always"></div>
 
@@ -594,7 +607,7 @@ if __name__ == "__main__" :
 </html>
 ```
 
-### **Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page correspondant au fichier ```page2.html```
+### **Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```
 ```py
 from flask import *
 
@@ -695,7 +708,13 @@ if __name__ == "__main__" :
 
 <div style="page-break-after: always"></div>
 
-# Joural des mises à jour de la plateforme de données Polluscope
+## **Schéma 1 :** Structure de la plateforme de données Polluscope
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img class="resize" src="schemasite.jpg" heigh="11974" width="5412" style="transform:rotate(90deg);">
+
+<div style="page-break-after: always"></div>
+
+## **Journal 1 :** Historique des implémentations de la plateforme de données Polluscope
 
 commit 178435ef86259261af418fc2119bdcc03fb7b2e1 (HEAD -> main, origin/main, origin/HEAD)
 Merge: 15c275d 577f917
@@ -943,19 +962,24 @@ Date:   Sun Apr 24 20:58:14 2022 +0200
 
 # Sitographie
 
-Site Internet du laboratoire DAVID : https://www.david.uvsq.fr/accueil/
+Site Internet du laboratoire DAVID : <https://www.david.uvsq.fr/accueil/>
 
-Site de présentation du projet Polluscope : http://polluscope.uvsq.fr/index.php/fr/
+Site de présentation du projet Polluscope : <http://polluscope.uvsq.fr/index.php/fr/>
 
-Liens utilisés pour l'apprentisage de **Python Flask** : \
-- https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
-- https://pypi.org/project/Flask/
-- https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask
+Dépot Github de la plateforme Polluscope : <https://github.com/yureiiko/pollu.git> (pour des questions de confidentialité, ce dépôt est privé)
 
-Liens utilisés pour l'apprentissage de la technologie **Docker** : \
-- https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04
-- https://www.youtube.com/watch?v=SXB6KJ4u5vg
-- https://www.youtube.com/watch?v=cWkmqZPWwiw
+Dépôt Github du rapport de stage : <https://github.com/yureiiko/david_internship_report.git> (ce dépôt deviendra privé après la soutenance de stage)
+
+Liens utilisés pour l'apprentisage de **Python Flask** :
+- <<https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3>
+- <https://pypi.org/project/Flask/>
+- <https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask>
+- <https://sysadmin.cyklodev.com/deployer-une-application-flask/>
+
+Liens utilisés pour l'apprentissage de la technologie **Docker** :
+- <https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04>
+- <https://www.youtube.com/watch?v=SXB6KJ4u5vg>
+- <https://www.youtube.com/watch?v=cWkmqZPWwiw>
 
  # Bibliographie
 
@@ -968,5 +992,9 @@ Liens utilisés pour l'apprentissage de la technologie **Docker** : \
     violet { color: #951986 }
     body {
         font-size: 12px;
+    }
+    img.resize {
+        max-width:100%;
+        max-height:100%;
     }
 </style>
