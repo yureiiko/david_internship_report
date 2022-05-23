@@ -73,13 +73,11 @@ Dans un premier temps nous verrons une présentation du laboratoire DAVID de l'U
 
 Dans cette partie, nous allons voir une présentation générale du laboratoire avant d'évoquer sa dimension juridique suivie de sa structure organisationnelle, d'une présentation de l'équipe avec laquelle j'ai effectué le stage pour finir avec une étude de l'environnement économique du laboratoire.
 
-issue du prisme. laboratoire projet ciblé sur données et algo, centrer ville intelligente
-
 ## <orange>I.A Historique</orange>
 
 <img src="logoDavid.jpg" heigh="220" width="230">
 
-Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialiser en algoritmique et en science de la donnée dont l'objectif est de concevoir une ville écologiquement responsable.
+Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algoritmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée infrastructures intelligentes.
 
 <img src="campus.png" heigh="220" width="230">
 
@@ -139,19 +137,18 @@ L'actualité sur le plan technologique est globalement favorable au bon fonction
 ### <violet>2) Analyse SWOT du laboratoire DAVID</violet>
 
 <und>SWOT :</und> Strengths, Weaknesses, Opportunities, Threats (Forces, Faiblesses, Opportunités, Menaces)
-
 L'ensemble des forces, faiblesses, opportunités et menaces du laboratoire DAVID sont résumés dans le tableau suivant et proviennent majoritairement du document d'évaluation HCERES de 2018 (voir [Bibliographie](#bibliographie)).
 
 |Aspect |Description    |
 |---|---|
-|**Forces**|- spécialisation du laboratoire dans le domaine de l'informatique<br>- le laboratoire est en lien avec plusieurs centres de recherches de l'UVSQ et du territoire français<br>- le laboratoire est en lien avec des universités à l'échelle international (Liban, Chine ...) et accueil des étudiants et doctorants venus du monde entier<br>- les activités de recherche du laboratoire se basent sur plusieurs thèmes liés à des défis sociétaux actuellement majeurs<br>- collaboration avec des acteurs territoriaux au niveau des communautés d'agglomération, du département des Yvelines et de la région Ile-de-France|
+|**Forces**|- spécialisation du laboratoire dans le domaine de l'informatique<br>- le laboratoire est en lien avec plusieurs centres de recherches de l'UVSQ et du territoire français<br>- le laboratoire est en lien avec des universités à l'échelle international (Liban, Chine ...) et accueil des étudiants et doctorants venus du monde entier<br>- les activités de recherche du laboratoire se basent sur plusieurs thèmes liés à des défis sociétaux majeurs<br>- collaboration avec des acteurs territoriaux au niveau des communautés d'agglomération, du département des Yvelines et de la région Ile-de-France|
 |**Faiblesses**|- effectif réduit par rapport à d'autres laboratoires de recherches<br>- peu de moyens et absence de soutien politique de la part de l'UVSQ<br>- difficulté pour les membres du laboratoire à investir dans des projets de recherche|
 |**Opportunités**|- le laboratoire de recherche **NIWC** (Naval Information Warafare Center) des États-Unis est à la recherches d'étudiants, doctorants et chercheurs compétents dans les domaines de l'informatiques, essentiellement dans le big data<br>- la <und>loi de programmation de la recherche</und> promet 3% du PIB consacré à la recherche et une meilleure organisation de celle-ci|
 |**Menaces**|- depuis mai 2021 et l'apparition du <und>Plan National de Recherche</und>, le gouvernement sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés par l’État<br>- baisse de motivation des membres du laboratoire dans l'investissement pour l'obtention des moyens de recherche|
 
-En France, les principaux organismes de recherche sont l'**INRA** (Institut National de la Recherche Agronomique), l'**INSERM** (Institut National de la Santé Et de la Recherche Médicale) et le **CNRS** (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde.
+En France, les principaux organismes de recherche sont l'**INRA** (Institut National de la Recherche Agronomique), l'**INSERM** (Institut National de la Santé Et de la Recherche Médicale) et le **CNRS** (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde. Ceux-ci sont les principaux concurrents du laboratoire DAVID dans la mesure où ils exercent tous dans le domaine de la recherche et aussi les principaux associés car certains projets de recherche, tel que le projet [Polluscope](#orangeiia-présentation-du-projetorange), se déroulent en collaboration avec les laboratoire évoqués précédemment.
 
-<img src="cnrs.jpg" heigh="220" width="220"><img src="inra.jpg" heigh="220" width="220"><img src="inserm.jpg" heigh="220" width="220">
+<img class="down" src="cnrs.jpg" heigh="220" width="220"><img src="inra.jpg" heigh="220" width="220"><img src="inserm.jpg" heigh="220" width="220">
 
 <div style="page-break-after: always"></div>
 
@@ -161,7 +158,8 @@ Dans cette partie, nous allons évoqué le travail effecuté durant le stage en 
 
 ## <orange>II.A Présentation du Projet</orange>
 
-Le stage s'est déroulé dans le cadre du projet de recherche **Polluscope** (voir [sitographie](#sitographie)) dont l'équipe ADAM du laboratoire DAVID est en charge depuis le 1er septembre 2016 jusqu'à la date limite du projet, le 31 décembre 2022. Celui-ci à pour objectif de mesurer l'exposition à la pollution de la population française au quotidien.
+Le stage s'est déroulé dans le cadre du projet de recherche **Polluscope** (voir [sitographie](#sitographie)) dont l'équipe ADAM du laboratoire DAVID est en charge depuis le 1er septembre 2016 jusqu'à la date limite prévue, le 31 décembre 2022. Réalisé en collaboration avec AirParis, Cerema Ile-de-France, Versailles Grand Parc,
+Sorbonne Médecine, Inserm, LSCE, EIVP et l'Agence Nationale de la Recherche, ce projet a pour objectif de mesurer l'exposition à la pollution de la population française au quotidien.
 
 ![](pollu.jpg)
 
@@ -429,7 +427,7 @@ On peut constater que la plupart des tâches qui m'ont été confiée nécessite
 
 ## <orange>II.F Résultats</orange>
 
-Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail. \
+Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail ce qui m'a permis d'entamer très vite la refactorisation de la plateforme Polluscope.
 
 <div style="page-break-after: always"></div>
 
@@ -1140,7 +1138,7 @@ Dépot Github de la plateforme Polluscope : <https://github.com/yureiiko/pollu.g
 Dépôt Github du rapport de stage : <https://github.com/yureiiko/david_internship_report.git> (ce dépôt deviendra privé après la soutenance de stage)
 
 Liens utilisés pour l'apprentisage de **Python Flask** :
-- <<https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3>
+- <https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3>
 - <https://pypi.org/project/Flask/>
 - <https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask>
 - <https://sysadmin.cyklodev.com/deployer-une-application-flask/>
@@ -1166,5 +1164,9 @@ Liens utilisés pour l'apprentissage de la technologie **Docker** :
     img.resize {
         max-width:100%;
         max-height:100%;
+    }
+    img.down {
+        max-width:50%;
+        max-height:50%;
     }
 </style>

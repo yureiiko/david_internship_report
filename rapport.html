@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>rapport.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="remerciement">Remerciement</h1>
+<p>Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés. Je veux également remercier l'ensemble des membres du laboratoire DAVID pour m'avoir accueillit et pour tous les moments que l'on a passé ensemble.</p>
+<div style="page-break-after: always"></div>
+<p><strong>Sommaire</strong></p>
+<ul>
+<li><a href="#remerciement">Remerciement</a></li>
+<li><a href="#r%C3%A9sum%C3%A9--summary">Résumé / Summary</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#redi-pr%C3%A9sentation-de-lorganisme-daccueilred"><red>I. Présentation de l'organisme d'accueil</red></a>
+<ul>
+<li><a href="#orangeia-historiqueorange"><orange>I.A Historique</orange></a></li>
+<li><a href="#orangeib-pr%C3%A9sentation-juridique-de-lorganisme-daccueilorange"><orange>I.B Présentation juridique de l'organisme d'accueil</orange></a></li>
+<li><a href="#orangeic-structure-de-lorganisme-daccueilorange"><orange>I.C Structure de l'organisme d'accueil</orange></a></li>
+<li><a href="#orangeid-pr%C3%A9sentation-de-l%C3%A9quipe-de-travailorange"><orange>I.D Présentation de l'équipe de travail</orange></a></li>
+<li><a href="#orangeie-%C3%A9tude-de-lenvironnement-%C3%A9conomique-de-lorganisme-daccueilorange"><orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange></a>
+<ul>
+<li><a href="#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet"><violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet></a></li>
+<li><a href="#violet2-analyse-swot-du-laboratoire-davidviolet"><violet>2) Analyse SWOT du laboratoire DAVID</violet></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#redii-pr%C3%A9sentation-du-travail-accompli-durant-le-stagered"><red>II. Présentation du travail accompli durant le stage</red></a>
+<ul>
+<li><a href="#orangeiia-pr%C3%A9sentation-du-projetorange"><orange>II.A Présentation du Projet</orange></a></li>
+<li><a href="#orangeiib-description-du-travail-r%C3%A9alis%C3%A9orange"><orange>II.B Description du travail réalisé</orange></a></li>
+<li><a href="#orangeiic-description-des-probl%C3%A8mes-%C3%A0-traiter-et-des-solutionsorange"><orange>II.C Description des problèmes à traiter et des solutions</orange></a>
+<ul>
+<li><a href="#violet%C3%A9tape-1--comprendre-la-structure-de-la-plateformeviolet"><violet>Étape 1 : Comprendre la structure de la plateforme</violet></a></li>
+<li><a href="#violet%C3%A9tape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet"><violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet></a></li>
+<li><a href="#violet%C3%A9tape-3--limpl%C3%A9mentation-de-la-m%C3%A9thode-post-avec-python-flaskviolet"><violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet></a></li>
+<li><a href="#violet%C3%A9tape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet"><violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet></a></li>
+<li><a href="#violet%C3%A9tape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet"><violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet></a></li>
+<li><a href="#violet%C3%A9tape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-donn%C3%A9es-postgresqlviolet"><violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet></a></li>
+<li><a href="#violet%C3%A9tape-7--s%C3%A9curiser-les-interactions-avec-la-base-de-donn%C3%A9esviolet"><violet>Étape 7 : Sécuriser les interactions avec la base de données</violet></a></li>
+<li><a href="#violet%C3%A9tape-8--v%C3%A9rifier-si-les-donn%C3%A9es-ins%C3%A9r%C3%A9e-par-le-client-sont-d%C3%A9j%C3%A0-dans-la-base-de-donn%C3%A9esviolet"><violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet></a></li>
+</ul>
+</li>
+<li><a href="#orangeiid-les-outils-informatiques-et-techniques-utilis%C3%A9sorange"><orange>II.D Les outils informatiques et techniques utilisés</orange></a></li>
+<li><a href="#orangeiie-m%C3%A9thodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange"><orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange></a></li>
+<li><a href="#orangeiif-r%C3%A9sultatsorange"><orange>II.F Résultats</orange></a></li>
+</ul>
+</li>
+<li><a href="#annexes">Annexes</a>
+<ul>
+<li><a href="#code-211--fichier-templatesindexhtml"><strong>Code 2.1.1 :</strong> fichier <code>templates/index.html</code></a></li>
+<li><a href="#code-212--fichier-apppy"><strong>Code 2.1.2 :</strong> fichier <code>app.py</code></a></li>
+<li><a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire"><strong>Code 2.2.1 :</strong> fichier <code>templates/index.html</code> avec un formulaire</a></li>
+<li><a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post"><strong>Code 2.2.2 :</strong> fichier <code>app.py</code> permettant de recevoir des éléments avec la méthode POST</a></li>
+<li><a href="#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel"><strong>Code 2.3.1 :</strong> fichier <code>templates/index.html</code> avec un affichage conditionnel</a></li>
+<li><a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post"><strong>Code 2.3.2 :</strong> fichier <code>app.py</code> avec passage de paramètre par le dictionnaire <code>post</code></a></li>
+<li><a href="#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2"><strong>Code 2.4.1 :</strong> fichier <code>index.html</code> avec un lien vers la page comportant l'URL <code>page2</code></a></li>
+<li><a href="#code-242--fichier-page2html-accessible-par-un-lien"><strong>Code 2.4.2 :</strong> fichier <code>page2.html</code> accessible par un lien</a></li>
+<li><a href="#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html"><strong>Code 2.4.3 :</strong> fichier <code>app.py</code> avec la fonction <code>page2</code> permettant l'affichage de la page du fichier <code>page2.html</code></a></li>
+<li><a href="#code-2611--fichier-indexhtml"><strong>Code 2.6.1.1 :</strong> fichier <code>index.html</code></a></li>
+<li><a href="#code-2612--fichier-apppy"><strong>Code 2.6.1.2 :</strong> fichier <code>app.py</code></a></li>
+<li><a href="#code-2621--fichier-apppy-avec-les-%C3%A9l%C3%A9ments-pour-emp%C3%AAcher-une-injection-sql"><strong>Code 2.6.2.1 :</strong> fichier <code>app.py</code> avec les éléments pour empêcher une injection SQL</a></li>
+<li><a href="#sch%C3%A9ma-1--structure-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Schéma 1 :</strong> Structure de la plateforme de données Polluscope</a></li>
+<li><a href="#journal-1--historique-des-impl%C3%A9mentations-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Journal 1 :</strong> Historique des implémentations de la plateforme de données Polluscope</a></li>
+</ul>
+</li>
+<li><a href="#sitographie">Sitographie</a></li>
+<li><a href="#bibliographie">Bibliographie</a></li>
+</ul>
+<div style="page-break-after: always"></div>
+<h1 id="r%C3%A9sum%C3%A9--summary">Résumé / Summary</h1>
+<p>Je suis rentré au laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines dans le cadre de mon stage de fin d'étude à l'IUT Informatique de Vélizy. Le stage a pour sujet <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> et s'est déroulé du 4 avril au 27 mai 2022. Durant cette période j'ai participé au projet de recherche Polluscope en créant un programme pour générer des rapports de façon automatique et en refactorisant la plateforme de données du projet en langage Python Flask.</p>
+<p>I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin-en-Yvellines in the context of my internship of end studies in computer sciences at the IUT of Velizy. The internship subject is <und>Development of loading, pretreatement and visualization interface for data from sensor and of mobile application</und> and took place between April 4th and may 27th of 2022. During this time, I participated to the research project Polluscope by creating a program of auto report generation and by refactoring the project's data platform in the Python Flask language.</p>
+<div style="page-break-after: always"></div>
+<h1 id="introduction">Introduction</h1>
+<p>Le présent rapport a pour fonction de présenter l'entreprise ayant accepté de m'embaucher pour mon stage de fin d'étude en IUT informatique. L'ensemble des éléments de ce rapports sont accessibles via le dépôt Github présent en <a href="#sitographie">sitographie</a>. <br>
+J'ai été accepté au <strong>laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines</strong> en répondant à l'offre de stage <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> de l'équipe ADAM. <br>
+Ce stage a débuter le 4 avril 2022 et a duré deux mois. Ce stage constitue ma première expérience dans le milieu professionnel en tant que membre actif d'une organisation et a pour objectif de valider mes deux ans d'étude à l'IUT informatique de Vélizy et d'obtenir le Diplôme Universitaire de Technologie en Informatique. <br>
+Dans un premier temps nous verrons une présentation du laboratoire DAVID de l'UVSQ avant de présenter le travail effectué durant la période de stage puis de finir par une conclusion récapitulant ce que le stage m'a appris et apporté.</p>
+<div style="page-break-after: always"></div>
+<h1 id="redi-pr%C3%A9sentation-de-lorganisme-daccueilred"><red>I. Présentation de l'organisme d'accueil</red></h1>
+<p>Dans cette partie, nous allons voir une présentation générale du laboratoire avant d'évoquer sa dimension juridique suivie de sa structure organisationnelle, d'une présentation de l'équipe avec laquelle j'ai effectué le stage pour finir avec une étude de l'environnement économique du laboratoire.</p>
+<h2 id="orangeia-historiqueorange"><orange>I.A Historique</orange></h2>
+<img src="logoDavid.jpg" heigh="220" width="230">
+<p>Le <strong>laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines</strong> (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algoritmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée infrastructures intelligentes.</p>
+<img src="campus.png" heigh="220" width="230">
+<h2 id="orangeib-pr%C3%A9sentation-juridique-de-lorganisme-daccueilorange"><orange>I.B Présentation juridique de l'organisme d'accueil</orange></h2>
+<p>Le laboratoire regroupe 60 chercheurs et doctorants spécialisés dans la recherche en informatique et plus particulièrement dans les domaines du big data, de la sécurité des données, de l'algorithmique, des réseaux de télécommunication et travail en interdisciplinarité avec la fédération <strong>SIHS</strong> (Sciences Informatiques, Humaines et Sociales) du CNRS dans l'objectif de concevoir une ville durable et intelligente. <br>
+La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projet en cours et du coût de ceux-ci. Dans le cas du projet de recherche Polluscope (voir <a href="#orangeiia-pr%C3%A9sentation-du-projetorange">Présentation du projet</a>), celui-ci à généré une aide financière de 172 721 € provenant de l'État et des financements 694 988 € provenant des partenaires du laboratoire dans le cadre du projet.</p>
+<h2 id="orangeic-structure-de-lorganisme-daccueilorange"><orange>I.C Structure de l'organisme d'accueil</orange></h2>
+<p>La direction du laboratoire est assurée par le professeur <strong>BARTH Dominique</strong>, <strong>KEDAD Zoubida</strong> et <strong>DUCOIN Chantal</strong> ayant respectivement les postes de directeur du laboratoire, directrice adjointe et responsable administrative. La gestion des équipes de recherches du laboratoire est répartie entre <strong>BARTH Dominique</strong> pour l'équipe <strong>ALMOST</strong>, <strong>ANCIAUX Nicolas</strong> pour l'équipe <strong>PETRUS</strong> et <strong>ZEITOUNI Karine</strong> pour l'équipe <strong>ADAM</strong>. L'équipe <strong>NGN</strong> récemment rattachée au laboratoire est quant à elle dirigée par <strong>AITSAADI Nadjib</strong>.</p>
+<div style="page-break-after: always"></div>
+<h2 id="orangeid-pr%C3%A9sentation-de-l%C3%A9quipe-de-travailorange"><orange>I.D Présentation de l'équipe de travail</orange></h2>
+<p>Le laboratoire regroupe les équipes de recherches <strong>ALMOST</strong> (Algorithms and Stochastic Models), <strong>PETRUS</strong> (PErsonnal and TRUSted cloud), <strong>NGN</strong> (Next Generation Network) et <strong>ADAM</strong> (Ambient Data Access and Mining) avec laquelle j'ai réalisé le stage. Celles-ci sont majoritairement constituées de chercheurs ou d'étudiants doctorants et on respectivement pour spécialités la résolution algorithmique et l'évaluation de performance, la structure, la gestion et la sécurisation de données personnelles, les réseaux et l'internet des objets et la modélisation de données hétérogènes.</p>
+<p>Dans le cadre de mon stage, j'ai travaillé au sein de l'équipe ALMOST sous la direction de <strong>ZEITOUNI Karine</strong>, la cheffe du groupe et également ma tutrice de stage ainsi qu'une des professeurs rencontrées durant mes études à l'IUT informatique de Vélizy.</p>
+<img src="kz.jpg" heigh="220" width="220">
+<p>Elle fait parti des membres permanents de l'équipe au même titre <strong>TAHER Yehia</strong> (Maître de conférence), <strong>YEH Laurent</strong> (Maître de conférence). J'ai remarqué que parmi les membres permanents de l'équipe ADAM se trouvent <strong>PREDA Nicoleta</strong> et <strong>LOYER Yann</strong>, deux professeurs rencontrés durant mes études à l'IUT informatique de Vélizy.</p>
+<p>Au sein de l'équipe, se trouvent également des étudiants doctorant ou post doctorant dont <strong>BOUHAMOUM Redouane</strong> un autre professeur de l'IUT de Vélizy. Par ailleurs, pendant la période de mon stage, deux membres du groupe de doctorants, <strong>EL HAFYANI Hafsa</strong> et <strong>ZUO Jingwei</strong>, ont soutenu leurs thèses devant un jury et obtenu le titre de Docteur en informatique. Quand le sujet de thèse est attribué à l'étudiant préparant un doctorat, il rejoint un des projets dont l'équipe est en charge. Celui-ci dépend du sujet de la thèse, de sa compatibilité avec celle-ci, et ce que l'étudiant peut apporter au projet avec ses travaux de recherche.</p>
+<p>Aussi, dans le cadre de certains projet ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs étude. J'ai fait parti de cette catégorie en rejoignant le laboratoire, au même titre que <strong>BADRA Riham</strong>, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique.</p>
+<p>Étant donnée que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.</p>
+<div style="page-break-after: always"></div>
+<h2 id="orangeie-%C3%A9tude-de-lenvironnement-%C3%A9conomique-de-lorganisme-daccueilorange"><orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange></h2>
+<p>Cette partie est entièrement dédiée à la présentation de l'environnement économique du laboratoire DAVID.</p>
+<h3 id="violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet"><violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet></h3>
+<p>L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont résumée dans la matrice PESTEL ci-dessous. <br>
+<und>PESTEL :</und> Politique, Économique, Socio-culturel, Technologique, Environnemental, Légal</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Opportunité</th>
+<th>Menace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Politique</td>
+<td>- la <und>loi de programmation de la recherche</und> promet 3% du PIB consacré à la recherche et une meilleure organisation de celle-ci</td>
+<td>- depuis mai 2021, le <und>Plan National de Recherche</und> sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés</td>
+</tr>
+<tr>
+<td>Économique</td>
+<td></td>
+<td>- pénurie mondiale de composants informatiques en raison de la crise du Covid-19<br>- les fortes dettes de l'État réduisent les possibilités de financement</td>
+</tr>
+<tr>
+<td>Socio-culturel</td>
+<td>- prise de conscience de l'importance des principes du développement durable<br>- prise de conscience des enjeux environnementaux</td>
+<td></td>
+</tr>
+<tr>
+<td>Technologique</td>
+<td>- amélioration constante des technologies de l'information pour le public et les entreprises<br>- la quantité de donnée augmente constamment et des travaux de recherche sont nécessaire pour optimiser leur traitement<br>- de plus en plus d'appareils interagissent grâce à internet</td>
+<td>- pénurie mondiale de composants informatiques en raison de la crise du Covid-19</td>
+</tr>
+<tr>
+<td>Environnemental</td>
+<td>- la dégradation de l'environnement nécessite des recherche pour en connaître les conséquences et les moyens de les diminuer</td>
+<td>- on sait depuis peu de temps que le stockage massif de données est facteur d'augmentation de la pollution<br>- la production d'ordinateur a des conséquences néfastes sur l'environnement</td>
+</tr>
+<tr>
+<td>Légale</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tableau 1 :</strong> Matrice PESTEL de l'environnement du laboratoire DAVID</p>
+<p>L'actualité sur le plan technologique est globalement favorable au bon fonctionnement du laboratoire car l'utilisation massive des réseaux de télécommunication et des bases de données nécessite des travaux de recherche pour les rendre toujours plus performants. Néanmoins, d'un point de vue économique, étant donné les fortes dettes de l'état français, celui-ci possède moins d'argent pouvant être investi dans la recherche scientifique. De plus, les enjeux écologiques actuels nécessite des travaux de recherche pour prévenir les conséquences de la pollution de l'air ou pour réduire l'impact des nouvelles technologies sur l'environnement.</p>
+<div style="page-break-after: always"></div>
+<h3 id="violet2-analyse-swot-du-laboratoire-davidviolet"><violet>2) Analyse SWOT du laboratoire DAVID</violet></h3>
+<p><und>SWOT :</und> Strengths, Weaknesses, Opportunities, Threats (Forces, Faiblesses, Opportunités, Menaces)
+L'ensemble des forces, faiblesses, opportunités et menaces du laboratoire DAVID sont résumés dans le tableau suivant et proviennent majoritairement du document d'évaluation HCERES de 2018 (voir <a href="#bibliographie">Bibliographie</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Forces</strong></td>
+<td>- spécialisation du laboratoire dans le domaine de l'informatique<br>- le laboratoire est en lien avec plusieurs centres de recherches de l'UVSQ et du territoire français<br>- le laboratoire est en lien avec des universités à l'échelle international (Liban, Chine ...) et accueil des étudiants et doctorants venus du monde entier<br>- les activités de recherche du laboratoire se basent sur plusieurs thèmes liés à des défis sociétaux actuellement majeurs<br>- collaboration avec des acteurs territoriaux au niveau des communautés d'agglomération, du département des Yvelines et de la région Ile-de-France</td>
+</tr>
+<tr>
+<td><strong>Faiblesses</strong></td>
+<td>- effectif réduit par rapport à d'autres laboratoires de recherches<br>- peu de moyens et absence de soutien politique de la part de l'UVSQ<br>- difficulté pour les membres du laboratoire à investir dans des projets de recherche</td>
+</tr>
+<tr>
+<td><strong>Opportunités</strong></td>
+<td>- le laboratoire de recherche <strong>NIWC</strong> (Naval Information Warafare Center) des États-Unis est à la recherches d'étudiants, doctorants et chercheurs compétents dans les domaines de l'informatiques, essentiellement dans le big data<br>- la <und>loi de programmation de la recherche</und> promet 3% du PIB consacré à la recherche et une meilleure organisation de celle-ci</td>
+</tr>
+<tr>
+<td><strong>Menaces</strong></td>
+<td>- depuis mai 2021 et l'apparition du <und>Plan National de Recherche</und>, le gouvernement sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés par l’État<br>- baisse de motivation des membres du laboratoire dans l'investissement pour l'obtention des moyens de recherche</td>
+</tr>
+</tbody>
+</table>
+<p>En France, les principaux organismes de recherche sont l'<strong>INRA</strong> (Institut National de la Recherche Agronomique), l'<strong>INSERM</strong> (Institut National de la Santé Et de la Recherche Médicale) et le <strong>CNRS</strong> (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde. Ceux-ci sont les principaux concurrents du laboratoire DAVID dans la mesure où ils exercent tous dans le domaine de la recherche et aussi les principaux associés car certains projets de recherche, tel que le projet <a href="#orangeiia-pr%C3%A9sentation-du-projetorange">Polluscope</a>, se déroulent en collaboration avec les laboratoire évoqués précédemment.</p>
+<p><img class="down" src="cnrs.jpg" heigh="220" width="220"><img src="inra.jpg" heigh="220" width="220"><img src="inserm.jpg" heigh="220" width="220"></p>
+<div style="page-break-after: always"></div>
+<h1 id="redii-pr%C3%A9sentation-du-travail-accompli-durant-le-stagered"><red>II. Présentation du travail accompli durant le stage</red></h1>
+<p>Dans cette partie, nous allons évoqué le travail effecuté durant le stage en commençant par une description dur projet, suivi d'une description des tâches réalisées, d'une mise en évidance des principaux problèmes rencontrés, d'une présentation des outils utilisés, des méthodes et formations suivies pour finir par l'analyse des résultat de chaque tâches.</p>
+<h2 id="orangeiia-pr%C3%A9sentation-du-projetorange"><orange>II.A Présentation du Projet</orange></h2>
+<p>Le stage s'est déroulé dans le cadre du projet de recherche <strong>Polluscope</strong> (voir <a href="#sitographie">sitographie</a>) dont l'équipe ADAM du laboratoire DAVID est en charge depuis le 1er septembre 2016 jusqu'à la date limite prévue, le 31 décembre 2022. Réalisé en collaboration avec AirParis, Cerema Ile-de-France, Versailles Grand Parc,
+Sorbonne Médecine, Inserm, LSCE, EIVP et l'Agence Nationale de la Recherche, ce projet a pour objectif de mesurer l'exposition à la pollution de la population française au quotidien.</p>
+<p><img src="pollu.jpg" alt=""></p>
+<p>Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit de un ou plusieurs capteurs de pollution et une tablette dans certains cas pour relever leurs activité ainsi que leur position géographique. Les capteurs sont conçu pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargés et déposées sur le site internet du projet pour être analysées et mise sous différentes formes. <br>
+Dans certaines conditions, des stations fixes sont utilisées pour mesurer la pollution de l'air ambiant. Toutefois, dans la mesure où celles-ci sont difficiles à déplacer, elles sont surtout utilisées comme témoins de la pollution dans des zones rurales ou peu urbanisées.</p>
+<h2 id="orangeiib-description-du-travail-r%C3%A9alis%C3%A9orange"><orange>II.B Description du travail réalisé</orange></h2>
+<p>Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des graphes de visualisation de données ayant été réalisée en langage Python par <strong>EL HAFYANI Hafsa</strong>, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. <br>
+Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par <strong>TAHER Yehia</strong>. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme en utilisant la technologie Docker. <br>
+La dernière partie de mon travail sera de <und>créer une application mobile</und> selon un modèle similaire à celui du site internet évoqué précédemment.</p>
+<p>Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de connaître mon exposition à la pollution au cours d'une journée de stage.</p>
+<div style="page-break-after: always"></div>
+<h2 id="orangeiic-description-des-probl%C3%A8mes-%C3%A0-traiter-et-des-solutionsorange"><orange>II.C Description des problèmes à traiter et des solutions</orange></h2>
+<p>Cette section du rapport est entièrement consacrée à la description détaillée des problèmes rencontrés durant la refactorisation de la plateforme de données Polluscope qui constitue mon travail le plus important durant le stage. Cette partie présente également les solutions découvertes ou mises au points pour résoudre ces problèmes.</p>
+<p>Dans cette partie, les références aux portions code présents en annexes sont entre parenthèses.</p>
+<h3 id="violet%C3%A9tape-1--comprendre-la-structure-de-la-plateformeviolet"><violet>Étape 1 : Comprendre la structure de la plateforme</violet></h3>
+<p>Étant donné qu'une première version de la plateforme à été créée en PHP par <strong>TAHER Yehia</strong> et <strong>Ahmad Ktaish</strong>, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créer un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles_ci.</p>
+<p><img src="schemasite.jpg"> <br>
+<strong>Schéma 1 :</strong> Structure de la plateforme de donnée Polluscope</p>
+<p>Ce schéma est également disponible en <a href="#sch%C3%A9ma-1--structure-de-la-plateforme-de-donn%C3%A9es-polluscope">annexe</a>.</p>
+<p>En examinant le code source de la plateforme, on constate qu'il est nécessaire d'avoir un compte enregistré dans la base de donnée pour utiliser les services du site internet. On peut également remarquer qu'un utilisateur peut avoir soit un rôle de participant, soit un rôle d'administrateur et que cela influe sur les actions réalisables par la personne qui se connecte à la plateforme et donc sur les pages qui lui sont accessibles. Dans le schéma précédant, les pages à gauche sont accessibles pour les participants, celles en bas au centre sont utilisables uniquement par les administrateurs et les autres sont accessibles pour tous les utilisateurs. Sur cette plateforme, seul la page <code>login</code> est accessible pour le grand public.</p>
+<h3 id="violet%C3%A9tape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet"><violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet></h3>
+<p>Afin d'apprendre à créer un site internet en Python Flask j'ai recherché sur internet des contenus expliquant la structure et le fonctionnement de ce dernier. <br>
+La liste des lien dont je me suis servis pour cette auto formation sont présents dans la <a href="#sitographie">sitographie</a>.</p>
+<p>D'après mes recherches, la technologie Flask a un fonctionnement semblable au Design Pattern <strong>Modele-View-Controller</strong> (Modèle-Vue-Contrôleur) utilisé dans les langages de programmation orientés objets. En effet, l'affichage des pages codées en HTML ainsi que les actions de l'utilisateur sur celles-ci sont ou peuvent être entièrement ou partiellement gérées par un seul fichier codé en Python.</p>
+<p>Les deux portions de code <a href="#code-211--fichier-templatesindexhtml"><em>2.1.1</em></a> et <a href="#code-212--fichier-apppy"><em>2.1.2</em></a> présentes en annexe, permettent l'affichage d'une pages web identique à celle de l'image suivante : <br>
+<img src="pagetest.jpg" heigh="420" width="420"></p>
+<p>Pour cela, le fichier <code>index.html</code> (<a href="#code-211--fichier-templatesindexhtml">Code <em>2.1.1</em></a>) doit être placé dans un répertoire <strong>templates</strong> avant d'exécuter le fichier <code>app.py</code> (<a href="#code-212--fichier-apppy">Code <em>2.1.2</em></a>). Cela permet d'ouvrir une fenêtre de terminal comportant les lignes suivantes :</p>
+<pre class="hljs"><code><div>* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+</div></code></pre>
+<p>Pour afficher la page web il faut entrer l'URL fourni (ici <code>http://127.0.0.1:5000</code>) dans un moteur de recherche.</p>
+<p>En sachant cela, j'ai pu créer la page d'accueil de la plateforme du projet.</p>
+<h3 id="violet%C3%A9tape-3--limpl%C3%A9mentation-de-la-m%C3%A9thode-post-avec-python-flaskviolet"><violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet></h3>
+<p>D'après l'analyse de la plateforme, celle-ci comporte de nombreux formulaires nécessaires aux dépôt des données de pollution. Tout comme dans la première version du site internet, celui que j'ai créer doit permettre la transmission d'éléments insérés dans des formulaires au moyen de la méthode POST. <br>
+En reprenant le code HTML vu précédemment on peut rajouter un formulaire (<a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire">Code <em>2.2.1</em> #1</a>) constitué d'une zone de texte (<a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire">Code <em>2.2.1</em> #2</a>) et d'un bouton de validation (<a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire">Code <em>2.2.1</em> #3</a>). La méthode <code>main()</code> du fichier <code>app.py</code> (<a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post">Code <em>2.2.2</em></a>) qui permet l'affichage de la page web est par défaut à l'écoute des actions réalisées sur ce formulaire.</p>
+<p>Avec le nouveau fichier <code>index.html</code> (<a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire">Code <em>2.2.1</em></a>), on obtient une page web identique à celle-ci :
+<img src="pagepost.jpg" heigh="420" width="420"></p>
+<p>Afin que le programme en Python puisse recevoir des éléments avec la méthode POST, celle-ci doit être spécifiée grâce à la méthode <code>@app.route()</code> (<a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post">Code <em>2.2.2</em> #1</a>). Pour récupérer les éléments insérés dans le formulaire, il faut utiliser l'attribut <code>form</code> de l'objet <code>request</code> en spécifiant le nom de l'élément (<a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post">Code <em>2.2.2</em> #2</a>) après avoir vérifié si la méthode POST est utilisée (<a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post">Code <em>2.2.2</em> #3</a>).</p>
+<p>Avec les deux dernières portions de code présentée précédemment, on peut entrer du texte dans la zone dédiée et l'envoyer pour que celui-ci soit affiché dans un terminal.</p>
+<p>Comprendre le fonctionnement de la méthode POST m'a permis de d'implémenter une première version de la page de connexion sans utilisation de la base de données.</p>
+<h3 id="violet%C3%A9tape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet"><violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet></h3>
+<p>Durant l'analyse de la première version du site internet, j'avais constaté que le programme en PHP permet l'affichage de texte sur les pages web pour indiquer si des erreurs ont eu lieu ou si une action s'est achevés correctement. Afin que cela soit possible dans la nouvelles version de la plateforme je devais trouver un moyen pour passer des éléments en paramètre des fonction d'affichage des pages web. <br>
+Pour ce faire, j'ai utilisé des éléments de syntaxe <strong>Jinja</strong> dans les pages web. Cela permet de créer des boucles ou des action conditionnels dans des pages codées en html. <br>
+Dans le code <a href="#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel"><em>2.3.1</em></a>, si la fonction d'affichage de la page comporte un paramètre <code>posts</code> portant le label 'text' (<a href="#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel">Code <em>2.3.1</em> #1</a>) alors celui-ci est affiché sur la page web (<a href="#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel">Code <em>2.3.1</em> #2</a>).</p>
+<p>Pour pouvoir passer un paramètre à la fonction d'affichage, un dictionnaire doit être instancié dans le script python (<a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post">Code <em>2.3.2</em> #1</a>) et les éléments à passer en paramètre doivent être associés à la bonne clé (<a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post">Code <em>2.3.2</em> #2</a>). Par défaut, l'élément associé à la clé doit être nul (<a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post">Code <em>2.3.2</em> #3</a>) pour éviter des erreurs. Le dictionnaire doit ensuite être placé en paramètre de la méthode <code>render_template()</code> avec le nom approprié (<a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post">Code <em>2.3.2</em> #4</a>).</p>
+<p>Le code ainsi modifié permet d'afficher une page web similaire à la précédente mais à présent lorsque du texte est entré dans la zone appropriée et envoyé (#1), celui-ci est affiché dans le navigateur (#2). <br>
+<img src="pagepara1.jpg" heigh="300" width="300"> #1
+<img src="pagepara2.jpg" heigh="300" width="300"> #2</p>
+<p>L'affichage conditionnel sur des pages web m'a permis de modifier les pages accessibles aux utilisateurs en fonction de leurs rôle de participant ou d'administrateur.</p>
+<h3 id="violet%C3%A9tape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet"><violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet></h3>
+<p>La plateforme doit comporter un menu permettant l'accès à différentes pages en fonction des besoins de l'utilisateur et de ses actions à réaliser. Dans la version que j'ai créer, j'ai dû trouver une méthode permettant l'utilisation des liens spécifiés pour chaque fonctions rattachées à chaque pages. <br>
+Pour ce faire, il faut utiliser un élément de syntaxe <strong>Jinja</strong> associé à la méthode <code>url_for()</code> (<a href="#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2">Code <em>2.4.1</em> #1</a>). Celle-ci doit avoir l'URL de la page souhaité en paramètre. \</p>
+<p>Pour qu'une autre page HTML (ici celle du <a href="#code-242--fichier-page2html-accessible-par-un-lien">Code <em>2.4.2</em></a>) soit accessible par un lien, celle-ci doit être rattachée à une fonction (<a href="#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html">Code <em>2.4.3</em> #1</a>) et à un chemin d'accès (<a href="#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html">Code <em>2.4.3</em> #2</a>).</p>
+<p>Les trois fichier permettent d'afficher une page comportant un titre et un lien. <br>
+<img src="lien1.jpg" heigh="300" width="300"></p>
+<p>Cliquer sur le lien permet d'afficher la deuxième page. <br>
+<img src="lien2.jpg" heigh="300" width="300"></p>
+<p>Avec ces éléments, j'ai pu créer le menu contenant les liens vers les différentes pages.</p>
+<h3 id="violet%C3%A9tape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-donn%C3%A9es-postgresqlviolet"><violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet></h3>
+<p>Tout comme la première version de la plateforme, celle que j'ai créé doit pouvoir insérer, lire et modifier des éléments contenus dans une base de données PostgreSQL. <br>
+Pour établir la connection avec la base de donnée, il est possible d'utiliser la commande python suivante avec le nom de la base de données, le nom d'utilisateur, le mot de passe de l'utilisateur et l'adresse IP du serveur ébergeant le système de gestion de base de données.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> psycopg2
+
+conn = psycopg2.connect(database=<span class="hljs-string">"nom_base_de_données"</span>, user=<span class="hljs-string">"nom_utilisateur"</span>, password=<span class="hljs-string">"mot_de_passe"</span>, host=<span class="hljs-string">"adresse_ip"</span>)
+</div></code></pre>
+<p><strong>Code 2.5.1 :</strong> Commande de connection à la base de données PostrgreSQL</p>
+<p>Pour exécuter une commande sur la base de données, il faut écrire cette dernière dans un objet de type String (#1) et le passer en paramètre de la méthode <code>execute()</code> du curseur (#2), attribut de la connection précédemment établie (#3).</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> psycopg2
+
+conn = psycopg2.connect(database=<span class="hljs-string">"nom_base_de_données"</span>, user=<span class="hljs-string">"nom_utilisateur"</span>, password=<span class="hljs-string">"mot_de_passe"</span>, host=<span class="hljs-string">"adresse_ip"</span>)
+
+query = <span class="hljs-string">"select * from test"</span> <span class="hljs-comment">#1</span>
+cur  = conn.cursor() <span class="hljs-comment">#3</span>
+cur.execute(query) <span class="hljs-comment">#2</span>
+</div></code></pre>
+<p><strong>Code 2.5.2 :</strong> Script Python permettant l'exécution d'une commande SQL sur une base de données PostgreSQL</p>
+<p>Les résultats des requête SQL sont stocké dans la variable curseur sous forme de tableau. Pour visualiser les ligne générées par la requête, il faut donc afficher chaque élément de la variable curseur (#1) grâce à une boucle (#2).</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> psycopg2
+
+conn = psycopg2.connect(database=<span class="hljs-string">"nom_base_de_données"</span>, user=<span class="hljs-string">"nom_utilisateur"</span>, password=<span class="hljs-string">"mot_de_passe"</span>, host=<span class="hljs-string">"adresse_ip"</span>, port= <span class="hljs-string">"port"</span>)
+
+query = <span class="hljs-string">"select * from test"</span>
+cur  = conn.cursor()
+cur.execute(query)
+
+<span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> cur: <span class="hljs-comment">#2</span>
+    print(row) <span class="hljs-comment">#1</span>
+</div></code></pre>
+<p><strong>Code 2.5.3 :</strong> Script Python permettant l'exécution d'une requête SQL et l'affichage des lignes générées</p>
+<pre class="hljs"><code><div>Output :
+['test1']
+['test2']
+['test3']
+</div></code></pre>
+<p>Pouvoir interagir avec la base de donnée m'a permis de créer une nouvelle version de la page de connexion en utilisant les logins et mots de passe stockés dans la base de données. J'ai également pu créer des scripts Python pour enregistrer les donnée de pollution mais aussi ajouter des utilisateurs, des capteurs, des kits ou des campagnes.</p>
+<h3 id="violet%C3%A9tape-7--s%C3%A9curiser-les-interactions-avec-la-base-de-donn%C3%A9esviolet"><violet>Étape 7 : Sécuriser les interactions avec la base de données</violet></h3>
+<p>D'après mon analyse du code source de la première version de la plateforme Polluscope, les requêtes utilisée pour insérer des éléments dans la base de donnée étaient exécutées sans être préparées. En tant que passionné de cybersécurité, je sais qu'une requête SQL non préparée est une faille de sécurité pouvant être utilisée à des fins malveillantes pour compromettre une base de donnée grâce à des <strong>injections SQL</strong>. Il était donc primodiale que je corrige cette faille dans la nouvelle version du site internet.</p>
+<p>Normalement, quand le client d'une page web insert un élément dans un champ prévu à cette effet tel qu'une zone de texte, celui-ci est récupéré et insérer dans la variable de type String qui constitue la commande SQL. Cette commande est ensuite exécutée sur la base de donnée. <br>
+Dans les exemples suivants nous utiliserons la table <code>personnes</code> présentée ci-dessous :</p>
+<pre class="hljs"><code><div> id |   nom
+----+---------
+  1 | Camille
+  2 | Bruce
+  3 | Selina
+</div></code></pre>
+<p>Les deux portions de code <a href="#code-2611--fichier-indexhtml"><em>2.6.1.1</em></a> et <a href="#code-2612--fichier-apppy"><em>2.6.1.2</em></a> présents en annexes, permettent l'affichage d'une page web avec un formulaire composé d'un champ texte. L'utilisateur doit entrer l'ID d'une personnes dans le champ texte pour que le nom de cette personne s'affiche sur la page web ().</p>
+<p>Le script Python étalit la connexion avec la base de donnée (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #1</a>) si il y a un élément transmis par la méthode POST (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #2</a>). Une commande est ensuite créée avec l'id de la personne dont l'utilisateur veut afficher le nom (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #3</a>). Une fois la commande exécutée (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #4</a>), les résultats de la commande sont récupérés dans la variable <code>out</code> (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #5</a>) et envoyés vers la page web par la méthode POST (<a href="#code-2612--fichier-apppy">Code <em>2.6.1.2</em> #6</a>).</p>
+<p>Si l'utilisateur entre l'id <code>1</code> alors le nom de <code>Camille</code> est affiché. <br>
+<img src="sql1.jpg" heigh="300" width="300"><img src="sql2.jpg" heigh="300" width="300"></p>
+<p>Cependant, il est possible d'afficher tous les noms des personnes en utilisant une injection SQL. Pour cela, il suffit de rajouter une condition après l'identifiant. Pour fonctionner, cette condition doit être vraie pour toutes les lignes de la table. Il peut aussi être nécessaire de rajouter des tirêts pour que la suite de la commande devienne un commentaire et ne soit pas pris en compte lors de l'exécution. Par exemple, le texte suivant est une injection SQL.</p>
+<pre class="hljs"><code><div>1 or 1=1; -- -
+</div></code></pre>
+<p>Si ce texte est inséré et envoyé, on obtient la page suivante. <br>
+<img src="injec.jpg" heigh="300" width="300"></p>
+<p>Dans l'exemple précédent, l'injection SQL permet l'affichage de plusieurs éléments alors que le programme utilisé normalement n'en affiche qu'un seul. Cependant, entrer le texte suivant aura pour conséquence, la suppression de la table <code>personnes</code>.</p>
+<pre class="hljs"><code><div>1; delete from personnes where 1=1 -- -
+</div></code></pre>
+<p>Dans le cadre de travaux de recherche, la suppression des données peut avoir de grâves conséquences sur le projet. <br>
+Pour éviter cela, j'ai dû rajouter un traîtement des éléments transmis par l'utilisateur pour que les requêtes ne contienne pas de caractères permettant les injections SQL.</p>
+<p>La plupart des langages utilisés dans la programmation web possèdent une fonction destinée à effacer les injections SQL des éléments insérés par le client d'un site web. Etant donné que je n'ai pas trouvé ce type de fonction dans le langage python, j'ai dû trouver un autre moyen. <br>
+Dans l'exemple précédent l'injection SQL est permise par l'éléments de comparaison <code>or</code> envoyé par le client de la page web. Utiliser la fonction <code>replace()</code> de la classe String avec les paramètre <code>&quot;or&quot;</code> et <code>&quot;&quot;</code> permet de le supprimer de l'élément inséré par le client (<a href="#code-2621--fichier-apppy-avec-les-%C3%A9l%C3%A9ments-pour-emp%C3%AAcher-une-injection-sql">Code <em>2.6.2.1</em> #1</a>).</p>
+<p>Avec la modifiction du script Python, entrer l'injection SQL génère une erreur mais n'endomage pas la base de données. <br>
+Concernant la plateforme Polluscope, le nombre de caractère à supprimer est plus important pour écarter la plupart des possiblités d'injection SQL.</p>
+<h3 id="violet%C3%A9tape-8--v%C3%A9rifier-si-les-donn%C3%A9es-ins%C3%A9r%C3%A9e-par-le-client-sont-d%C3%A9j%C3%A0-dans-la-base-de-donn%C3%A9esviolet"><violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet></h3>
+<p>Dans la mesure où les travaux de recherche nécessitent des mesures précises pour être fiables, j'ai considéré que l'insertion de doublons de données de pollution dans la base de données mettrait en péril les résultats des campagnes de ressencement de la pollution. Je suis donc parti du principe que les participants des campagnes pouvaient faire l'erreur d'insérer plusieurs fois un même fichier de donnée et que si cela se produit alors les scripts Python doivent le savoir et ne pas insérer les doublons dans la base de données. C'est un constat qui a été approuvé par mes encadrants.</p>
+<p>J'ai considéré que le nom du fichier inséré et contenant les données de pollution n'est pas un élément de décision fiable car celui-ci peut être facilement modifié par le participant. <br>
+Étant donnée que les fichier inséré par les clients de la plateforme sont enregistrés sur le serveur du laboratoire, dans une première version du programme, pour tester l'existance d'une ligne dans la base de donnée, le script Python testait si elle se trouvait parmis les lignes des fichiers précédemement insérés et stockés sur le serveur. Le pseudo code Python suivant illustre cette première méthode de vérification. La fonction prend en paramètre la ligne à insérer et une liste contenant toutes les lignes enregistrées (#1). Si la nouvelle ligne est présente dans la liste alors la fonction renvoie la valeur booléenne <code>False</code> (#2) et la valeur <code>True</code> dans le cas contraire (#3).</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">testNew</span><span class="hljs-params">(nouvelleLigne, toutesLesLignes)</span>:</span> <span class="hljs-comment">#1</span>
+    <span class="hljs-keyword">if</span> nouvelleLigne <span class="hljs-keyword">in</span> toutesLesLignes:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#2</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span> <span class="hljs-comment">#3</span>
+</div></code></pre>
+<p><strong>Code 2.7.1.1 :</strong> fonction <code>testNew()</code></p>
+<p>Avec la fonction précédente, il est possible de placer l'instruction d'insertion dans une boucle conditionnelle (#1). L'insertion ne sera effectuée que si la nouvelle ligne n'est pas enregistée.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">if</span> testNew(nouvelleLigne, toutesLesLignes) : <span class="hljs-comment">#1</span>
+    inserer(nouvelleLigne)
+</div></code></pre>
+<p><strong>Code 2.7.1.2 :</strong> boucle d'insertion conditionnelle</p>
+<p>Néanmoins, comme l'ont remarqué mes encadrants, cette méthode est très coûteuse en mémoire pour l'ordinateur réalisant l'opération et l'utilisation de cette ressource augmente avec le nombre de ligne à comparer. Étant donné que, dans le cadre du projet Polluscope, ce nombre peut s'élever à plusieurs millions, cette méthode n'est pas applicable pour ce projet. J'ai donc dû trouver une autre méthode.</p>
+<p>Mes encadrant m'ont alors suggéré d'utiliser les dates d'utilisation du capteur comme moyen de vérification. En effet, l'ensemble des capteurs, en plus de relever des données de pollution, mémorisent les dates auquels les données sont enregistrées. En ayant connaissance de l'identifiant du capteur, des dates auquel il a été utilisé et en sachant qu'un capteur ne peut être utilisé que par un seul participant à la fois, il est possible de savoir si une ligne à déjà été insérée. <br>
+Pour ce faire, le script Python récupère grâce à une requête SQL l'intervalle d'utilisation d'un capteur en fonction de son identifiant.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">select</span> <span class="hljs-keyword">min</span>(<span class="hljs-built_in">time</span>), <span class="hljs-keyword">max</span>(<span class="hljs-built_in">time</span>) <span class="hljs-keyword">from</span> sensor_measure <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span>=<span class="hljs-string">'sensorId'</span>;
+</div></code></pre>
+<p><strong>Code 2.7.2.1 :</strong> Requête permettant de connaître l'intervalle d'utilisation d'un capteur</p>
+<p>On peut alors modifier la fonction <code>testNew()</code> pour que celle-ci vérifie si la date de la ligne à insérer est comprise dans cet intervalle (#1). Si tel est le cas alors la fonction renvoie la valeur <code>False</code> (#2) et la valeur <code>True</code> dans le cas contraire (#3).</p>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">testNew</span><span class="hljs-params">(dateNouvelleLigne, intervalleMin, intervalleMax)</span>:</span>
+    <span class="hljs-keyword">if</span> intervalleMin &lt; dateNouvelleLigne <span class="hljs-keyword">and</span> dateNouvelleLigne &lt; intervalleMax : <span class="hljs-comment">#1</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span> <span class="hljs-comment">#2</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span> <span class="hljs-comment">#3</span>
+</div></code></pre>
+<p><strong>Code 2.7.2.1 :</strong> nouvelle version de la méthode <code>testNew()</code></p>
+<p>Il s'agit d'une méthode de vérification nécessitant moins de ressouces de l'ordinateur, ce qui permet d'accélérer l'insertion de nouvelles lignes dans la base de données.</p>
+<div style="page-break-after: always"></div>
+<h2 id="orangeiid-les-outils-informatiques-et-techniques-utilis%C3%A9sorange"><orange>II.D Les outils informatiques et techniques utilisés</orange></h2>
+<p>Dans le cadre de mon travail durant ce stage, l'ordinateur personnel que je possède et utilise au quotidien pour mes études et mes activités dans le domaine de l'informatique est devenu mon principal outils de travail. Étant déjà familiarisé avec les environnements de développement créer par <strong>JetBrains</strong> tel que <und>PyCharm</und> mon choix s'est porté sur ceux-ci pour produire les logiciels et applications durant le stage. <br>
+<img src="jblogo.jpg" heigh="220" width="220"> <br>
+Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentation est disponible <a href="#joural-des-mises-%C3%A0-jour-de-la-plateforme-de-donn%C3%A9es-polluscope">ici</a> parmis les annexes <br>
+<img src="ghlogo.jpg" heigh="220" width="220"> <br>
+Comme évoqué dans la partie précédente, l'ensemble des données recueillies lors des campagnes de recensement sont stockées sur une base de données <und>PostgreSQL</und> appartenant au laboratoire. Afin de ne pas endommager, effacer ou modifier ces données lors du développement de la nouvelle version de la plateforme Polluscope, j'ai installé ce même système de gestion de base de données sur mon ordinateur personnel. Celle-ci a été utilisée pendant toute la durée de la création du nouveau site web du projet. <br>
+<img src="pglogo.jpg" heigh="220" width="220"> <br>
+Tel que spécifié dans le sujet du stage, la plateforme Polluscope doit fonctionner avec le langage <und>Python</und>. Par conséquent, il a été nécessaire d'utiliser le framework <und>Flask</und>. Celui-ci permet le déploiement d'une application web sur un ordinateur en ayant seulement recours au langage Python et ne nécessite pas l'utilisation de logiciels d'hébergement de site internet tel que Apache pour fonctionner. <br>
+<img src="pflogo.jpg" heigh="220" width="220"> <br>
+Aussi, pour faciliter le déploiement de l'application sur le serveur du laboratoire, l'équipe a exigé que l'acquisition des packages nécessaires et la mises en marche de la plateforme se fasse par l'utilisation de la technologie <und>Docker</und>. Cela permet de faire fonctionner le site internet sans avoir à installer les paquets de façon définitive sur le serveur et donc d'économiser de l'espace sur le disque dur de celui-ci. <br>
+<img src="docklogo.jpg" heigh="220" width="220"></p>
+<div style="page-break-after: always"></div>
+<h2 id="orangeiie-m%C3%A9thodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange"><orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange></h2>
+<p>Comme évoquer auparavant ma première tâche à été de créer un programme générant automatiquement des rapports en <und>Markdown</und> avant de les convertir au format PDF. Étant déjà familiarisée avec ce premier je n'ai pas eu besoin d'apprendre la structure d'un fichier Markdown. En revanche, il a été nécessaire que je trouve des fonctions en Python permettant l'exportation du fichier au format souhaité.</p>
+<p>Dans le cadre de la refactorisation de la plateforme Polluscope, je n'avais jusqu'alors jamais créé de site internet avec le framework Flask. Il a donc été nécessaire que j'apprenne et comprenne son fonctionnement avant de commencer à produire le code de la plateforme. Sachant cela et étant donnée que mes seules contraintes étaient l'utilisation d'un langage spécifique et l'achèvement de ce travail avant la fin du stage, j'ai utilisé une méthode de travail semblable à la méthode agile. Cela signifie les membres de l'équipe encadrant mon travail me demandaient régulièrement des retours sur l'avancée de mon travail en me suggérant des modifications ou des améliorations. Par exemple, cette méthode m'a permis de recevoir les retours de mes encadrants concernant une méthode de vérification d'insertion de données que j'avais créé et qui nécessitait des modification (voir <a href="#violet%C3%A9tape-8--v%C3%A9rifier-si-les-donn%C3%A9es-ins%C3%A9r%C3%A9e-par-le-client-sont-d%C3%A9j%C3%A0-dans-la-base-de-donn%C3%A9esviolet">Étape 8 du développement de la plateforme</a>). <br>
+J'ai donc débuté mon travail de développement en contruisant des pages simples et en ajoutant des fonctionnalités au fur et à mesure de mon apprentissage. Toutefois, ayant déjà travaillé avec le langage Python, créer des applications web et étant désireux d'apprendre à utiliser de nouvelles technologies et préparé à cette éventualité, cette tâche s'est avéré être passionnante.</p>
+<p>Une autre partie de mon travail a été de déployer la plateforme de données Polluscope sur le serveur du laboratoire en utilisant la technologie <strong>Docker</strong>. Pour comprendre son fonctionnement, j'ai eu recours aux lien présents en <a href="#sitographie">sitographie</a> et j'ai été aidé par TAHER Yehia. J'ai également eu recours à ma machine virtuelle et à ma clé bootable, toutes deux sous Linux, pour tester le fonctionnement des conteneurs ainsi créés.</p>
+<p>On peut constater que la plupart des tâches qui m'ont été confiée nécessite l'utilisation de technologies nouvelles ou peu utilisées. Toutefois, ma formation à l'IUT étant axée sur la pratique de la programmation par le développement et la recherche de documentation, l'utilisation de nouveaux langages ou de technologies de programmation spécifiques ne m'a pas posé de difficultés.</p>
+<h2 id="orangeiif-r%C3%A9sultatsorange"><orange>II.F Résultats</orange></h2>
+<p>Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail. \</p>
+<div style="page-break-after: always"></div>
+<h1 id="annexes">Annexes</h1>
+<p><a href="#code-211--fichier-templatesindexhtml"><strong>Code 2.1.1 :</strong> fichier <code>templates/index.html</code></a></p>
+<p><a href="#code-212--fichier-apppy"><strong>Code 2.1.2 :</strong> fichier <code>app.py</code></a></p>
+<p><a href="#code-221--fichier-templatesindexhtml-avec-un-formulaire"><strong>Code 2.2.1 :</strong> fichier <code>templates/index.html</code> avec un formulaire</a></p>
+<p><a href="#code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post"><strong>Code 2.2.2 :</strong> fichier <code>app.py</code> permettant de recevoir des éléments avec la méthode POST</a></p>
+<p><a href="#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel"><strong>Code 2.3.1 :</strong> fichier <code>templates/index.html</code> avec un affichage conditionnel</a></p>
+<p><a href="#code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post"><strong>Code 2.3.2 :</strong> fichier <code>app.py</code> avec passage de paramètre par le dictionnaire <code>post</code></a></p>
+<p><a href="#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2"><strong>Code 2.4.1 :</strong> fichier <code>index.html</code> avec un lien vers la page comportant l'URL <code>page2</code></a></p>
+<p><a href="#code-242--fichier-page2html-accessible-par-un-lien"><strong>Code 2.4.2 :</strong> fichier <code>page2.html</code> accessible par un lien</a></p>
+<p><a href="#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html"><strong>Code 2.4.3 :</strong> fichier <code>app.py</code> avec la fonction <code>page2</code> permettant l'affichage de la page correspondant au fichier <code>page2.html</code></a></p>
+<p><a href="#code-2611--fichier-indexhtml"><strong>Code 2.6.1.1 :</strong> fichier <code>index.html</code></a></p>
+<p><a href="#code-2612--fichier-apppy"><strong>Code 2.6.1.2 :</strong> fichier <code>app.py</code></a></p>
+<p><a href="#code-2621--fichier-apppy-avec-les-%C3%A9l%C3%A9ments-pour-emp%C3%AAcher-une-injection-sql"><strong>Code 2.6.2.1 :</strong> fichier <code>app.py</code> avec les éléments pour empêcher une injection SQL</a></p>
+<p><a href="#sch%C3%A9ma-1--structure-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Schéma 1 :</strong> Structure de la plateforme de données Polluscope</a></p>
+<p><a href="#journal-1--historique-des-impl%C3%A9mentations-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Journal 1 :</strong> Historique des implémentation de la plateforme de données Polluscope</a></p>
+<div style="page-break-after: always"></div>
+<h3 id="code-211--fichier-templatesindexhtml"><strong>Code 2.1.1 :</strong> fichier <code>templates/index.html</code></h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-212--fichier-apppy"><strong>Code 2.1.2 :</strong> fichier <code>app.py</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/")</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<div style="page-break-after: always"></div>
+<h3 id="code-221--fichier-templatesindexhtml-avec-un-formulaire"><strong>Code 2.2.1 :</strong> fichier <code>templates/index.html</code> avec un formulaire</h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span> #1
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"text"</span>&gt;</span> #2
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"submit"</span>&gt;</span> #3
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-222--fichier-apppy-permettant-de-recevoir-des-%C3%A9l%C3%A9ments-avec-la-m%C3%A9thode-post"><strong>Code 2.2.2 :</strong> fichier <code>app.py</code> permettant de recevoir des éléments avec la méthode POST</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/", methods=("GET", "POST")) #1</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">"POST"</span>: <span class="hljs-comment">#3</span>
+        text = request.form[<span class="hljs-string">"text"</span>] <span class="hljs-comment">#2</span>
+        print(text)
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<div style="page-break-after: always"></div>
+<h3 id="code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel"><strong>Code 2.3.1 :</strong> fichier <code>templates/index.html</code> avec un affichage conditionnel</h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"text"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+        {% block content %}
+
+        {% if posts['text'] %} #1
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Texte entré : {{posts['text']}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> #2
+        {% endif %}
+
+        {% endblock %}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-232--fichier-apppy-avec-passage-de-param%C3%A8tre-par-le-dictionnaire-post"><strong>Code 2.3.2 :</strong> fichier <code>app.py</code> avec passage de paramètre par le dictionnaire <code>post</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/", methods=("GET", "POST"))</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    post = {} <span class="hljs-comment">#1</span>
+    post[<span class="hljs-string">'text'</span>] = <span class="hljs-literal">None</span> <span class="hljs-comment">#3</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">"POST"</span>:
+        text = request.form[<span class="hljs-string">"text"</span>]
+        post[<span class="hljs-string">"text"</span>] = text <span class="hljs-comment">#2</span>
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>, posts = post) <span class="hljs-comment">#4</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<div style="page-break-after: always"></div>
+<h3 id="code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2"><strong>Code 2.4.1 :</strong> fichier <code>index.html</code> avec un lien vers la page comportant l'URL <code>page2</code></h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Ceci est la première page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ url_for('page2') }}"</span>&gt;</span> #1
+                lien vers la deuxième
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-242--fichier-page2html-accessible-par-un-lien"><strong>Code 2.4.2 :</strong> fichier <code>page2.html</code> accessible par un lien</h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Ceci est la deuxième page<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html"><strong>Code 2.4.3 :</strong> fichier <code>app.py</code> avec la fonction <code>page2</code> permettant l'affichage de la page du fichier <code>page2.html</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/")</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>)
+
+<span class="hljs-meta">@app.route("/page2") #2</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">page2</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment">#1</span>
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"page2.html"</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<div style="page-break-after: always"></div>
+<h3 id="code-2611--fichier-indexhtml"><strong>Code 2.6.1.1 :</strong> fichier <code>index.html</code></h3>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Test<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">""</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Entrez l'id d'une personne : <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"text"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+        {% block content %}
+
+        {% for n in posts['name'] %}
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{n}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        {% endfor %}
+
+        {% endblock %}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</div></code></pre>
+<h3 id="code-2612--fichier-apppy"><strong>Code 2.6.1.2 :</strong> fichier <code>app.py</code></h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> psycopg2
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/", methods=("GET", "POST"))</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    post = {}
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">"POST"</span>: <span class="hljs-comment">#2</span>
+        conn = psycopg2.connect(database=<span class="hljs-string">"X"</span>, user=<span class="hljs-string">"X"</span>, password=<span class="hljs-string">"X"</span>, host=<span class="hljs-string">"X"</span>) <span class="hljs-comment">#1</span>
+        input = request.form[<span class="hljs-string">"text"</span>]
+        query = <span class="hljs-string">"select nom from personnes where id="</span>+input <span class="hljs-comment">#3</span>
+        cur = conn.cursor()
+        cur.execute(query) <span class="hljs-comment">#4</span>
+        out = []
+        <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> cur:
+            out.append(row) <span class="hljs-comment">#5</span>
+        post[<span class="hljs-string">'name'</span>] = out
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>, posts=post) <span class="hljs-comment">#6</span>
+    
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<h3 id="code-2621--fichier-apppy-avec-les-%C3%A9l%C3%A9ments-pour-emp%C3%AAcher-une-injection-sql"><strong>Code 2.6.2.1 :</strong> fichier <code>app.py</code> avec les éléments pour empêcher une injection SQL</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> psycopg2
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> *
+
+app = Flask(__name__)
+
+<span class="hljs-meta">@app.route("/", methods=("GET", "POST"))</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    post = {}
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">"POST"</span>:
+        conn = psycopg2.connect(database=<span class="hljs-string">"X"</span>, user=<span class="hljs-string">"X"</span>, password=<span class="hljs-string">"X"</span>, host=<span class="hljs-string">"X"</span>)
+        input = request.form[<span class="hljs-string">"text"</span>]
+        query = <span class="hljs-string">"select nom from personnes where id="</span>+str(input).replace(<span class="hljs-string">"or"</span>, <span class="hljs-string">""</span>) <span class="hljs-comment">#1</span>
+        print(query)
+        cur = conn.cursor()
+        cur.execute(query)
+        out = []
+        <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> cur:
+            out.append(row)
+        post[<span class="hljs-string">'name'</span>] = out
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">"index.html"</span>, posts=post)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span> :
+    app.run()
+</div></code></pre>
+<div style="page-break-after: always"></div>
+<h2 id="sch%C3%A9ma-1--structure-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Schéma 1 :</strong> Structure de la plateforme de données Polluscope</h2>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<img class="resize" src="schemasite.jpg" heigh="11974" width="5412" style="transform:rotate(90deg);"></p>
+<div style="page-break-after: always"></div>
+<h2 id="journal-1--historique-des-impl%C3%A9mentations-de-la-plateforme-de-donn%C3%A9es-polluscope"><strong>Journal 1 :</strong> Historique des implémentations de la plateforme de données Polluscope</h2>
+<p>commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>:
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:26:44 2022 +0200</p>
+<pre><code>UPDATES :
+Add the file ```wsgi.py```. That's useful to deploy the web application.
+</code></pre>
+<p>:...skipping...
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:26:44 2022 +0200</p>
+<pre><code>UPDATES :
+Add the file ```wsgi.py```. That's useful to deploy the web application.
+</code></pre>
+<p>commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri May 20 10:11:10 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>:...skipping...
+HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:26:44 2022 +0200</p>
+<pre><code>UPDATES :
+Add the file ```wsgi.py```. That's useful to deploy the web application.
+</code></pre>
+<p>commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri May 20 10:11:10 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
+:...skipping...
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -&gt; main, origin/main, origin/HEAD)
+Merge: f3a5b2d 28e4205
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:27:08 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 20 10:26:44 2022 +0200</p>
+<pre><code>UPDATES :
+Add the file ```wsgi.py```. That's useful to deploy the web application.
+</code></pre>
+<p>commit 28e420507fdfa44d4808a46c79ef690944f52c10
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri May 20 10:11:10 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 19 15:00:40 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit b58b634d18e0ed949765b3ff499b213e557a3fe7
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 19 14:18:20 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 1bb6eeee81813aff19ccc57bbd40db0980a0cac6
+Merge: 978274e 9de06f3
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Thu May 19 14:14:55 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit 978274e53bb1d50ad87712283036093ad37b244c
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Thu May 19 14:14:25 2022 +0200</p>
+<pre><code>UPDATES :
+Minor problem correction.
+</code></pre>
+<p>commit 9de06f34c6e752da12d3bbd8f82b68a80926b030
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 19 12:01:37 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit d14f5815377b4706eea4ed32122d3f1cbc145e98
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 19 12:01:12 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit a5ae3af39471c6a13e2b611784954c650eb0250e
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Wed May 18 17:28:27 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 932ea94e03c32135beff9a6d30064cec52956768
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Wed May 18 12:51:57 2022 +0000</p>
+<pre><code>Delete requirement.txt
+</code></pre>
+<p>commit 734a3bf7c37a9c0125bbe0fb3eb0d0fb93bcbcd2
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Wed May 18 12:51:44 2022 +0000</p>
+<pre><code>Delete DockerFile
+</code></pre>
+<p>commit d2caa193d0557e089b6b0b2387a1a7321e4bfe5f
+Merge: 178435e e65c939
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Wed May 18 12:47:24 2022 +0000</p>
+<pre><code>Merge pull request #1 from yureiiko/docker
+
+Add files via upload
+</code></pre>
+<p>commit e65c939ba16b0f2a59f37636195406f7c989f4e6
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Wed May 18 12:46:54 2022 +0000</p>
+<pre><code>Add files via upload
+
+First version of docker.
+Not complete.
+</code></pre>
+<p>commit 178435ef86259261af418fc2119bdcc03fb7b2e1
+Merge: 15c275d 577f917
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Mon May 16 11:13:26 2022 +0200</p>
+<pre><code>Merge remote-tracking branch 'origin/main'
+</code></pre>
+<p>commit 15c275dec590bf56b413dc5be79421407b5da889
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Mon May 16 11:11:51 2022 +0200</p>
+<pre><code>UPDATES :
+Addition of the page ```canarinFidas.html```. This page isn't working.
+Modifiation of all page's header.
+</code></pre>
+<p>commit 577f9173e9e3239bcead009c5e3de49c9ad0e87a
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri May 13 11:35:56 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit b844daeeb08c43e040fcb228dca7be77ee90e489
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 13 11:33:46 2022 +0200</p>
+<pre><code>UPDATES :
+Addition of the fonctional page ```uploadFidas.html```
+</code></pre>
+<p>commit ee638a00b0615215f5cf793a6cf9e90a1c6b6a1d
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 12 11:42:02 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit e86f45c37cc002c5ec3f30d0953f249f89075e57
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Thu May 12 11:41:25 2022 +0200</p>
+<pre><code>UPDATES :
+Addition of the fonctional page ```uploadTeom.html```
+</code></pre>
+<p>commit c04c95fbcf3d06a4823708ee6d749374a798933b
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Tue May 10 11:32:28 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit e71c28c67f4d31cf1507ca4e273f88851ae97b92
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Tue May 10 11:31:08 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit b413aa08ddfb8e8915b53eb73f5fe3dd868d4202
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Tue May 10 11:15:05 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 347520624453265a36c182d4cb4c7cc9f46e3485
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Tue May 10 11:14:08 2022 +0200</p>
+<pre><code>UPDATES :
+Addition of the fonctional page ```downloadKitData.html```
+</code></pre>
+<p>commit b2555dddc115cbfcc3c86acac32510eacd555524
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 9 16:22:18 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 21589f36cc7404e8475d3f9a31eecab22cbc6b4e
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Mon May 9 16:21:14 2022 +0200</p>
+<pre><code>UPDATES :
+Addition of the fonctional page ```downloadCampaignData.html```
+</code></pre>
+<p>commit a75faaf2c57ce109ddb39399e181d947db841840
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 9 14:58:01 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 821a6e42cf7e0cdce3bf7b82c0657660b1d716f7
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri May 6 16:41:28 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit d2e4e88e4dbb892c003c7fd4d39d6c9f13da9d55
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 6 16:39:56 2022 +0200</p>
+<pre><code>UPDATES :
+It's nom possible to use the ```downloadAssignedData.html``` page.
+</code></pre>
+<p>commit c9ae60910febb3e647440caeceb4ad4dabc867b8
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Fri May 6 12:32:46 2022 +0200</p>
+<pre><code>UPDATES :
+Minor modifications to fix errors.
+</code></pre>
+<p>commit de5fc91cd81a80a06dce367c17432e0a74b67bec
+Author: yureiiko <a href="mailto:pierrefcz@gmail.com">pierrefcz@gmail.com</a>
+Date:   Thu May 5 12:01:50 2022 +0200</p>
+<pre><code>UPDATES :
+Modifications on ```downloadAssignedData.html```.
+</code></pre>
+<p>commit 030f6f5afcd0cdc65f96680ed0232f605289f6dd
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 5 11:37:47 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 4cf594f5affb2fd1d0cb88946a51247ddfbd55a7
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 5 11:10:43 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 2ba62dca514a828a5a305842a525cf2c1d74c8c2
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 5 11:08:26 2022 +0200</p>
+<pre><code>Add files via upload
+</code></pre>
+<p>commit adbc5a91d2e59bc65d065d01819f44ed78e2e128
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Thu May 5 11:06:52 2022 +0200</p>
+<pre><code>Add files via upload
+
+UPDATE :
+The way to check if a row was already inserted change. Now the program check in fonction of the device's id and of the date.
+It's now possible to upload aethalometer, actris, report and to check the history of report uploading.
+</code></pre>
+<p>commit 572ca0e80cb7298128d506449200db9abe14d504
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:35:04 2022 +0200</p>
+<pre><code>Add files via upload
+</code></pre>
+<p>commit 2e847c0528d27a356fea61d06dd840f416458fa0
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:34:31 2022 +0200</p>
+<pre><code>Add files via upload
+</code></pre>
+<p>commit a285b3017d2d1c538e0f4f289d1df3764f897a93
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:33:21 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 9d434b36975f26a4f1e09b07f1c4f890891a6843
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:32:07 2022 +0200</p>
+<pre><code>Add files via upload
+
+UPDATE
+It's now possible to load reports, tablet's activity and tablet's events. All history for this loads can be seen by an admin.
+</code></pre>
+<p>commit e9d4405f6b1bd582b243782e4e6edcfef356ec78
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:29:30 2022 +0200</p>
+<pre><code>Add files via upload
+</code></pre>
+<p>commit 885e53518d98a412b0d9a1829428c00fcbcf7718
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 16:28:20 2022 +0200</p>
+<pre><code>Add files via upload
+
+Update
+new data folders
+</code></pre>
+<p>commit 9d17074065e3ad05fa1bf50717637f298ddf3766
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 14:33:13 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit bc5dcfdadab917203a61ca6b3e428535079f9cc1
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 14:32:55 2022 +0200</p>
+<pre><code>Delete scriptPython directory
+</code></pre>
+<p>commit c1436feacb570ad9e3b3a22917722c6cb4a62bfa
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Mon May 2 14:21:26 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit 999905ac6ff31a5778cb79f412018484bdbd1ed5
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri Apr 29 17:37:54 2022 +0200</p>
+<pre><code>Update README.md
+</code></pre>
+<p>commit f8759e0e11e6e561271cca86eb392cbd389b18bf
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri Apr 29 17:37:29 2022 +0200</p>
+<pre><code>Create README.md
+</code></pre>
+<p>commit 310e40980ea4cc5bb0b0358d21f631ca0221573f
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Fri Apr 29 17:33:44 2022 +0200</p>
+<pre><code>Add files via upload
+
+Updates
+Kits can be created.
+It's now possible to create link between campaign, participant and kit. When we associate a kit to a participant the old kit association is erased.
+The device id seeking is now based on this link.
+It's also possible to see the history of file uploading.
+</code></pre>
+<p>commit 58d107b8f3dfc7bfc778d2aa3390df5f23852a5d
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Tue Apr 26 16:42:52 2022 +0200</p>
+<pre><code>Add files via upload
+
+New functionnalities
+It's possible to add a user, a participant and to upload gps tablet files.
+</code></pre>
+<p>commit 1786bb3707a3c428d0e0e40a0f9cf3e3c9d7c5c4
+Author: yureiiko <a href="mailto:101016323+yureiiko@users.noreply.github.com">101016323+yureiiko@users.noreply.github.com</a>
+Date:   Sun Apr 24 20:58:14 2022 +0200</p>
+<pre><code>Add files via upload
+
+First Commit
+It's possible for the user to upload Diams, Cairsens and AE51 measures. The administrator can download uploaded files.
+</code></pre>
+<div style="page-break-after: always"></div>
+<h1 id="sitographie">Sitographie</h1>
+<p>Site Internet du laboratoire DAVID : <a href="https://www.david.uvsq.fr/accueil/">https://www.david.uvsq.fr/accueil/</a></p>
+<p>Site de présentation du projet Polluscope : <a href="http://polluscope.uvsq.fr/index.php/fr/">http://polluscope.uvsq.fr/index.php/fr/</a></p>
+<p>Dépot Github de la plateforme Polluscope : <a href="https://github.com/yureiiko/pollu.git">https://github.com/yureiiko/pollu.git</a> (pour des questions de confidentialité, ce dépôt est privé)</p>
+<p>Dépôt Github du rapport de stage : <a href="https://github.com/yureiiko/david_internship_report.git">https://github.com/yureiiko/david_internship_report.git</a> (ce dépôt deviendra privé après la soutenance de stage)</p>
+<p>Liens utilisés pour l'apprentisage de <strong>Python Flask</strong> :</p>
+<ul>
+<li>&lt;<a href="https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3">https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3</a></li>
+<li><a href="https://pypi.org/project/Flask/">https://pypi.org/project/Flask/</a></li>
+<li><a href="https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask">https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask</a></li>
+<li><a href="https://sysadmin.cyklodev.com/deployer-une-application-flask/">https://sysadmin.cyklodev.com/deployer-une-application-flask/</a></li>
+</ul>
+<p>Liens utilisés pour l'apprentissage de la technologie <strong>Docker</strong> :</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04">https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04</a></li>
+<li><a href="https://www.youtube.com/watch?v=SXB6KJ4u5vg">https://www.youtube.com/watch?v=SXB6KJ4u5vg</a></li>
+<li><a href="https://www.youtube.com/watch?v=cWkmqZPWwiw">https://www.youtube.com/watch?v=cWkmqZPWwiw</a></li>
+<li><a href="https://linuxhint.com/install_docker_kali_linux/">https://linuxhint.com/install_docker_kali_linux/</a></li>
+</ul>
+<h1 id="bibliographie">Bibliographie</h1>
+<ul>
+<li>Évaluation HCERES DAVID UVSQ 25 Mai 2018</li>
+</ul>
+<style>
+    und { text-decoration: underline; }
+    red { color: red; }
+    orange { color: orange; }
+    violet { color: #951986 }
+    body {
+        font-size: 12px;
+    }
+    img.resize {
+        max-width:100%;
+        max-height:100%;
+    }
+    img.down {
+        max-width:50%;
+        max-height:50%;
+    }
+</style>
+</body>
+</html>
