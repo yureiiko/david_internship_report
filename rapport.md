@@ -1149,6 +1149,7 @@ Liens utilisés pour l'apprentissage de la technologie **Docker** :
 - <https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04>
 - <https://www.youtube.com/watch?v=SXB6KJ4u5vg>
 - <https://www.youtube.com/watch?v=cWkmqZPWwiw>
+- <https://linuxhint.com/install_docker_kali_linux/>
 
  # Bibliographie
 
