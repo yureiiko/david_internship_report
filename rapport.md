@@ -1149,6 +1149,9 @@ Liens utilisés pour l'apprentissage de la technologie **Docker** :
 - <https://www.youtube.com/watch?v=cWkmqZPWwiw>
 - <https://linuxhint.com/install_docker_kali_linux/>
 
+Autre lien utilisés dans la refactorisation de la plateforme Polluscope :
+- <https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/>
+
  # Bibliographie
 
  - Évaluation HCERES DAVID UVSQ 25 Mai 2018
