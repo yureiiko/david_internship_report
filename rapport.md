@@ -32,7 +32,9 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
   - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange)
   - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange)
   - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange)
+- [<red>Conclusion</red>](#redconclusionred)
 - [Annexes](#annexes)
+    - [**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david)
     - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml)
     - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy)
     - [**Code 2.2.1 :** fichier ```templates/index.html``` avec un formulaire](#code-221--fichier-templatesindexhtml-avec-un-formulaire)
@@ -46,7 +48,9 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
     - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy)
     - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)
   - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope)
+  - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope)
   - [**Journal 1 :** Historique des implémentations de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope)
+- [Glossaire](#glossaire)
 - [Sitographie](#sitographie)
 - [Bibliographie](#bibliographie)
 
@@ -77,7 +81,7 @@ Dans cette partie, nous allons voir une présentation générale du laboratoire 
 
 <img src="logoDavid.jpg" heigh="220" width="230">
 
-Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans le bâtiment Descartes du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algoritmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée infrastructures intelligentes.
+Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans les bâtiments Descartes et ... du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algoritmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée d'infrastructures autonomes et intelligentes.
 
 <img src="campus.png" heigh="220" width="230">
 
@@ -85,10 +89,12 @@ Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines
 
 Le laboratoire regroupe 60 chercheurs et doctorants spécialisés dans la recherche en informatique et plus particulièrement dans les domaines du big data, de la sécurité des données, de l'algorithmique, des réseaux de télécommunication et travail en interdisciplinarité avec la fédération **SIHS** (Sciences Informatiques, Humaines et Sociales) du CNRS dans l'objectif de concevoir une ville durable et intelligente. \
 La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projet en cours et du coût de ceux-ci. Dans le cas du projet de recherche Polluscope (voir [Présentation du projet](#orangeiia-présentation-du-projetorange)), celui-ci à généré une aide financière de 172 721 € provenant de l'État et des financements 694 988 € provenant des partenaires du laboratoire dans le cadre du projet.
+La majorité des produits du laboratoire sont les publication scientifiques liées aux projets de recherches menés par les différentes équipes.
 
 ## <orange>I.C Structure de l'organisme d'accueil</orange>
 
-La direction du laboratoire est assurée par le professeur **BARTH Dominique**, **KEDAD Zoubida** et **DUCOIN Chantal** ayant respectivement les postes de directeur du laboratoire, directrice adjointe et responsable administrative. La gestion des équipes de recherches du laboratoire est répartie entre **BARTH Dominique** pour l'équipe **ALMOST**, **ANCIAUX Nicolas** pour l'équipe **PETRUS** et **ZEITOUNI Karine** pour l'équipe **ADAM**. L'équipe **NGN** récemment rattachée au laboratoire est quant à elle dirigée par **AITSAADI Nadjib**.
+La direction du laboratoire est assurée par le professeur **BARTH Dominique**, **KEDAD Zoubida** et **DUCOIN Chantal** ayant respectivement les postes de directeur du laboratoire, directrice adjointe et responsable administrative. La gestion des équipes de recherches du laboratoire est répartie entre **BARTH Dominique** pour l'équipe **ALMOST**, **ANCIAUX Nicolas** pour l'équipe **PETRUS** et **ZEITOUNI Karine** pour l'équipe **ADAM**. \
+L'organigramme du laboratoire est diponible en [annexe](#annexes) et provient du site internet de ce dernier (voir [sitographie](#sitographie)).
 
 <div style="page-break-after: always"></div>
 
@@ -104,9 +110,7 @@ Elle fait parti des membres permanents de l'équipe au même titre **TAHER Yehia
 
 Au sein de l'équipe, se trouvent également des étudiants doctorant ou post doctorant dont **BOUHAMOUM Redouane** un autre professeur de l'IUT de Vélizy. Par ailleurs, pendant la période de mon stage, deux membres du groupe de doctorants, **EL HAFYANI Hafsa** et **ZUO Jingwei**, ont soutenu leurs thèses devant un jury et obtenu le titre de Docteur en informatique. Quand le sujet de thèse est attribué à l'étudiant préparant un doctorat, il rejoint un des projets dont l'équipe est en charge. Celui-ci dépend du sujet de la thèse, de sa compatibilité avec celle-ci, et ce que l'étudiant peut apporter au projet avec ses travaux de recherche.
 
-Aussi, dans le cadre de certains projet ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs étude. J'ai fait parti de cette catégorie en rejoignant le laboratoire, au même titre que **BADRA Riham**, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique.
-
-Étant donnée que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.
+Aussi, dans le cadre de certains projet ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs étude. J'ai fait parti de cette catégorie en rejoignant le laboratoire, au même titre que **BADRA Riham**, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique. Étant donnée que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.
 
 <div style="page-break-after: always"></div>
 
@@ -168,11 +172,10 @@ Dans certaines conditions, des stations fixes sont utilisées pour mesurer la po
 
 ## <orange>II.B Description du travail réalisé</orange>
 
-Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
-Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme en utilisant la technologie Docker. \
-La dernière partie de mon travail sera de <und>créer une application mobile</und> selon un modèle similaire à celui du site internet évoqué précédemment.
+Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
+Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
 
-Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de connaître mon exposition à la pollution au cours d'une journée de stage.
+Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de recenser mon exposition à la pollution au cours d'une journée de stage et de l'intégrer aux données du projet de recherche.
 
 <div style="page-break-after: always"></div>
 
@@ -184,7 +187,7 @@ Dans cette partie, les références aux portions code présents en annexes sont 
 
 ### <violet>Étape 1 : Comprendre la structure de la plateforme</violet>
 
-Étant donné qu'une première version de la plateforme à été créée en PHP par **TAHER Yehia** et **Ahmad Ktaish**, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créer un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles_ci.
+Étant donné qu'une première version de la plateforme à été créée en PHP par **TAHER Yehia** et **Ahmad Ktaish**, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créer un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles_ci. Ici le terme de structure est utilisé pour évoquer le comportement de la plateforme en fonction des actions de l'utilisateur et des pages sur lesquelles elles sont réalisées.
 
 <img src="schemasite.jpg"> \
 **Schéma 1 :** Structure de la plateforme de donnée Polluscope
@@ -427,11 +430,23 @@ On peut constater que la plupart des tâches qui m'ont été confiée nécessite
 
 ## <orange>II.F Résultats</orange>
 
-Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail ce qui m'a permis d'entamer très vite la refactorisation de la plateforme Polluscope.
+Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail ce qui m'a permis d'entamer très vite la refactorisation de la plateforme Polluscope. \
+Cela a constitué la partie la plus importante de mon travail et également la plus longue. La refactorisation de la plateforme ainsi que l'ajout des pages permettant le chargement des données des nouveaux capteurs a commencé le 11 avril, au début de la deuxième semaine de stage, et s'est terminé le 20 mai. La création des fichiers permettant le fonctionnement d'une image Docker hébergeant la plateforme a nécessité deux jours de travail durant la semaine de l'Ascension. \
+Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai été absent pendant cinq jours durant le stage. J'ai donc eu la permission de prolonger mon stage d'une semaine. Cela m'a permis de participer au déploiement de la plateforme Polluscope sur le serveur du laboratoire et d'insérer les données de pollution de la campagne qui venait de débuter.
+
+<div style="page-break-after: always"></div>
+
+# <red>Conclusion</red>
+
+Mon choix de stage en entreprise s'est porté sur l'offre proposée par ZEITOUNI Karine car l'utilisation de technologies ou de langages peu connus dans le domaine de l'informatique faisait partie intégrante du sujet du stage et du travail à réaliser durant celui-ci. J'y ai vu une opportunité pour continuer d'acquérir des compétences en informatique tout en participant à un projet de recherche. Il s'agit d'une opportunité dont je n'aurais peu être pas bénéficié dans une autre entreprise. \
+L'apprentissage de nouvelles technologie a rajouté une difficulé au travail a réalisé car il fallu que je me forme a leurs utilisations. Toutefois, étant avide d'acquérir de nouvelles connaissances et compétences, cette tâche ne m'a pas posé de grandes difficultés et s'est avérée être passionnante. \
+Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution.
 
 <div style="page-break-after: always"></div>
 
 # Annexes
+
+[**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david)
 
 [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml)
 
@@ -462,6 +477,10 @@ Concernant le programme de génération automatique de rapport, celui-ci a pu ê
 [**Journal 1 :** Historique des implémentation de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope)
 
 <div style="page-break-after: always"></div>
+
+### **Organigramme 1 :** Organigramme du laboratoire DAVID
+
+![](organigramme.jpg)
 
 ### **Code 2.1.1 :** fichier ```templates/index.html```
 ```html
@@ -709,6 +728,52 @@ if __name__ == "__main__" :
 ## **Schéma 1 :** Structure de la plateforme de données Polluscope
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <img class="resize" src="schemasite.jpg" heigh="11974" width="5412" style="transform:rotate(90deg);">
+
+<div style="page-break-after: always"></div>
+
+## **Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope
+
+    # Polluscope
+
+    The code in the main branch can be used on any device with python3 and all packages installed.
+
+    **Required Packages :**
+    - flask
+    - flask_session
+    - pathlib
+    - pandas
+    - werkzeug.utils
+    - datetime
+    - pyscopg2
+    - configparser
+    - gunicorn
+
+    It's important to modifie lines in the file ```database.ini``` to make possible a connection to your own PostgreSQL database. SQL queries in the file ```creation.sql``` will create all necessary tables in your data base. Use queries in ```delete.sql``` to erase all tables and in ```insert_basic.sql``` to create an admin user for the platform.
+
+    Before launch the application for the first time, be sure that all data repositories in ```data``` folder are empty. Before launch the app check the ```data``` repository contains all repositories in the following list and create them else :
+    - actris
+    - ae51
+    - aethalometer
+    - cairsens
+    - canarin
+    - diams
+    - flow
+    - report
+    - tablet_activity
+    - tablet_event
+    - tablet_gps
+    - teom
+
+    To launch the web application on the computer in development mod you have to run the python file ```app.py```.
+
+    To launch the web application on a server for deployement, you have to use the command ```gunicorn --bind 0.0.0.0:5000 app:app```
+
+    **Unfonctional pages :**
+    - canarinTeom
+    - canarinFidas
+    - cairsensActris
+    - ae51Aethalometer
+
 
 <div style="page-break-after: always"></div>
 
@@ -1127,6 +1192,18 @@ Date:   Sun Apr 24 20:58:14 2022 +0200
 
 <div style="page-break-after: always"></div>
 
+# Glossaire
+
+**Déploiement :** Installation des composants d'une ou plusieurs applications dans un environnement de production.
+
+**Plateforme (informatique) :** Environnement servant d'interface pour l'utilisation ou la gestion de services.
+
+**Injection SQL :** Type d'attaque sur une application reliée à une base de données permettant à l'attaquant d'insérer et d'exécuter des commande SQL.
+
+**SQLi :** Faille de sécurité permettant l'injection de commandes SQL.
+
+<div style="page-break-after: always"></div>
+
 # Sitographie
 
 Site Internet du laboratoire DAVID : <https://www.david.uvsq.fr/accueil/>
@@ -1142,6 +1219,7 @@ Liens utilisés pour l'apprentisage de **Python Flask** :
 - <https://pypi.org/project/Flask/>
 - <https://openclassrooms.com/fr/courses/4425066-concevez-un-site-avec-flask/4525776-installez-flask>
 - <https://sysadmin.cyklodev.com/deployer-une-application-flask/>
+- <https://pythondex.com/convert-gpx-to-csv-python>
 
 Liens utilisés pour l'apprentissage de la technologie **Docker** :
 - <https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-20-04>
@@ -1149,12 +1227,9 @@ Liens utilisés pour l'apprentissage de la technologie **Docker** :
 - <https://www.youtube.com/watch?v=cWkmqZPWwiw>
 - <https://linuxhint.com/install_docker_kali_linux/>
 
-Autre lien utilisés dans la refactorisation de la plateforme Polluscope :
-- <https://techviewleo.com/how-to-install-postgresql-server-on-kali-linux/>
+# Bibliographie
 
- # Bibliographie
-
- - Évaluation HCERES DAVID UVSQ 25 Mai 2018
+- Évaluation HCERES DAVID UVSQ 25 Mai 2018
 
 <style>
     und { text-decoration: underline; }
