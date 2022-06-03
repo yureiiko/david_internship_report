@@ -1,6 +1,6 @@
 # Remerciement
 
-Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés. Je veux également remercier l'ensemble des membres du laboratoire DAVID pour m'avoir accueillit et pour tous les moments que l'on a passé ensemble.
+Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés. Je veux également remercier l'ensemble des membres du laboratoire DAVID pour m'avoir accueilli et pour tous les moments que l'on a passés ensemble.
 
 <div style="page-break-after: always"></div>
 
@@ -29,6 +29,7 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
     - [<violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>](#violetétape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-données-postgresqlviolet)
     - [<violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>](#violetétape-7--sécuriser-les-interactions-avec-la-base-de-donnéesviolet)
     - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)
+    - [<violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>](#violetétape-9--créer-et-ajouter-des-graphes-de-visualisation-des-donnéesviolet)
   - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange)
   - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange)
   - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange)
@@ -58,17 +59,17 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
 
 # Résumé / Summary
 
-Je suis rentré au laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines dans le cadre de mon stage de fin d'étude à l'IUT Informatique de Vélizy. Le stage a pour sujet <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> et s'est déroulé du 4 avril au 27 mai 2022. Durant cette période j'ai participé au projet de recherche Polluscope en créant un programme pour générer des rapports de façon automatique et en refactorisant la plateforme de données du projet en langage Python Flask.
+Je suis rentré au laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines dans le cadre de mon stage de fin d'étude à l'IUT Informatique de Vélizy. Le stage a pour sujet <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> et s'est déroulé du 4 avril au 27 mai 2022. Durant cette période j'ai participé au projet de recherche Polluscope en créant un programme pour générer des rapports de façon automatique et en refactorisant la plateforme de données du projet en langage Python Flask.
 
-I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin-en-Yvellines in the context of my internship of end studies in computer sciences at the IUT of Velizy. The internship subject is <und>Development of loading, pretreatement and visualization interface for data from sensor and of mobile application</und> and took place between April 4th and may 27th of 2022. During this time, I participated to the research project Polluscope by creating a program of auto report generation and by refactoring the project's data platform in the Python Flask language.
+I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin-en-Yvelines in the context of my internship of end studies in computer sciences at the IUT of Velizy. The internship subject is <und>Development of loading, pretreatement and visualization interface for data from sensor and of mobile application</und> and took place between April 4th and may 27th of 2022. During this time, I participated to the research project Polluscope by creating a program of auto report generation and by refactoring the project's data platform in the Python Flask language.
 
 <div style="page-break-after: always"></div>
 
 # Introduction
 
-Le présent rapport a pour fonction de présenter l'entreprise ayant accepté de m'embaucher pour mon stage de fin d'étude en IUT informatique. L'ensemble des éléments de ce rapports sont accessibles via le dépôt Github présent en [sitographie](#sitographie). \
-J'ai été accepté au **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** en répondant à l'offre de stage <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> de l'équipe ADAM. \
-Ce stage a débuter le 4 avril 2022 et a duré deux mois. Ce stage constitue ma première expérience dans le milieu professionnel en tant que membre actif d'une organisation et a pour objectif de valider mes deux ans d'étude à l'IUT informatique de Vélizy et d'obtenir le Diplôme Universitaire de Technologie en Informatique. \
+Le présent rapport a pour fonction de présenter l'entreprise ayant accepté de m'embaucher pour mon stage de fin d'étude en IUT informatique. L'ensemble des éléments de ce rapport sont accessibles via le dépôt Github présent en [sitographie](#sitographie). \
+J'ai été accepté au **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines** en répondant à l'offre de stage <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> de l'équipe ADAM. \
+Ce stage a débuté le 4 avril 2022 et a duré deux mois. Ce stage constitue ma première expérience dans le milieu professionnel en tant que membre actif d'une organisation et a pour objectif de valider mes deux ans d'étude à l'IUT informatique de Vélizy et d'obtenir le Diplôme Universitaire de Technologie en Informatique. \
 Dans un premier temps nous verrons une présentation du laboratoire DAVID de l'UVSQ avant de présenter le travail effectué durant la période de stage puis de finir par une conclusion récapitulant ce que le stage m'a appris et apporté.
 
 <div style="page-break-after: always"></div>
@@ -81,36 +82,36 @@ Dans cette partie, nous allons voir une présentation générale du laboratoire 
 
 <img src="logoDavid.jpg" heigh="220" width="230">
 
-Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvellines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans les bâtiments Descartes et ... du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algoritmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée d'infrastructures autonomes et intelligentes.
+Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans les bâtiments Descartes et ... du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il a été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algorithmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée d'infrastructures autonomes et intelligentes.
 
 <img src="campus.png" heigh="220" width="230">
 
 ## <orange>I.B Présentation juridique de l'organisme d'accueil</orange>
 
 Le laboratoire regroupe 60 chercheurs et doctorants spécialisés dans la recherche en informatique et plus particulièrement dans les domaines du big data, de la sécurité des données, de l'algorithmique, des réseaux de télécommunication et travail en interdisciplinarité avec la fédération **SIHS** (Sciences Informatiques, Humaines et Sociales) du CNRS dans l'objectif de concevoir une ville durable et intelligente. \
-La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projet en cours et du coût de ceux-ci. Dans le cas du projet de recherche Polluscope (voir [Présentation du projet](#orangeiia-présentation-du-projetorange)), celui-ci à généré une aide financière de 172 721 € provenant de l'État et des financements 694 988 € provenant des partenaires du laboratoire dans le cadre du projet.
-La majorité des produits du laboratoire sont les publication scientifiques liées aux projets de recherches menés par les différentes équipes.
+La majorité des ressources financières du laboratoire proviennent de l'État et varient en fonction de la période ou du nombre de projets en cours et du coût de ceux-ci. Dans le cas du projet de recherche Polluscope (voir [Présentation du projet](#orangeiia-présentation-du-projetorange)), celui-ci à généré une aide financière de 172 721 € provenant de l'État et des financements 694 988 € provenant des partenaires du laboratoire dans le cadre du projet.
+La majorité des produits du laboratoire sont les publications scientifiques liées aux projets de recherches menés par les différentes équipes.
 
 ## <orange>I.C Structure de l'organisme d'accueil</orange>
 
 La direction du laboratoire est assurée par le professeur **BARTH Dominique**, **KEDAD Zoubida** et **DUCOIN Chantal** ayant respectivement les postes de directeur du laboratoire, directrice adjointe et responsable administrative. La gestion des équipes de recherches du laboratoire est répartie entre **BARTH Dominique** pour l'équipe **ALMOST**, **ANCIAUX Nicolas** pour l'équipe **PETRUS** et **ZEITOUNI Karine** pour l'équipe **ADAM**. \
-L'organigramme du laboratoire est diponible en [annexe](#annexes) et provient du site internet de ce dernier (voir [sitographie](#sitographie)).
+L'organigramme du laboratoire est disponible en [annexe](#annexes) et provient du site internet de ce dernier (voir [sitographie](#sitographie)).
 
 <div style="page-break-after: always"></div>
 
 ## <orange>I.D Présentation de l'équipe de travail</orange>
 
-Le laboratoire regroupe les équipes de recherches **ALMOST** (Algorithms and Stochastic Models), **PETRUS** (PErsonnal and TRUSted cloud), **NGN** (Next Generation Network) et **ADAM** (Ambient Data Access and Mining) avec laquelle j'ai réalisé le stage. Celles-ci sont majoritairement constituées de chercheurs ou d'étudiants doctorants et on respectivement pour spécialités la résolution algorithmique et l'évaluation de performance, la structure, la gestion et la sécurisation de données personnelles, les réseaux et l'internet des objets et la modélisation de données hétérogènes.
+Le laboratoire regroupe les équipes de recherches **ALMOST** (Algorithms and Stochastic Models), **PETRUS** (PErsonnal and TRUSted cloud), **NGN** (Next Generation Network) et **ADAM** (Ambient Data Access and Mining) avec laquelle j'ai réalisé le stage. Celles-ci sont majoritairement constituées de chercheurs ou d'étudiants doctorants et ont respectivement pour spécialités la résolution algorithmique et l'évaluation de performance, la structure, la gestion et la sécurisation de données personnelles, les réseaux et l'internet des objets et la modélisation de données hétérogènes.
 
 Dans le cadre de mon stage, j'ai travaillé au sein de l'équipe ALMOST sous la direction de **ZEITOUNI Karine**, la cheffe du groupe et également ma tutrice de stage ainsi qu'une des professeurs rencontrées durant mes études à l'IUT informatique de Vélizy.
 
 <img src="kz.jpg" heigh="220" width="220">
 
-Elle fait parti des membres permanents de l'équipe au même titre **TAHER Yehia** (Maître de conférence), **YEH Laurent** (Maître de conférence). J'ai remarqué que parmi les membres permanents de l'équipe ADAM se trouvent **PREDA Nicoleta** et **LOYER Yann**, deux professeurs rencontrés durant mes études à l'IUT informatique de Vélizy.
+Elle fait partie des membres permanents de l'équipe au même titre **TAHER Yehia** (Maître de conférence), **YEH Laurent** (Maître de conférence). J'ai remarqué que parmi les membres permanents de l'équipe ADAM se trouvent **PREDA Nicoleta** et **LOYER Yann**, deux professeurs rencontrés durant mes études à l'IUT informatique de Vélizy.
 
 Au sein de l'équipe, se trouvent également des étudiants doctorant ou post doctorant dont **BOUHAMOUM Redouane** un autre professeur de l'IUT de Vélizy. Par ailleurs, pendant la période de mon stage, deux membres du groupe de doctorants, **EL HAFYANI Hafsa** et **ZUO Jingwei**, ont soutenu leurs thèses devant un jury et obtenu le titre de Docteur en informatique. Quand le sujet de thèse est attribué à l'étudiant préparant un doctorat, il rejoint un des projets dont l'équipe est en charge. Celui-ci dépend du sujet de la thèse, de sa compatibilité avec celle-ci, et ce que l'étudiant peut apporter au projet avec ses travaux de recherche.
 
-Aussi, dans le cadre de certains projet ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs étude. J'ai fait parti de cette catégorie en rejoignant le laboratoire, au même titre que **BADRA Riham**, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique. Étant donnée que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.
+Aussi, dans le cadre de certains projets ou pour des exigences précises, le laboratoire recrute des étudiants devant réaliser des stages en entreprises dans le cadre de leurs études. J'ai fait partie de cette catégorie en rejoignant le laboratoire, au même titre que **BADRA Riham**, une étudiante ayant rejoint l'équipe dans le cadre de son Master en Informatique. Étant donné que le laboratoire est en relation avec des universités à l'échelle mondiale, cela lui permet d'accueillir des étudiants stagiaires et doctorants venus du monde entier.
 
 <div style="page-break-after: always"></div>
 
@@ -120,8 +121,8 @@ Cette partie est entièrement dédiée à la présentation de l'environnement é
 
 ### <violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>
 
-L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont résumée dans la matrice PESTEL ci-dessous. \
-<und>PESTEL :</und> Politique, Économique, Socio-culturel, Technologique, Environnemental, Légal
+L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont résumées dans la matrice PESTEL ci-dessous. \
+<und>PESTEL :</und> Politique, Économique, Socioculturel, Technologique, Environnemental, Légal
 
 |Dimension  |Opportunité    |Menace |
 |---|---|---|
@@ -134,7 +135,7 @@ L'ensemble des opportunités et menaces pesant sur le laboratoire DAVID sont ré
 
 **Tableau 1 :** Matrice PESTEL de l'environnement du laboratoire DAVID
 
-L'actualité sur le plan technologique est globalement favorable au bon fonctionnement du laboratoire car l'utilisation massive des réseaux de télécommunication et des bases de données nécessite des travaux de recherche pour les rendre toujours plus performants. Néanmoins, d'un point de vue économique, étant donné les fortes dettes de l'état français, celui-ci possède moins d'argent pouvant être investi dans la recherche scientifique. De plus, les enjeux écologiques actuels nécessite des travaux de recherche pour prévenir les conséquences de la pollution de l'air ou pour réduire l'impact des nouvelles technologies sur l'environnement.
+L'actualité sur le plan technologique est globalement favorable au bon fonctionnement du laboratoire car l'utilisation massive des réseaux de télécommunication et des bases de données nécessite des travaux de recherche pour les rendre toujours plus performants. Néanmoins, d'un point de vue économique, étant donné les fortes dettes de l'État français, celui-ci possède moins d'argent pouvant être investi dans la recherche scientifique. De plus, les enjeux écologiques actuels nécessitent des travaux de recherche pour prévenir les conséquences de la pollution de l'air ou pour réduire l'impact des nouvelles technologies sur l'environnement.
 
 <div style="page-break-after: always"></div>
 
@@ -150,7 +151,7 @@ L'ensemble des forces, faiblesses, opportunités et menaces du laboratoire DAVID
 |**Opportunités**|- le laboratoire de recherche **NIWC** (Naval Information Warafare Center) des États-Unis est à la recherches d'étudiants, doctorants et chercheurs compétents dans les domaines de l'informatiques, essentiellement dans le big data<br>- la <und>loi de programmation de la recherche</und> promet 3% du PIB consacré à la recherche et une meilleure organisation de celle-ci|
 |**Menaces**|- depuis mai 2021 et l'apparition du <und>Plan National de Recherche</und>, le gouvernement sélectionne les proposition de projet de recherche en fonction de leurs impacts sociétaux, ce qui réduit le nombre projets financés par l’État<br>- baisse de motivation des membres du laboratoire dans l'investissement pour l'obtention des moyens de recherche|
 
-En France, les principaux organismes de recherche sont l'**INRA** (Institut National de la Recherche Agronomique), l'**INSERM** (Institut National de la Santé Et de la Recherche Médicale) et le **CNRS** (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde. Ceux-ci sont les principaux concurrents du laboratoire DAVID dans la mesure où ils exercent tous dans le domaine de la recherche et aussi les principaux associés car certains projets de recherche, tel que le projet [Polluscope](#orangeiia-présentation-du-projetorange), se déroulent en collaboration avec les laboratoire évoqués précédemment.
+En France, les principaux organismes de recherche sont l'**INRA** (Institut National de la Recherche Agronomique), l'**INSERM** (Institut National de la Santé Et de la Recherche Médicale) et le **CNRS** (Centre National de la Recherche Scientifique) reconnu par son nombre de publications scientifiques comme le premier organisme de recherche au monde. Ceux-ci sont les principaux concurrents du laboratoire DAVID dans la mesure où ils exercent tous dans le domaine de la recherche et aussi les principaux associés car certains projets de recherche, tel que le projet [Polluscope](#orangeiia-présentation-du-projetorange), se déroulent en collaboration avec les laboratoires évoqués précédemment.
 
 <img class="down" src="cnrs.jpg" heigh="220" width="220"><img src="inra.jpg" heigh="220" width="220"><img src="inserm.jpg" heigh="220" width="220">
 
@@ -158,7 +159,7 @@ En France, les principaux organismes de recherche sont l'**INRA** (Institut Nati
 
 # <red>II. Présentation du travail accompli durant le stage</red>
 
-Dans cette partie, nous allons évoqué le travail effecuté durant le stage en commençant par une description dur projet, suivi d'une description des tâches réalisées, d'une mise en évidance des principaux problèmes rencontrés, d'une présentation des outils utilisés, des méthodes et formations suivies pour finir par l'analyse des résultat de chaque tâches.
+Dans cette partie, nous allons évoqué le travail effectué durant le stage en commençant par une description du projet, suivi d'une description des tâches réalisées, d'une mise en évidence des principaux problèmes rencontrés, d'une présentation des outils utilisés, des méthodes et formations suivies pour finir par l'analyse des résultat de chaque tâches.
 
 ## <orange>II.A Présentation du Projet</orange>
 
@@ -167,13 +168,13 @@ Sorbonne Médecine, Inserm, LSCE, EIVP et l'Agence Nationale de la Recherche, ce
 
 ![](pollu.jpg)
 
-Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit de un ou plusieurs capteurs de pollution et une tablette dans certains cas pour relever leurs activité ainsi que leur position géographique. Les capteurs sont conçu pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargés et déposées sur le site internet du projet pour être analysées et mise sous différentes formes. \
+Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit un ou plusieurs capteurs de pollution et une tablette dans certains cas pour relever leurs activités ainsi que leur position géographique. Les capteurs sont conçus pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargées et déposées sur le site internet du projet pour être analysées et mises sous différentes formes. \
 Dans certaines conditions, des stations fixes sont utilisées pour mesurer la pollution de l'air ambiant. Toutefois, dans la mesure où celles-ci sont difficiles à déplacer, elles sont surtout utilisées comme témoins de la pollution dans des zones rurales ou peu urbanisées.
 
 ## <orange>II.B Description du travail réalisé</orange>
 
 Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
-Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichier de données et le téléchargement des rapports. Une première version du site à été codé en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
+Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichiers de données et le téléchargement des rapports. Une première version du site à été codée en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
 
 Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de recenser mon exposition à la pollution au cours d'une journée de stage et de l'intégrer aux données du projet de recherche.
 
@@ -181,25 +182,25 @@ Aussi, une partie de mon travail durant le stage à été de participer à une c
 
 ## <orange>II.C Description des problèmes à traiter et des solutions</orange>
 
-Cette section du rapport est entièrement consacrée à la description détaillée des problèmes rencontrés durant la refactorisation de la plateforme de données Polluscope qui constitue mon travail le plus important durant le stage. Cette partie présente également les solutions découvertes ou mises au points pour résoudre ces problèmes.
+Cette section du rapport est entièrement consacrée à la description détaillée des problèmes rencontrés durant la refactorisation de la plateforme de données Polluscope qui constitue mon travail le plus important durant le stage. Cette partie présente également les solutions découvertes ou mises au point pour résoudre ces problèmes.
 
 Dans cette partie, les références aux portions code présents en annexes sont entre parenthèses.
 
 ### <violet>Étape 1 : Comprendre la structure de la plateforme</violet>
 
-Étant donné qu'une première version de la plateforme à été créée en PHP par **TAHER Yehia** et **Ahmad Ktaish**, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créer un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles_ci. Ici le terme de structure est utilisé pour évoquer le comportement de la plateforme en fonction des actions de l'utilisateur et des pages sur lesquelles elles sont réalisées.
+Étant donné qu'une première version de la plateforme à été créée en PHP par **TAHER Yehia** et **Ahmad Ktaish**, il fallait que je respecte la structure de l'application mais aussi sa charte graphique. Pour visualiser la structure du site internet et mieux comprendre son fonctionnement, j'ai créé un schéma comportant des balises représentant les différentes pages de la plateforme ainsi que les liens entre celles-ci. Ici le terme de structure est utilisé pour évoquer le comportement de la plateforme en fonction des actions de l'utilisateur et des pages sur lesquelles elles sont réalisées.
 
 <img src="schemasite.jpg"> \
-**Schéma 1 :** Structure de la plateforme de donnée Polluscope
+**Schéma 1 :** Structure de la plateforme de données Polluscope
 
 Ce schéma est également disponible en [annexe](#schéma-1--structure-de-la-plateforme-de-données-polluscope).
 
-En examinant le code source de la plateforme, on constate qu'il est nécessaire d'avoir un compte enregistré dans la base de donnée pour utiliser les services du site internet. On peut également remarquer qu'un utilisateur peut avoir soit un rôle de participant, soit un rôle d'administrateur et que cela influe sur les actions réalisables par la personne qui se connecte à la plateforme et donc sur les pages qui lui sont accessibles. Dans le schéma précédant, les pages à gauche sont accessibles pour les participants, celles en bas au centre sont utilisables uniquement par les administrateurs et les autres sont accessibles pour tous les utilisateurs. Sur cette plateforme, seul la page ```login``` est accessible pour le grand public.
+En examinant le code source de la plateforme, on constate qu'il est nécessaire d'avoir un compte enregistré dans la base de données pour utiliser les services du site internet. On peut également remarquer qu'un utilisateur peut avoir soit un rôle de participant, soit un rôle d'administrateur et que cela influe sur les actions réalisables par la personne qui se connecte à la plateforme et donc sur les pages qui lui sont accessibles. Dans le schéma précédent, les pages à gauche sont accessibles pour les participants, celles en bas au centre sont utilisables uniquement par les administrateurs et les autres sont accessibles pour tous les utilisateurs. Sur cette plateforme, seule la page ```login``` est accessible pour le grand public.
 
 ### <violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>
 
 Afin d'apprendre à créer un site internet en Python Flask j'ai recherché sur internet des contenus expliquant la structure et le fonctionnement de ce dernier. \
-La liste des lien dont je me suis servis pour cette auto formation sont présents dans la [sitographie](#sitographie).
+La liste des liens dont je me suis servi pour cette auto formation sont présents dans la [sitographie](#sitographie).
 
 D'après mes recherches, la technologie Flask a un fonctionnement semblable au Design Pattern **Modele-View-Controller** (Modèle-Vue-Contrôleur) utilisé dans les langages de programmation orientés objets. En effet, l'affichage des pages codées en HTML ainsi que les actions de l'utilisateur sur celles-ci sont ou peuvent être entièrement ou partiellement gérées par un seul fichier codé en Python.
 
@@ -221,7 +222,7 @@ En sachant cela, j'ai pu créer la page d'accueil de la plateforme du projet.
 
 ### <violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>
 
-D'après l'analyse de la plateforme, celle-ci comporte de nombreux formulaires nécessaires aux dépôt des données de pollution. Tout comme dans la première version du site internet, celui que j'ai créer doit permettre la transmission d'éléments insérés dans des formulaires au moyen de la méthode POST. \
+D'après l'analyse de la plateforme, celle-ci comporte de nombreux formulaires nécessaires aux dépôt des données de pollution. Tout comme dans la première version du site internet, celui que j'ai créé doit permettre la transmission d'éléments insérés dans des formulaires au moyen de la méthode POST. \
 En reprenant le code HTML vu précédemment on peut rajouter un formulaire ([Code *2.2.1* #1](#code-221--fichier-templatesindexhtml-avec-un-formulaire)) constitué d'une zone de texte ([Code *2.2.1* #2](#code-221--fichier-templatesindexhtml-avec-un-formulaire)) et d'un bouton de validation ([Code *2.2.1* #3](#code-221--fichier-templatesindexhtml-avec-un-formulaire)). La méthode ```main()``` du fichier ```app.py``` ([Code *2.2.2*](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)) qui permet l'affichage de la page web est par défaut à l'écoute des actions réalisées sur ce formulaire.
 
 Avec le nouveau fichier ```index.html``` ([Code *2.2.1*](#code-221--fichier-templatesindexhtml-avec-un-formulaire)), on obtient une page web identique à celle-ci :
@@ -229,14 +230,14 @@ Avec le nouveau fichier ```index.html``` ([Code *2.2.1*](#code-221--fichier-temp
 
 Afin que le programme en Python puisse recevoir des éléments avec la méthode POST, celle-ci doit être spécifiée grâce à la méthode ```@app.route()``` ([Code *2.2.2* #1](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)). Pour récupérer les éléments insérés dans le formulaire, il faut utiliser l'attribut ```form``` de l'objet ```request``` en spécifiant le nom de l'élément ([Code *2.2.2* #2](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)) après avoir vérifié si la méthode POST est utilisée ([Code *2.2.2* #3](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)).
 
-Avec les deux dernières portions de code présentée précédemment, on peut entrer du texte dans la zone dédiée et l'envoyer pour que celui-ci soit affiché dans un terminal.
+Avec les deux dernières portions de code présentées précédemment, on peut entrer du texte dans la zone dédiée et l'envoyer pour que celui-ci soit affiché dans un terminal.
 
 Comprendre le fonctionnement de la méthode POST m'a permis de d'implémenter une première version de la page de connexion sans utilisation de la base de données.
 
 ### <violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>
 
-Durant l'analyse de la première version du site internet, j'avais constaté que le programme en PHP permet l'affichage de texte sur les pages web pour indiquer si des erreurs ont eu lieu ou si une action s'est achevés correctement. Afin que cela soit possible dans la nouvelles version de la plateforme je devais trouver un moyen pour passer des éléments en paramètre des fonction d'affichage des pages web. \
-Pour ce faire, j'ai utilisé des éléments de syntaxe **Jinja** dans les pages web. Cela permet de créer des boucles ou des action conditionnels dans des pages codées en html. \
+Durant l'analyse de la première version du site internet, j'avais constaté que le programme en PHP permet l'affichage de texte sur les pages web pour indiquer si des erreurs ont eu lieu ou si une action s'est achevée correctement. Afin que cela soit possible dans la nouvelle version de la plateforme je devais trouver un moyen pour passer des éléments en paramètre des fonctions d'affichage des pages web. \
+Pour ce faire, j'ai utilisé des éléments de syntaxe **Jinja** dans les pages web. Cela permet de créer des boucles ou des action conditionnelles dans des pages codées en html. \
 Dans le code [*2.3.1*](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel), si la fonction d'affichage de la page comporte un paramètre ```posts``` portant le label 'text' ([Code *2.3.1* #1](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel)) alors celui-ci est affiché sur la page web ([Code *2.3.1* #2](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel)).
 
 Pour pouvoir passer un paramètre à la fonction d'affichage, un dictionnaire doit être instancié dans le script python ([Code *2.3.2* #1](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)) et les éléments à passer en paramètre doivent être associés à la bonne clé ([Code *2.3.2* #2](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)). Par défaut, l'élément associé à la clé doit être nul ([Code *2.3.2* #3](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)) pour éviter des erreurs. Le dictionnaire doit ensuite être placé en paramètre de la méthode ```render_template()``` avec le nom approprié ([Code *2.3.2* #4](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)).
@@ -249,8 +250,8 @@ L'affichage conditionnel sur des pages web m'a permis de modifier les pages acce
 
 ### <violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>
 
-La plateforme doit comporter un menu permettant l'accès à différentes pages en fonction des besoins de l'utilisateur et de ses actions à réaliser. Dans la version que j'ai créer, j'ai dû trouver une méthode permettant l'utilisation des liens spécifiés pour chaque fonctions rattachées à chaque pages. \
-Pour ce faire, il faut utiliser un élément de syntaxe **Jinja** associé à la méthode ```url_for()``` ([Code *2.4.1* #1](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2)). Celle-ci doit avoir l'URL de la page souhaité en paramètre. \
+La plateforme doit comporter un menu permettant l'accès à différentes pages en fonction des besoins de l'utilisateur et de ses actions à réaliser. Dans la version que j'ai créé, j'ai dû trouver une méthode permettant l'utilisation des liens spécifiés pour chaque fonctions rattachées à chaque page. \
+Pour ce faire, il faut utiliser un élément de syntaxe **Jinja** associé à la méthode ```url_for()``` ([Code *2.4.1* #1](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2)). Celle-ci doit avoir l'URL de la page souhaitée en paramètre.
 
 Pour qu'une autre page HTML (ici celle du [Code *2.4.2*](#code-242--fichier-page2html-accessible-par-un-lien)) soit accessible par un lien, celle-ci doit être rattachée à une fonction ([Code *2.4.3* #1](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)) et à un chemin d'accès ([Code *2.4.3* #2](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)).
 
@@ -265,7 +266,7 @@ Avec ces éléments, j'ai pu créer le menu contenant les liens vers les différ
 ### <violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>
 
 Tout comme la première version de la plateforme, celle que j'ai créé doit pouvoir insérer, lire et modifier des éléments contenus dans une base de données PostgreSQL. \
-Pour établir la connection avec la base de donnée, il est possible d'utiliser la commande python suivante avec le nom de la base de données, le nom d'utilisateur, le mot de passe de l'utilisateur et l'adresse IP du serveur ébergeant le système de gestion de base de données.
+Pour établir la connexion avec la base de données, il est possible d'utiliser la commande python suivante avec le nom de la base de données, le nom d'utilisateur, le mot de passe de l'utilisateur et l'adresse IP du serveur hébergeant le système de gestion de base de données.
 
 ```py
 import psycopg2
@@ -287,7 +288,7 @@ cur.execute(query) #2
 ```
 **Code 2.5.2 :** Script Python permettant l'exécution d'une commande SQL sur une base de données PostgreSQL
 
-Les résultats des requête SQL sont stocké dans la variable curseur sous forme de tableau. Pour visualiser les ligne générées par la requête, il faut donc afficher chaque élément de la variable curseur (#1) grâce à une boucle (#2).
+Les résultats des requêtes SQL sont stockés dans la variable curseur sous forme de tableau. Pour visualiser les ligne générées par la requête, il faut donc afficher chaque élément de la variable curseur (#1) grâce à une boucle (#2).
 
 ```py
 import psycopg2
@@ -310,13 +311,13 @@ Output :
 ['test3']
 ```
 
-Pouvoir interagir avec la base de donnée m'a permis de créer une nouvelle version de la page de connexion en utilisant les logins et mots de passe stockés dans la base de données. J'ai également pu créer des scripts Python pour enregistrer les donnée de pollution mais aussi ajouter des utilisateurs, des capteurs, des kits ou des campagnes.
+Pouvoir interagir avec la base de données m'a permis de créer une nouvelle version de la page de connexion en utilisant les logins et mots de passe stockés dans la base de données. J'ai également pu créer des scripts Python pour enregistrer les données de pollution mais aussi ajouter des utilisateurs, des capteurs, des kits ou des campagnes.
 
 ### <violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>
 
-D'après mon analyse du code source de la première version de la plateforme Polluscope, les requêtes utilisée pour insérer des éléments dans la base de donnée étaient exécutées sans être préparées. En tant que passionné de cybersécurité, je sais qu'une requête SQL non préparée est une faille de sécurité pouvant être utilisée à des fins malveillantes pour compromettre une base de donnée grâce à des **injections SQL**. Il était donc primodiale que je corrige cette faille dans la nouvelle version du site internet.
+D'après mon analyse du code source de la première version de la plateforme Polluscope, les requêtes utilisées pour insérer des éléments dans la base de données étaient exécutées sans être préparées. En tant que passionné de cybersécurité, je sais qu'une requête SQL non préparée est une faille de sécurité pouvant être utilisée à des fins malveillantes pour compromettre une base de données grâce à des **injections SQL**. Il était donc primordiale que je corrige cette faille dans la nouvelle version du site internet.
 
-Normalement, quand le client d'une page web insert un élément dans un champ prévu à cette effet tel qu'une zone de texte, celui-ci est récupéré et insérer dans la variable de type String qui constitue la commande SQL. Cette commande est ensuite exécutée sur la base de donnée. \
+Normalement, quand le client d'une page web insère un élément dans un champ prévu à cet effet tel qu'une zone de texte, celui-ci est récupéré et inséré dans la variable de type String qui constitue la commande SQL. Cette commande est ensuite exécutée sur la base de données. \
 Dans les exemples suivants nous utiliserons la table ```personnes``` présentée ci-dessous :
 ```
  id |   nom
@@ -326,9 +327,9 @@ Dans les exemples suivants nous utiliserons la table ```personnes``` présentée
   3 | Selina
 ```
 
-Les deux portions de code [*2.6.1.1*](#code-2611--fichier-indexhtml) et [*2.6.1.2*](#code-2612--fichier-apppy) présents en annexes, permettent l'affichage d'une page web avec un formulaire composé d'un champ texte. L'utilisateur doit entrer l'ID d'une personnes dans le champ texte pour que le nom de cette personne s'affiche sur la page web ().
+Les deux portions de code [*2.6.1.1*](#code-2611--fichier-indexhtml) et [*2.6.1.2*](#code-2612--fichier-apppy) présents en annexes, permettent l'affichage d'une page web avec un formulaire composé d'un champ texte. L'utilisateur doit entrer l'ID d'une personne dans le champ texte pour que le nom de cette personne s'affiche sur la page web ().
 
-Le script Python étalit la connexion avec la base de donnée ([Code *2.6.1.2* #1](#code-2612--fichier-apppy)) si il y a un élément transmis par la méthode POST ([Code *2.6.1.2* #2](#code-2612--fichier-apppy)). Une commande est ensuite créée avec l'id de la personne dont l'utilisateur veut afficher le nom ([Code *2.6.1.2* #3](#code-2612--fichier-apppy)). Une fois la commande exécutée ([Code *2.6.1.2* #4](#code-2612--fichier-apppy)), les résultats de la commande sont récupérés dans la variable ```out``` ([Code *2.6.1.2* #5](#code-2612--fichier-apppy)) et envoyés vers la page web par la méthode POST ([Code *2.6.1.2* #6](#code-2612--fichier-apppy)).
+Le script Python établit la connexion avec la base de donnée ([Code *2.6.1.2* #1](#code-2612--fichier-apppy)) si il y a un élément transmis par la méthode POST ([Code *2.6.1.2* #2](#code-2612--fichier-apppy)). Une commande est ensuite créée avec l'id de la personne dont l'utilisateur veut afficher le nom ([Code *2.6.1.2* #3](#code-2612--fichier-apppy)). Une fois la commande exécutée ([Code *2.6.1.2* #4](#code-2612--fichier-apppy)), les résultats de la commande sont récupérés dans la variable ```out``` ([Code *2.6.1.2* #5](#code-2612--fichier-apppy)) et envoyés vers la page web par la méthode POST ([Code *2.6.1.2* #6](#code-2612--fichier-apppy)).
 
 Si l'utilisateur entre l'id ```1``` alors le nom de ```Camille``` est affiché. \
 <img src="sql1.jpg" heigh="300" width="300"><img src="sql2.jpg" heigh="300" width="300">
@@ -346,21 +347,21 @@ Dans l'exemple précédent, l'injection SQL permet l'affichage de plusieurs él�
 1; delete from personnes where 1=1 -- -
 ```
 
-Dans le cadre de travaux de recherche, la suppression des données peut avoir de grâves conséquences sur le projet. \
-Pour éviter cela, j'ai dû rajouter un traîtement des éléments transmis par l'utilisateur pour que les requêtes ne contienne pas de caractères permettant les injections SQL.
+Dans le cadre de travaux de recherche, la suppression des données peut avoir de graves conséquences sur le projet. \
+Pour éviter cela, j'ai dû rajouter un traitement des éléments transmis par l'utilisateur pour que les requêtes ne contiennent pas de caractères permettant les injections SQL.
 
 La plupart des langages utilisés dans la programmation web possèdent une fonction destinée à effacer les injections SQL des éléments insérés par le client d'un site web. Etant donné que je n'ai pas trouvé ce type de fonction dans le langage python, j'ai dû trouver un autre moyen. \
-Dans l'exemple précédent l'injection SQL est permise par l'éléments de comparaison ```or``` envoyé par le client de la page web. Utiliser la fonction ```replace()``` de la classe String avec les paramètre ```"or"``` et ```""``` permet de le supprimer de l'élément inséré par le client ([Code *2.6.2.1* #1](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)).
+Dans l'exemple précédent l'injection SQL est permise par l'élément de comparaison ```or``` envoyé par le client de la page web. Utiliser la fonction ```replace()``` de la classe String avec les paramètre ```"or"``` et ```""``` permet de le supprimer de l'élément inséré par le client ([Code *2.6.2.1* #1](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)).
 
-Avec la modifiction du script Python, entrer l'injection SQL génère une erreur mais n'endomage pas la base de données. \
-Concernant la plateforme Polluscope, le nombre de caractère à supprimer est plus important pour écarter la plupart des possiblités d'injection SQL.
+Avec la modification du script Python, entrer l'injection SQL génère une erreur mais n'endommage pas la base de données. \
+Concernant la plateforme Polluscope, le nombre de caractères à supprimer est plus important pour écarter la plupart des possibilités d'injection SQL.
 
 ### <violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>
 
-Dans la mesure où les travaux de recherche nécessitent des mesures précises pour être fiables, j'ai considéré que l'insertion de doublons de données de pollution dans la base de données mettrait en péril les résultats des campagnes de ressencement de la pollution. Je suis donc parti du principe que les participants des campagnes pouvaient faire l'erreur d'insérer plusieurs fois un même fichier de donnée et que si cela se produit alors les scripts Python doivent le savoir et ne pas insérer les doublons dans la base de données. C'est un constat qui a été approuvé par mes encadrants.
+Dans la mesure où les travaux de recherche nécessitent des mesures précises pour être fiables, j'ai considéré que l'insertion de doublons de données de pollution dans la base de données mettrait en péril les résultats des campagnes de recensement de la pollution. Je suis donc parti du principe que les participants des campagnes pouvaient faire l'erreur d'insérer plusieurs fois un même fichier de données et que si cela se produit alors les scripts Python doivent le savoir et ne pas insérer les doublons dans la base de données. C'est un constat qui a été approuvé par mes encadrants.
 
 J'ai considéré que le nom du fichier inséré et contenant les données de pollution n'est pas un élément de décision fiable car celui-ci peut être facilement modifié par le participant. \
-Étant donnée que les fichier inséré par les clients de la plateforme sont enregistrés sur le serveur du laboratoire, dans une première version du programme, pour tester l'existance d'une ligne dans la base de donnée, le script Python testait si elle se trouvait parmis les lignes des fichiers précédemement insérés et stockés sur le serveur. Le pseudo code Python suivant illustre cette première méthode de vérification. La fonction prend en paramètre la ligne à insérer et une liste contenant toutes les lignes enregistrées (#1). Si la nouvelle ligne est présente dans la liste alors la fonction renvoie la valeur booléenne ```False``` (#2) et la valeur ```True``` dans le cas contraire (#3).
+Étant donnée que les fichier inséré par les clients de la plateforme sont enregistrés sur le serveur du laboratoire, dans une première version du programme, pour tester l'existence d'une ligne dans la base de donnée, le script Python testait si elle se trouvait parmis les lignes des fichiers précédemment insérés et stockés sur le serveur. Le pseudo code Python suivant illustre cette première méthode de vérification. La fonction prend en paramètre la ligne à insérer et une liste contenant toutes les lignes enregistrées (#1). Si la nouvelle ligne est présente dans la liste alors la fonction renvoie la valeur booléenne ```False``` (#2) et la valeur ```True``` dans le cas contraire (#3).
 
 ```py
 def testNew(nouvelleLigne, toutesLesLignes): #1
@@ -370,7 +371,7 @@ def testNew(nouvelleLigne, toutesLesLignes): #1
 ```
 **Code 2.7.1.1 :** fonction ```testNew()```
 
-Avec la fonction précédente, il est possible de placer l'instruction d'insertion dans une boucle conditionnelle (#1). L'insertion ne sera effectuée que si la nouvelle ligne n'est pas enregistée.
+Avec la fonction précédente, il est possible de placer l'instruction d'insertion dans une boucle conditionnelle (#1). L'insertion ne sera effectuée que si la nouvelle ligne n'est pas enregistrée.
 
 ```py
 if testNew(nouvelleLigne, toutesLesLignes) : #1
@@ -380,7 +381,7 @@ if testNew(nouvelleLigne, toutesLesLignes) : #1
 
 Néanmoins, comme l'ont remarqué mes encadrants, cette méthode est très coûteuse en mémoire pour l'ordinateur réalisant l'opération et l'utilisation de cette ressource augmente avec le nombre de ligne à comparer. Étant donné que, dans le cadre du projet Polluscope, ce nombre peut s'élever à plusieurs millions, cette méthode n'est pas applicable pour ce projet. J'ai donc dû trouver une autre méthode.
 
-Mes encadrant m'ont alors suggéré d'utiliser les dates d'utilisation du capteur comme moyen de vérification. En effet, l'ensemble des capteurs, en plus de relever des données de pollution, mémorisent les dates auquels les données sont enregistrées. En ayant connaissance de l'identifiant du capteur, des dates auquel il a été utilisé et en sachant qu'un capteur ne peut être utilisé que par un seul participant à la fois, il est possible de savoir si une ligne à déjà été insérée. \
+Mes encadrant m'ont alors suggéré d'utiliser les dates d'utilisation du capteur comme moyen de vérification. En effet, l'ensemble des capteurs, en plus de relever des données de pollution, mémorisent les dates auxquelles les données sont enregistrées. En ayant connaissance de l'identifiant du capteur, de l'intervalle pendant lequel il a été utilisé et en sachant qu'un capteur ne peut être utilisé que par un seul participant à la fois, il est possible de savoir si une ligne à déjà été insérée. \
 Pour ce faire, le script Python récupère grâce à une requête SQL l'intervalle d'utilisation d'un capteur en fonction de son identifiant.
 
 ```sql
@@ -398,7 +399,13 @@ def testNew(dateNouvelleLigne, intervalleMin, intervalleMax):
 ```
 **Code 2.7.2.1 :** nouvelle version de la méthode ```testNew()```
 
-Il s'agit d'une méthode de vérification nécessitant moins de ressouces de l'ordinateur, ce qui permet d'accélérer l'insertion de nouvelles lignes dans la base de données.
+Il s'agit d'une méthode de vérification nécessitant moins de ressources de l'ordinateur, ce qui permet d'accélérer l'insertion de nouvelles lignes dans la base de données.
+
+### <violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>
+
+Peu avant la fin du stage, il m'a été demandé de rajouter des graphes et des cartes, créés avec le logiciel Grafana, à la plateforme Polluscope pour permettre la visualisation de données. Le programme de création des graphes avait été créé par **ABBOUD Mohammad** et des étudiant de l'université. Mon travail dans cette étape a donc été d'intégrer ce programme dans le code source de la plateforme Polluscope en faisant les modifications nécessaires.
+
+Dans cette partie du travail la principale difficulté a été d'apporter des modifications au code déjà créé et d'en comprendre les erreurs. En effet, pour interagir avec le logiciel Grafana, le programme utilise le package ```requests``` pour envoyer des requêtes vers l'ordinateur sur lequel ce premier est installé et en obtenir les réponses. Il s'agit d'une librairie que je n'avais alors jamais utilisé et dont les erreurs peuvent être incomprises et mener la personne en charge du développement vers de fausses réflexions.
 
 <div style="page-break-after: always"></div>
 
@@ -406,14 +413,13 @@ Il s'agit d'une méthode de vérification nécessitant moins de ressouces de l'o
 
 Dans le cadre de mon travail durant ce stage, l'ordinateur personnel que je possède et utilise au quotidien pour mes études et mes activités dans le domaine de l'informatique est devenu mon principal outils de travail. Étant déjà familiarisé avec les environnements de développement créer par **JetBrains** tel que <und>PyCharm</und> mon choix s'est porté sur ceux-ci pour produire les logiciels et applications durant le stage. \
 <img src="jblogo.jpg" heigh="220" width="220"> \
-Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentation est disponible [ici](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope) parmis les annexes \
+Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentation est disponible [ici](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope) en annexes. \
 <img src="ghlogo.jpg" heigh="220" width="220"> \
 Comme évoqué dans la partie précédente, l'ensemble des données recueillies lors des campagnes de recensement sont stockées sur une base de données <und>PostgreSQL</und> appartenant au laboratoire. Afin de ne pas endommager, effacer ou modifier ces données lors du développement de la nouvelle version de la plateforme Polluscope, j'ai installé ce même système de gestion de base de données sur mon ordinateur personnel. Celle-ci a été utilisée pendant toute la durée de la création du nouveau site web du projet. \
 <img src="pglogo.jpg" heigh="220" width="220"> \
-Tel que spécifié dans le sujet du stage, la plateforme Polluscope doit fonctionner avec le langage <und>Python</und>. Par conséquent, il a été nécessaire d'utiliser le framework <und>Flask</und>. Celui-ci permet le déploiement d'une application web sur un ordinateur en ayant seulement recours au langage Python et ne nécessite pas l'utilisation de logiciels d'hébergement de site internet tel que Apache pour fonctionner. \
-<img src="pflogo.jpg" heigh="220" width="220"> \
+Tel que spécifié dans le sujet du stage, la plateforme Polluscope doit fonctionner avec le langage <und>Python</und>. Par conséquent, il a été nécessaire d'utiliser le framework <und>Flask</und>. Celui-ci permet le déploiement d'une application web sur un ordinateur en ayant seulement recours au langage Python et ne nécessite pas l'utilisation de logiciels d'hébergement de site internet tel que Apache pour fonctionner. De plus pour rendre les données recueillies visibles et compréhensibes, il m'était demandé que j'utilise l'outil de visualisation de données <und>Grafana</und>. Cela a permis la création de graphes ou de cartes avec les données de pollution relevées ainsi que leurs coordonnées. \
 Aussi, pour faciliter le déploiement de l'application sur le serveur du laboratoire, l'équipe a exigé que l'acquisition des packages nécessaires et la mises en marche de la plateforme se fasse par l'utilisation de la technologie <und>Docker</und>. Cela permet de faire fonctionner le site internet sans avoir à installer les paquets de façon définitive sur le serveur et donc d'économiser de l'espace sur le disque dur de celui-ci. \
-<img src="docklogo.jpg" heigh="220" width="220">
+<img src="pflogo.jpg" heigh="220" width="220"> <img src="grafana.jpg" heigh="220" width="220"> <img src="docklogo.jpg" heigh="220" width="220">
 
 <div style="page-break-after: always"></div>
 
@@ -779,81 +785,196 @@ if __name__ == "__main__" :
 
 ## **Journal 1 :** Historique des implémentations de la plateforme de données Polluscope
 
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
-Merge: f3a5b2d 28e4205
+commit c843939f0204418f3522f618a776b8a3aa3f8cad (HEAD -> main, origin/main, origin/HEAD)
 Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-:
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
-Merge: f3a5b2d 28e4205
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-
-
-
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
-Merge: f3a5b2d 28e4205
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:26:44 2022 +0200
+Date:   Fri Jun 3 15:41:24 2022 +0200
 
     UPDATES :
-    Add the file ```wsgi.py```. That's useful to deploy the web application.
-:...skipping...
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
-Merge: f3a5b2d 28e4205
+    Dashboard creation in progress.
+
+commit 6dfcaf7219951344c5d7f77bbe8b77d06cda9860
 Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
+Date:   Fri Jun 3 12:05:04 2022 +0200
+
+    UPDATES :
+    Dashboard creation in progress.
+
+commit d6074c14d7b8c46d476e73ab66b4686c51a7c4a9
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu Jun 2 17:12:56 2022 +0200
+
+    UPDATES :
+    Add the package to create DashBoards with Grafana.
+
+commit aa1dace405619332f076107ac77568104f89aea1
+Merge: 1e8dc75 fd306d8
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Thu Jun 2 10:41:30 2022 +0200
 
     Merge remote-tracking branch 'origin/main'
 
-commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+commit 1e8dc758de6ee3e2b37984e1d872aa05d4fdc16f
 Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:26:44 2022 +0200
+Date:   Thu Jun 2 10:41:16 2022 +0200
 
     UPDATES :
-    Add the file ```wsgi.py```. That's useful to deploy the web application.
+    New documentation.
 
-commit 28e420507fdfa44d4808a46c79ef690944f52c10
+commit fd306d84486bc3fa437211d7b0e5b14a562fe0d3
 Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:11:10 2022 +0200
+Date:   Wed Jun 1 17:22:21 2022 +0200
 
     Update README.md
 
-:...skipping...
-HEAD -> main, origin/main, origin/HEAD)
-Merge: f3a5b2d 28e4205
+commit 0bc6fa9c8eb9fcd70c558b21db53db3fb903a88a
+Merge: 4874a42 8581bee
 Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
+Date:   Wed Jun 1 17:20:40 2022 +0200
 
     Merge remote-tracking branch 'origin/main'
 
-commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
+commit 4874a42f108cdec16f635772eb647744aa208dbf
 Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:26:44 2022 +0200
+Date:   Wed Jun 1 17:20:20 2022 +0200
 
     UPDATES :
-    Add the file ```wsgi.py```. That's useful to deploy the web application.
+    Add a page to load data form the GPS Logger app on the participant personal phone.
 
-commit 28e420507fdfa44d4808a46c79ef690944f52c10
+commit 8581bee6305059e23fe7740285928063d0d365e8
 Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:11:10 2022 +0200
+Date:   Wed Jun 1 10:12:51 2022 +0200
 
     Update README.md
 
-commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
-:...skipping...
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676 (HEAD -> main, origin/main, origin/HEAD)
+commit 9ddb35776d793ee9c8a56e75953c23a9f68a1c40
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Tue May 31 15:52:01 2022 +0200
+
+    UPDATES :
+    Modification to raise an error if there's a problem with the database.
+
+commit fbd9d68559828b34ea561624636c3ec53a73da6a
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 30 16:00:49 2022 +0200
+
+    UPDATES :
+    Minor modification.
+
+commit b59bf52a9009eacd7b5dfb303ab26a733f382527
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 30 14:35:30 2022 +0200
+
+    Update README.md
+
+commit 882406a4a46c631699a10427d92d1fe6020d21eb
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 30 14:35:03 2022 +0200
+
+    Update README.md
+
+commit 6904707234d45b22cb003f25f1076f79219f8c94
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 30 14:26:40 2022 +0200
+
+    UPDATES :
+    Addition of SQL script to insert an admin user in the database and a script to drop all tables.
+
+commit 5618cdd24d92fabbcf620fc06f89df6937713ba1
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 30 12:19:57 2022 +0200
+
+    UPDATES :
+    Addition of SQL script to create tables.
+
+commit c2a0f5253e36eba67e20e2e3c11b270703756dd1
+Merge: 508b9ee 7743b0a
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 30 10:47:39 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 508b9ee5b76801ed903543cff07e452d8793d0f5
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 30 10:47:24 2022 +0200
+
+    UPDATES :
+    Some commentaries were delete.
+
+commit 7743b0ad6bda831bafa3863a8a419d9b2404d7d4
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Wed May 25 14:03:07 2022 +0000
+
+    Update table_creation_sql
+
+commit 09193840a6eb70a465c3a84160875d9ca87802e9
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 23 16:12:59 2022 +0200
+
+    Update README.md
+
+commit d9a49006f2fa127e1d6176e5cb25a3fac8bbecc7
+Merge: 42debd1 99a7269
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 23 16:07:51 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 42debd11e9a3e1ebb6e9a477b9954595f81d23dd
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 23 16:07:36 2022 +0200
+
+    UPDATES :
+    All pages are now up to upload Flow data and record it.
+    New pages :
+    - ```uploadFlowMeasure```
+
+commit 99a72692c637125ad7f1fd12b1e01d3ad554aa94
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 23 12:07:32 2022 +0200
+
+    Update README.md
+
+commit c0250aaf7279460eb2633a72635305004bbd7cae
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Mon May 23 12:06:43 2022 +0200
+
+    Update README.md
+
+commit 370c195ed5a79b7ddc4f956ca8e1fe4ff5fc1d91
+Merge: d21ae7b 5f8227d
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 23 12:01:09 2022 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+commit d21ae7b565be4921c4dd1584f6f6a81a1b910d44
+Author: yureiiko <pierrefcz@gmail.com>
+Date:   Mon May 23 12:00:53 2022 +0200
+
+    UPDATES :
+    First modifications to add a flow sensor insert it in a kit and link this kit with a campaign and a participant.
+    New pages :
+    - ```addFlowSensor.html```
+
+commit 5f8227d2e4856033807992abb5bdad06841a2b2e
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:55:45 2022 +0200
+
+    Update wsgi.py
+
+commit 52cc4dfaf9bd6ba02c0e1892b5f2a32ef4c3db37
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:53:02 2022 +0200
+
+    Update README.md
+
+commit d14b5c43f7045d86c6a9d661fcca1c749e112455
+Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
+Date:   Fri May 20 10:52:30 2022 +0200
+
+    Update README.md
+
+commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676
 Merge: f3a5b2d 28e4205
 Author: yureiiko <pierrefcz@gmail.com>
 Date:   Fri May 20 10:27:08 2022 +0200
