@@ -82,7 +82,7 @@ Dans cette partie, nous allons voir une présentation générale du laboratoire 
 
 <img src="logoDavid.jpg" heigh="220" width="230">
 
-Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans les bâtiments Descartes et ... du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il a été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algorithmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée d'infrastructures autonomes et intelligentes.
+Le **laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines** (Données et Algorithme pour une Ville Intelligente et Durable) se situe dans les bâtiments Descartes et Buffon du campus de l'Unité de Formation et de Recherche (UFR) des Sciences de la ville de Versailles (78000). Il a été fondé en juillet 2015 à l'initiative des membres du laboratoire PRISM pour créer un laboratoire spécialisé en algorithmique et en science de la donnée dont le principal objectif est de concevoir une ville  écologiquement responsable, durable et dotée d'infrastructures autonomes et intelligentes.
 
 <img src="campus.png" heigh="220" width="230">
 
@@ -528,9 +528,9 @@ if __name__ == "__main__" :
     </head>
     <body>
         <h1>Test</h1>
-        <form action="" method="post"> #1
-            <input type="text" name="text"> #2
-            <input type="submit" name="submit"> #3
+        <form action="" method="post"> #1 un formulaire
+            <input type="text" name="text"> #2 avec une zone de texte
+            <input type="submit" name="submit"> #3 et un bouton de validation
         </form>
     </body>
 </html>
@@ -542,10 +542,10 @@ from flask import *
 
 app = Flask(__name__)
 
-@app.route("/", methods=("GET", "POST")) #1
+@app.route("/", methods=("GET", "POST")) #1 La fonction peut utiliser les méthodes GET et POST
 def main():
-    if request.method == "POST": #3
-        text = request.form["text"] #2
+    if request.method == "POST": #3 Si la méthode post est utilisée
+        text = request.form["text"] #2 le texte inséré dans le formulaire est récupéré
         print(text)
     return render_template("index.html")
 
@@ -571,8 +571,8 @@ if __name__ == "__main__" :
 
         {% block content %}
 
-        {% if posts['text'] %} #1
-        <p>Texte entré : {{posts['text']}}</p> #2
+        {% if posts['text'] %} #1 Si il y a un paramètre post avec le label 'text'
+        <p>Texte entré : {{posts['text']}}</p> #2 alors celui-ci est affiché sur la page
         {% endif %}
 
         {% endblock %}
@@ -588,12 +588,12 @@ app = Flask(__name__)
 
 @app.route("/", methods=("GET", "POST"))
 def main():
-    post = {} #1
-    post['text'] = None #3
+    post = {} #1 Un dictionnaire est instancié
+    post['text'] = None #3 Par défaut l'élément associé à la clé est nul
     if request.method == "POST":
         text = request.form["text"]
-        post["text"] = text #2
-    return render_template("index.html", posts = post) #4
+        post["text"] = text #2 Les éléments a passer en paramètre doivent être associés à la bonne clé
+    return render_template("index.html", posts = post) #4 dictionnaire doit ensuite être placé en paramètre de la fonction d'affichage
 
 if __name__ == "__main__" :
     app.run()
