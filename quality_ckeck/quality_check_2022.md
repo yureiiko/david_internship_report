@@ -8,6 +8,10 @@
   - précision : 45 %
   - le graphe des données présente des nombreuses courbes linéaires
 
+![](kit3.jpg)
+
+<div style="page-break-after: always"></div>
+
 ## participant 14 - kit 4
 - PMScan (1386E7 / 138637)
   - temps d'utilisation : 3H 25 mins (205 minutes soit 12300 secondes) = 12300 secondes
@@ -16,10 +20,18 @@
   - précision : 100.2 %
   - le graphe ne présente pas de courbes linéaires mais le capteur a été utilisé sur une période très courte
 
+![](kit4.jpg)
+
+<div style="page-break-after: always"></div>
+
 ## participant 15 - kit 5
 - PMScan (1386DC)
   - le temps d'utilisation n'est pas fournis mais il est précisé que les données sont partielles
   - les graphes du capteur comporte de nombreuses courbes linéaires et des données sur des laps de temps très courts
+
+![](kit5.jpg)
+
+<div style="page-break-after: always"></div>
 
 ## participant 16 - kit 6
 - PMScan (138715)
@@ -27,7 +39,11 @@
   - nombre de ligne attendu : 6420 / 5 = 1284
   - nombre de ligne obtenu : 44075
   - précision > 100 % (le temps d'utilisation spécifié n'est sûrement pas correcte)
-  - le graphe du capteur ne présente pas d'anomalies sur la période où il a été utilisé en continue
+  - le graphe du capteur quelques anomalies quand il est utilisé sur de longues périodes
+
+![](kit6.jpg)
+
+<div style="page-break-after: always"></div>
 
 ## participant 17 - kit 7
 - PMScan (648F8B)
@@ -39,10 +55,18 @@
   - précision : 116 %
   - le graphe du capteur ne présente pas de courbe linéaire pendant toute la durée d'utilisation
 
+![](kit7.jpg)
+
+<div style="page-break-after: always"></div>
+
 ## participant 18 - kit 8
 - PMScan (64BDD7)
   - le temps exacte d'utilisation n'est pas fournis
   - le graphe du capteur présente des courbes linéaires pouvant durer plusieurs heures
+
+![](kit8.jpg)
+
+<div style="page-break-after: always"></div>
 
 ## participant 19 - kit 9
 - PMScan (64BDE1)
@@ -53,11 +77,19 @@
   - nombre de ligne obtenu : 120991
   - précision : ~=~ 100.1 %
 
+![](kit9.jpg)
+
+<div style="page-break-after: always"></div>
+
 ## participant 110 - kit 10
 - PMScan (648FB1)
   - le temps exacte d'utilisation n'est pas renseigné
   - le capteur n'a été utilisé que sur des temps courts.
   - le graphe du capteur présente des courbes linéaires sur des durées supérieurs à 2 heures
+
+![](kit10.jpg)
+
+<div style="page-break-after: always"></div>
 
 ## participant 111 - kit 11
 - PMScan (648F74)
@@ -68,3 +100,41 @@
   - nombre de lignes obtenu : 59122
   - précision : 71.4 %
   - le graphe du capteur présentes des courbes linéaires sur des laps de temps très courts
+
+![](kit11.jpg)
+
+<div style="page-break-after: always"></div>
+
+## participant 112 - kit 12
+- PMScan (64BF71)
+  - le temps exacte d'utilisation n'est pas renseigné
+  - le graphe du capteur présente régulièrement des courbes linéaires sur des laps de temps plus ou moins longs
+
+![](kit12.jpg)
+
+<div style="page-break-after: always"></div>
+
+## participant 113 - kit 13
+- PMScan (648DBA)
+  - le temps exacte d'utilisation n'est pas renseigné
+  - les intervalles d'utilisation du capteur sont trop courts pour permettre une évaluation de la qualité des données
+
+![](kit13.jpg)
+
+<div style="page-break-after: always"></div>
+
+## participant 115 - kit 15
+- PMScan (648DC9)
+  - le temps exacte d'utilisation n'est pas renseigné
+  - le graphe du capteur présente régulièrement des courbes linéaires
+
+![](kit15.jpg)
+
+<div style="page-break-after: always"></div>
+
+## participant 116 - kit 16
+- PMScan (648973)
+  - le temps exacte d'utilisation n'est pas renseigné
+  - le graphe du capteur ne semble pas présenter de courbes linéaires pendant toute la durée de son utilisation mais il présente régulièrement des pics
+
+![](kit16.jpg)
