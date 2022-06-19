@@ -1,3 +1,24 @@
+Nom : **FLEURY CALAIS** \
+Prénom : **Pierre**
+
+Année : **2021 - 2022**
+
+<div style="text-align: center;"><img src="logo_iut.jpg" heigh="800" width="800"></div>
+
+<div style="text-align: center; font-weight: bold; font-size: 18px;">Rapport de stage de deuxième année d'IUT Informatique</div><br>
+
+<div style="text-align: center; font-size: 16px">Stage de développement web au laboratoire DAVID de l'UVSQ</div>
+
+<div style="text-align: center;">4 avril 2022 - 15 juin 2022</div>
+
+<div style="text-align: center;"><img src="logoDavid.jpg" heigh="800" width="800"></div>
+
+
+Tutrice de stage : **ZEITOUNI Karine** \
+Professeur encadrant : **HOGUIN Fabrice**
+
+<div style="page-break-after: always"></div>
+
 # Remerciement
 
 Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine ZEITOUNI pour avoir proposé ce stage et pour la confiance dont elle a fait preuve à mon égard pendant toute la période où j'ai travaillé à ses côtés. Je veux également remercier l'ensemble des membres du laboratoire DAVID pour m'avoir accueilli et pour tous les moments que l'on a passés ensemble.
@@ -6,62 +27,62 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
 
 **Sommaire**
 
-- [Remerciement](#remerciement)
-- [Résumé / Summary](#résumé--summary)
-- [Introduction](#introduction)
-- [<red>I. Présentation de l'organisme d'accueil</red>](#redi-présentation-de-lorganisme-daccueilred)
-  - [<orange>I.A Historique</orange>](#orangeia-historiqueorange)
-  - [<orange>I.B Présentation juridique de l'organisme d'accueil</orange>](#orangeib-présentation-juridique-de-lorganisme-daccueilorange)
-  - [<orange>I.C Structure de l'organisme d'accueil</orange>](#orangeic-structure-de-lorganisme-daccueilorange)
-  - [<orange>I.D Présentation de l'équipe de travail</orange>](#orangeid-présentation-de-léquipe-de-travailorange)
-  - [<orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>](#orangeie-étude-de-lenvironnement-économique-de-lorganisme-daccueilorange)
-    - [<violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet)
-    - [<violet>2) Analyse SWOT du laboratoire DAVID</violet>](#violet2-analyse-swot-du-laboratoire-davidviolet)
-- [<red>II. Présentation du travail accompli durant le stage</red>](#redii-présentation-du-travail-accompli-durant-le-stagered)
-  - [<orange>II.A Présentation du Projet</orange>](#orangeiia-présentation-du-projetorange)
-  - [<orange>II.B Description du travail réalisé</orange>](#orangeiib-description-du-travail-réaliséorange)
-  - [<orange>II.C Description des problèmes à traiter et des solutions</orange>](#orangeiic-description-des-problèmes-à-traiter-et-des-solutionsorange)
-    - [<violet>Étape 1 : Comprendre la structure de la plateforme</violet>](#violetétape-1--comprendre-la-structure-de-la-plateformeviolet)
-    - [<violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>](#violetétape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet)
-    - [<violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>](#violetétape-3--limplémentation-de-la-méthode-post-avec-python-flaskviolet)
-    - [<violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>](#violetétape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet)
-    - [<violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>](#violetétape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet)
-    - [<violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>](#violetétape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-données-postgresqlviolet)
-    - [<violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>](#violetétape-7--sécuriser-les-interactions-avec-la-base-de-donnéesviolet)
-    - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)
-    - [<violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>](#violetétape-9--créer-et-ajouter-des-graphes-de-visualisation-des-donnéesviolet)
-  - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange)
-  - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange)
-  - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange)
-- [<red>Conclusion</red>](#redconclusionred)
-- [Annexes](#annexes)
-    - [**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david)
-    - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml)
-    - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy)
-    - [**Code 2.2.1 :** fichier ```templates/index.html``` avec un formulaire](#code-221--fichier-templatesindexhtml-avec-un-formulaire)
-    - [**Code 2.2.2 :** fichier ```app.py``` permettant de recevoir des éléments avec la méthode POST](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)
-    - [**Code 2.3.1 :** fichier ```templates/index.html``` avec un affichage conditionnel](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel)
-    - [**Code 2.3.2 :** fichier ```app.py``` avec passage de paramètre par le dictionnaire ```post```](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)
-    - [**Code 2.4.1 :** fichier ```index.html``` avec un lien vers la page comportant l'URL ```page2```](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2)
-    - [**Code 2.4.2 :** fichier ```page2.html``` accessible par un lien](#code-242--fichier-page2html-accessible-par-un-lien)
-    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html)
-    - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml)
-    - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy)
-    - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql)
-  - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope)
-  - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope)
-  - [**Journal 1 :** Historique des implémentations de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope)
-- [Glossaire](#glossaire)
-- [Sitographie](#sitographie)
-- [Bibliographie](#bibliographie)
+- [Remerciement](#remerciement) page 1
+- [Résumé / Summary](#résumé--summary) page 4
+- [Introduction](#introduction) page 5
+- [<red>I. Présentation de l'organisme d'accueil</red>](#redi-présentation-de-lorganisme-daccueilred) page 6
+  - [<orange>I.A Historique</orange>](#orangeia-historiqueorange) page 6
+  - [<orange>I.B Présentation juridique de l'organisme d'accueil</orange>](#orangeib-présentation-juridique-de-lorganisme-daccueilorange) page 6
+  - [<orange>I.C Structure de l'organisme d'accueil</orange>](#orangeic-structure-de-lorganisme-daccueilorange) page 6
+  - [<orange>I.D Présentation de l'équipe de travail</orange>](#orangeid-présentation-de-léquipe-de-travailorange) page 7
+  - [<orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>](#orangeie-étude-de-lenvironnement-économique-de-lorganisme-daccueilorange) page 8
+    - [<violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet) page 8
+    - [<violet>2) Analyse SWOT du laboratoire DAVID</violet>](#violet2-analyse-swot-du-laboratoire-davidviolet) page 9
+- [<red>II. Présentation du travail accompli durant le stage</red>](#redii-présentation-du-travail-accompli-durant-le-stagered) page 10
+  - [<orange>II.A Présentation du Projet</orange>](#orangeiia-présentation-du-projetorange) page 10
+  - [<orange>II.B Description du travail réalisé</orange>](#orangeiib-description-du-travail-réaliséorange) page 10
+  - [<orange>II.C Description des problèmes à traiter et des solutions</orange>](#orangeiic-description-des-problèmes-à-traiter-et-des-solutionsorange) page 11
+    - [<violet>Étape 1 : Comprendre la structure de la plateforme</violet>](#violetétape-1--comprendre-la-structure-de-la-plateformeviolet) page 11
+    - [<violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>](#violetétape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet) page 11
+    - [<violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>](#violetétape-3--limplémentation-de-la-méthode-post-avec-python-flaskviolet) page 12
+    - [<violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>](#violetétape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet) page 13
+    - [<violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>](#violetétape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet) page 14
+    - [<violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>](#violetétape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-données-postgresqlviolet) page 15
+    - [<violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>](#violetétape-7--sécuriser-les-interactions-avec-la-base-de-donnéesviolet) page 16
+    - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet) page 18
+    - [<violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>](#violetétape-9--créer-et-ajouter-des-graphes-de-visualisation-des-donnéesviolet) page 20
+  - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange) page 21
+  - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange) page 22
+  - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange) page 22
+- [<red>Conclusion</red>](#redconclusionred) page 23
+- [Annexes](#annexes) page 24
+    - [**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david) page 25
+    - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml) page 25
+    - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy) page 25
+    - [**Code 2.2.1 :** fichier ```templates/index.html``` avec un formulaire](#code-221--fichier-templatesindexhtml-avec-un-formulaire) page 26
+    - [**Code 2.2.2 :** fichier ```app.py``` permettant de recevoir des éléments avec la méthode POST](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post) page 26
+    - [**Code 2.3.1 :** fichier ```templates/index.html``` avec un affichage conditionnel](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel) page 27
+    - [**Code 2.3.2 :** fichier ```app.py``` avec passage de paramètre par le dictionnaire ```post```](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post) page 27
+    - [**Code 2.4.1 :** fichier ```index.html``` avec un lien vers la page comportant l'URL ```page2```](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2) page 28
+    - [**Code 2.4.2 :** fichier ```page2.html``` accessible par un lien](#code-242--fichier-page2html-accessible-par-un-lien) page 28
+    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html) page 28
+    - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml) page 29
+    - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy) page 29
+    - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql) page 30
+  - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope) page 31
+  - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope) page 32
+  - [**Journal 1 :** Historique des implémentations de la plateforme de données Polluscope](#journal-1--historique-des-implémentations-de-la-plateforme-de-données-polluscope) page 34
+- [Glossaire](#glossaire) page 46
+- [Sitographie](#sitographie) page 47
+- [Bibliographie](#bibliographie) page 47
 
 <div style="page-break-after: always"></div>
 
 # Résumé / Summary
 
-Je suis rentré au laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines dans le cadre de mon stage de fin d'étude à l'IUT Informatique de Vélizy. Le stage a pour sujet <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> et s'est déroulé du 4 avril au 27 mai 2022. Durant cette période j'ai participé au projet de recherche Polluscope en créant un programme pour générer des rapports de façon automatique et en refactorisant la plateforme de données du projet en langage Python Flask.
+Je suis rentré au laboratoire DAVID de l'Université de Versailles-Saint-Quentin-en-Yvelines dans le cadre de mon stage de fin d'étude à l'IUT Informatique de Vélizy. Le stage a pour sujet <und>Développement d'interfaces de chargement, de prétraitement et de visualisation de données issues d'un capteur et d'une application mobile</und> et a commencé le 4 avril 2022. Il devait initialement se terminer le 27 mai mais il a été prolongé jusqu'au 15 juin pour me permettre d'achever pleinement mon travail. Durant cette période j'ai participé au projet de recherche Polluscope en créant un programme pour générer des rapports de façon automatique et en refactorisant la plateforme de données du projet Polluscope en langage Python Flask. Plus qu'une expérience dans le milieu professionnel en tant que membre actif du laboratoire, ce stage a été riche en apprentissage sur le plan technique et m'a permis de découvrir le monde de la recherche en rencontrant des personnes aux parcours variés mais partageant la même passion pour l'informatique 
 
-I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin-en-Yvelines in the context of my internship of end studies in computer sciences at the IUT of Velizy. The internship subject is <und>Development of loading, pretreatement and visualization interface for data from sensor and of mobile application</und> and took place between April 4th and may 27th of 2022. During this time, I participated to the research project Polluscope by creating a program of auto report generation and by refactoring the project's data platform in the Python Flask language.
+I entered in the DAVID laboratory of the Université de Versailles-Saint-Quentin-en-Yvelines in the context of my internship of end studies in computer sciences at the IUT of Velizy. The internship subject is <und>Development of loading, pretreatement and visualization interface for data from sensor and of mobile application</und> and began the April 4th 2022. Initially it was suppose to last until the May 27th but was extended to the June 15th to allow me to fully achieve my work. During this time, I participated to the research project Polluscope by creating a program of auto report generation and by refactoring the Polluscope project's data platform in the Python Flask language. More than an experience in a professionnal environment as an active laboratory's member, this internship was rich in learning on the technical aspect and allowed me to discover the research world by meeting peoples with varied career history but sharing the same passion for computer sciences.
 
 <div style="page-break-after: always"></div>
 
@@ -176,8 +197,6 @@ Dans certaines conditions, des stations fixes sont utilisées pour mesurer la po
 Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
 Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichiers de données et le téléchargement des rapports. Une première version du site à été codée en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
 
-Aussi, une partie de mon travail durant le stage à été de participer à une campagne de recensement de la pollution. Pour cela, en plus de l'application nécessaire que j'ai téléchargé sur mon téléphone, j'avais à ma disposition un capteur FLOW. Cela m'a permis de recenser mon exposition à la pollution au cours d'une journée de stage et de l'intégrer aux données du projet de recherche.
-
 <div style="page-break-after: always"></div>
 
 ## <orange>II.C Description des problèmes à traiter et des solutions</orange>
@@ -205,7 +224,8 @@ La liste des liens dont je me suis servi pour cette auto formation sont présent
 D'après mes recherches, la technologie Flask a un fonctionnement semblable au Design Pattern **Modele-View-Controller** (Modèle-Vue-Contrôleur) utilisé dans les langages de programmation orientés objets. En effet, l'affichage des pages codées en HTML ainsi que les actions de l'utilisateur sur celles-ci sont ou peuvent être entièrement ou partiellement gérées par un seul fichier codé en Python.
 
 Les deux portions de code [*2.1.1*](#code-211--fichier-templatesindexhtml) et [*2.1.2*](#code-212--fichier-apppy) présentes en annexe, permettent l'affichage d'une pages web identique à celle de l'image suivante : \
-<img src="pagetest.jpg" heigh="420" width="420">
+<img src="pagetest.jpg" heigh="420" width="420"> \
+**Page Web 1 :** Page web basique avec Python Flask
 
 Pour cela, le fichier ```index.html``` ([Code *2.1.1*](#code-211--fichier-templatesindexhtml)) doit être placé dans un répertoire **templates** avant d'exécuter le fichier ```app.py``` ([Code *2.1.2*](#code-212--fichier-apppy)). Cela permet d'ouvrir une fenêtre de terminal comportant les lignes suivantes :
 ```
@@ -220,13 +240,17 @@ Pour afficher la page web il faut entrer l'URL fourni (ici ```http://127.0.0.1:5
 
 En sachant cela, j'ai pu créer la page d'accueil de la plateforme du projet.
 
+<img src="pollu_accueil.jpg" heigh="420" width="420"> \
+**Page Web 2 :** Page d'accueil de la plateforme de données Polluscope
+
 ### <violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>
 
 D'après l'analyse de la plateforme, celle-ci comporte de nombreux formulaires nécessaires aux dépôt des données de pollution. Tout comme dans la première version du site internet, celui que j'ai créé doit permettre la transmission d'éléments insérés dans des formulaires au moyen de la méthode POST. \
 En reprenant le code HTML vu précédemment on peut rajouter un formulaire ([Code *2.2.1* #1](#code-221--fichier-templatesindexhtml-avec-un-formulaire)) constitué d'une zone de texte ([Code *2.2.1* #2](#code-221--fichier-templatesindexhtml-avec-un-formulaire)) et d'un bouton de validation ([Code *2.2.1* #3](#code-221--fichier-templatesindexhtml-avec-un-formulaire)). La méthode ```main()``` du fichier ```app.py``` ([Code *2.2.2*](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)) qui permet l'affichage de la page web est par défaut à l'écoute des actions réalisées sur ce formulaire.
 
 Avec le nouveau fichier ```index.html``` ([Code *2.2.1*](#code-221--fichier-templatesindexhtml-avec-un-formulaire)), on obtient une page web identique à celle-ci :
-<img src="pagepost.jpg" heigh="420" width="420">
+<img src="pagepost.jpg" heigh="420" width="420"> \
+**Page Web 3 :** Page web avec un formulaire pour afficher du texte dans une fenêtre de terminal
 
 Afin que le programme en Python puisse recevoir des éléments avec la méthode POST, celle-ci doit être spécifiée grâce à la méthode ```@app.route()``` ([Code *2.2.2* #1](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)). Pour récupérer les éléments insérés dans le formulaire, il faut utiliser l'attribut ```form``` de l'objet ```request``` en spécifiant le nom de l'élément ([Code *2.2.2* #2](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)) après avoir vérifié si la méthode POST est utilisée ([Code *2.2.2* #3](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post)).
 
@@ -244,9 +268,16 @@ Pour pouvoir passer un paramètre à la fonction d'affichage, un dictionnaire do
 
 Le code ainsi modifié permet d'afficher une page web similaire à la précédente mais à présent lorsque du texte est entré dans la zone appropriée et envoyé (#1), celui-ci est affiché dans le navigateur (#2). \
 <img src="pagepara1.jpg" heigh="300" width="300"> #1
-<img src="pagepara2.jpg" heigh="300" width="300"> #2
+**Page Web 4 :** Page web avec un formulaire permettant d'entrer du texte
 
-L'affichage conditionnel sur des pages web m'a permis de modifier les pages accessibles aux utilisateurs en fonction de leurs rôle de participant ou d'administrateur.
+
+<img src="pagepara2.jpg" heigh="300" width="300"> #2
+**Page Web 5 :** Page web affichant le texte entré dans le formulaire
+
+L'affichage conditionnel sur des pages web m'a permis de modifier les pages accessibles aux utilisateurs en fonction de leurs rôle de participant ou d'administrateur ou d'afficher des messages d'erreur ou de réussite de certaines actions.
+
+<img src="pollu_err.jpg" heigh="300" width="300"> \
+**Page Web 6 :** Page d'accueil de la plateforme Polluscope après une erreur de connexion
 
 ### <violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>
 
@@ -256,12 +287,17 @@ Pour ce faire, il faut utiliser un élément de syntaxe **Jinja** associé à la
 Pour qu'une autre page HTML (ici celle du [Code *2.4.2*](#code-242--fichier-page2html-accessible-par-un-lien)) soit accessible par un lien, celle-ci doit être rattachée à une fonction ([Code *2.4.3* #1](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)) et à un chemin d'accès ([Code *2.4.3* #2](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)).
 
 Les trois fichier permettent d'afficher une page comportant un titre et un lien. \
-<img src="lien1.jpg" heigh="300" width="300">
+<img src="lien1.jpg" heigh="300" width="300"> \
+**Page Web 7 :** Première page web avec un lien vers la deuxième page
 
 Cliquer sur le lien permet d'afficher la deuxième page. \
-<img src="lien2.jpg" heigh="300" width="300">
+<img src="lien2.jpg" heigh="300" width="300"> \
+**Page Web 8 :** Deuxième page web accessible via la première
 
 Avec ces éléments, j'ai pu créer le menu contenant les liens vers les différentes pages.
+
+<img src="pollu_menu.jpg" heigh="300" width="300"> \
+**Page Web 9 :** Exemple de menu de la plateforme Polluscope
 
 ### <violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>
 
@@ -332,7 +368,11 @@ Les deux portions de code [*2.6.1.1*](#code-2611--fichier-indexhtml) et [*2.6.1.
 Le script Python établit la connexion avec la base de donnée ([Code *2.6.1.2* #1](#code-2612--fichier-apppy)) si il y a un élément transmis par la méthode POST ([Code *2.6.1.2* #2](#code-2612--fichier-apppy)). Une commande est ensuite créée avec l'id de la personne dont l'utilisateur veut afficher le nom ([Code *2.6.1.2* #3](#code-2612--fichier-apppy)). Une fois la commande exécutée ([Code *2.6.1.2* #4](#code-2612--fichier-apppy)), les résultats de la commande sont récupérés dans la variable ```out``` ([Code *2.6.1.2* #5](#code-2612--fichier-apppy)) et envoyés vers la page web par la méthode POST ([Code *2.6.1.2* #6](#code-2612--fichier-apppy)).
 
 Si l'utilisateur entre l'id ```1``` alors le nom de ```Camille``` est affiché. \
-<img src="sql1.jpg" heigh="300" width="300"><img src="sql2.jpg" heigh="300" width="300">
+<img src="sql1.jpg" heigh="300" width="300"> \
+**Page Web 10 :** L'identifiant 1 est entré dans le formulaire
+
+<img src="sql2.jpg" heigh="300" width="300"> \
+**Page Web 11 :** Le nom de Cammile est affiché sur la page
 
 Cependant, il est possible d'afficher tous les noms des personnes en utilisant une injection SQL. Pour cela, il suffit de rajouter une condition après l'identifiant. Pour fonctionner, cette condition doit être vraie pour toutes les lignes de la table. Il peut aussi être nécessaire de rajouter des tirêts pour que la suite de la commande devienne un commentaire et ne soit pas pris en compte lors de l'exécution. Par exemple, le texte suivant est une injection SQL.
 ```
@@ -340,7 +380,8 @@ Cependant, il est possible d'afficher tous les noms des personnes en utilisant u
 ```
 
 Si ce texte est inséré et envoyé, on obtient la page suivante. \
-<img src="injec.jpg" heigh="300" width="300">
+<img src="injec.jpg" heigh="300" width="300"> \
+**Page Web 12 :** Tout les noms sont affichés grâce à l'injection SQL
 
 Dans l'exemple précédent, l'injection SQL permet l'affichage de plusieurs éléments alors que le programme utilisé normalement n'en affiche qu'un seul. Cependant, entrer le texte suivant aura pour conséquence, la suppression de la table ```personnes```.
 ```
@@ -403,11 +444,18 @@ Il s'agit d'une méthode de vérification nécessitant moins de ressources de l'
 
 ### <violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>
 
-Peu avant la fin du stage, il m'a été demandé de rajouter des graphes et des cartes, créés avec le logiciel Grafana, à la plateforme Polluscope pour permettre la visualisation de données. Le programme de création des graphes avait été créé par **ABBOUD Mohammad** et des étudiant de l'université. Mon travail dans cette étape a donc été d'intégrer ce programme dans le code source de la plateforme Polluscope en faisant les modifications nécessaires.
+Peu avant la fin du stage, il m'a été demandé de rajouter des graphes et des cartes, créés avec le logiciel <und>Grafana</und>, à la plateforme Polluscope pour permettre la visualisation de données. Le programme de création des graphes avait été créé par **ABBOUD Mohammad** et des étudiant de l'université. Mon travail dans cette étape a donc été d'intégrer ce programme dans le code source de la plateforme Polluscope en faisant les modifications nécessaires.
 
 Dans cette partie du travail la principale difficulté a été d'apporter des modifications au code déjà créé et d'en comprendre les erreurs. En effet, pour interagir avec le logiciel Grafana, le programme utilise le package ```requests``` pour envoyer des requêtes vers l'ordinateur sur lequel ce premier est installé et en obtenir les réponses. Il s'agit d'une librairie que je n'avais alors jamais utilisé et dont les erreurs peuvent être incomprises et mener la personne en charge du développement vers de fausses réflexions.
 
-Aussi, les données utilisées pour générer les graphes proviennent de requêtes SQL transmises au logiciel par l'intermédiaire d'un ou plusieurs fichiers JSON. Or ces fichier ont été écrits avec des requêtes permettant l'extraction d'informations d'une base de données selon un modèle créé au début du projet. Celui-ci a ensuite été mis à jour, ce qui rend les fichiers JSON inutilisables. Il a donc été nécessaire que je modifie les requêtes SQL de ces fichier pour rendre possible les interations avec la base de données.
+Aussi, les données utilisées pour générer les graphes proviennent de requêtes SQL transmises au logiciel par l'intermédiaire d'un ou plusieurs fichiers JSON. Or ces fichier ont été écrits avec des requêtes permettant l'extraction d'informations d'une base de données selon un modèle créé au début du projet. Celui-ci a ensuite été mis à jour, ce qui rend les fichiers JSON inutilisables. Il a donc été nécessaire que je modifie les requêtes SQL de ces fichier pour rendre possible les interations avec la base de données et donc l'affichage de graphes.
+
+<img src="pollu_graphe.jpg" heigh="300" width="300"> \
+**Page Web 13 :** Exemple de graphe généré sur Grafana
+
+A la demande de ZEITOUNI Karine, la génération des graphes m'a permis de réaliser un contrôle de la qualité des données recueillies par les capteurs PMScan / Diams lors de la campagne de recesement de pollution réalisée durant le mois de mai. Cela a pour objectif de mettre en évidence des disfonctionnements sur certains capteurs. Ceux-ci sont censés fonctionner et recueillir des données de pollution pendant sept jours. Ainsi, des absences de données peuvent être décelées grâces aux graphes et imposé une réparation ou un remplacement de matériel.
+
+Le rapport sur la qualité des données des capteurs PMScan est disponible dans le répertoire ```quality_check``` sur le dépôt Github du présent rapport (voir [sitographie](#sitographie)).
 
 <div style="page-break-after: always"></div>
 
@@ -439,16 +487,16 @@ On peut constater que la plupart des tâches qui m'ont été confiée nécessite
 ## <orange>II.F Résultats</orange>
 
 Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail ce qui m'a permis d'entamer très vite la refactorisation de la plateforme Polluscope. \
-Cela a constitué la partie la plus importante de mon travail et également la plus longue. La refactorisation de la plateforme ainsi que l'ajout des pages permettant le chargement des données des nouveaux capteurs a commencé le 11 avril, au début de la deuxième semaine de stage, et s'est terminé le 20 mai. La création des fichiers permettant le fonctionnement d'une image Docker hébergeant la plateforme a nécessité deux jours de travail durant la semaine de l'Ascension. \
-Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai été absent pendant cinq jours durant le stage. J'ai donc eu la permission de prolonger mon stage d'une semaine. Cela m'a permis de participer au déploiement de la plateforme Polluscope sur le serveur du laboratoire et d'insérer les données de pollution de la campagne qui venait de débuter.
+Cela a constitué la partie la plus importante de mon travail et également la plus longue. La refactorisation de la plateforme ainsi que l'ajout des pages permettant le chargement des données des nouveaux capteurs a commencé le 11 avril, au début de la deuxième semaine de stage, et s'est déroulé jusqu'à la fin du stage. La création des fichiers permettant le fonctionnement d'une image Docker hébergeant la plateforme a nécessité deux jours de travail durant la semaine de l'Ascension. Néanmoins, ayant peu de connaissances concerant la mise en place de cette technologie, c'est une tâche qui a été remprise par TAHER Yehia. Il m'était également demandé d'intégrer la génération de rapport dans la plateforme de données. Néanmoins, en raison du départ de EL HAFYANI Hafsa et de la complexité de son code intégré dans les scripts Python que j'ai créé, c'est une tâche que je n'ai pu accomplir. \
+Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai été absent pendant cinq jours durant le stage. Mon stage a donc été prolongé d'une semaine en premier lieu, puis de quinze jour. Cela m'a permis d'apporter de nouvelles fonctionnalités à la plateforme et également de corriger des disfonctionnements. La plateforme Polluscope sera sûrement amenée à évoluer pendant la suite du projet de recherche et je reste par conséquent à disposition des membres de l'équipe ADAM pour leur apporter mon aide dans l'amélioration de la plateforme Polluscope
 
 <div style="page-break-after: always"></div>
 
 # <red>Conclusion</red>
 
 Mon choix de stage en entreprise s'est porté sur l'offre proposée par ZEITOUNI Karine car l'utilisation de technologies ou de langages peu connus dans le domaine de l'informatique faisait partie intégrante du sujet du stage et du travail à réaliser durant celui-ci. J'y ai vu une opportunité pour continuer d'acquérir des compétences en informatique tout en participant à un projet de recherche. Il s'agit d'une opportunité dont je n'aurais peu être pas bénéficié dans une autre entreprise. \
-L'apprentissage de nouvelles technologie a rajouté une difficulé au travail a réalisé car il fallu que je me forme a leurs utilisations. Toutefois, étant avide d'acquérir de nouvelles connaissances et compétences, cette tâche ne m'a pas posé de grandes difficultés et s'est avérée être passionnante. \
-Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution.
+L'apprentissage de nouvelles technologies a rajouté une difficulé au travail à réaliser car il fallu que je me forme a leurs utilisations. Toutefois, étant avide d'acquérir de nouvelles connaissances et compétences, cette tâche ne m'a pas posé de grandes difficultés et s'est avérée être passionnante. \
+Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution. 
 
 <div style="page-break-after: always"></div>
 
@@ -611,7 +659,7 @@ if __name__ == "__main__" :
     <body>
         <h1>Ceci est la première page</h1>
         <li>
-            <a href="{{ url_for('page2') }}"> #1
+            <a href="{{ url_for('page2') }}"> #1 élément de synthaxe Jinja associé à la méthode url_for()
                 lien vers la deuxième
             </a>
         </li>
@@ -642,8 +690,8 @@ app = Flask(__name__)
 def main():
     return render_template("index.html")
 
-@app.route("/page2") #2
-def page2(): #1
+@app.route("/page2") #2 le chemin d'accès vers la deuxième page
+def page2(): #1 la fonction permettant l'affichage de la deuxième page
     return render_template("page2.html")
 
 if __name__ == "__main__" :
@@ -688,17 +736,17 @@ app = Flask(__name__)
 @app.route("/", methods=("GET", "POST"))
 def main():
     post = {}
-    if request.method == "POST": #2
-        conn = psycopg2.connect(database="X", user="X", password="X", host="X") #1
+    if request.method == "POST": #2 si la méthode POST est utilisée
+        conn = psycopg2.connect(database="X", user="X", password="X", host="X") #1 une connexion est établie avec la base de données
         input = request.form["text"]
-        query = "select nom from personnes where id="+input #3
+        query = "select nom from personnes where id="+input #3 la requête selectionne le nom de la personne en fonction de son identifiant
         cur = conn.cursor()
-        cur.execute(query) #4
+        cur.execute(query) #4 la requête est exécutée ...
         out = []
         for row in cur:
-            out.append(row) #5
+            out.append(row) #5 ... et son résultat est stocké dans la variable out ...
         post['name'] = out
-    return render_template("index.html", posts=post) #6
+    return render_template("index.html", posts=post) #6 ... et envoyé vers la page web
     
 if __name__ == "__main__" :
     app.run()
@@ -717,7 +765,7 @@ def main():
     if request.method == "POST":
         conn = psycopg2.connect(database="X", user="X", password="X", host="X")
         input = request.form["text"]
-        query = "select nom from personnes where id="+str(input).replace("or", "") #1
+        query = "select nom from personnes where id="+str(input).replace("or", "") #1 la fonction replace permet de supprimer la chaîne de caractère "or" de l'élément envoyé par l'utilisateur
         print(query)
         cur = conn.cursor()
         cur.execute(query)
