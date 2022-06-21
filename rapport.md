@@ -189,13 +189,27 @@ Sorbonne Médecine, Inserm, LSCE, EIVP et l'Agence Nationale de la Recherche, ce
 
 ![](pollu.jpg)
 
-Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit un ou plusieurs capteurs de pollution et une tablette dans certains cas pour relever leurs activités ainsi que leur position géographique. Les capteurs sont conçus pour mesurer le taux de particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application. Celles-ci peuvent ensuite être téléchargées et déposées sur le site internet du projet pour être analysées et mises sous différentes formes. \
+Pour ce faire, des campagnes de recensement sont régulièrement réalisées en région parisienne et marseillaise avec la participation de volontaires. Pour les besoins de l'expérience, chaque participant reçoit un ou plusieurs capteurs de pollution et une tablette pour relever leurs activités ainsi que leur position géographique. Les capteurs sont conçus pour mesurer le taux de différents gazs ou particules fines de différentes tailles dans l'air ambiant et transférer les données sur une application.
+
+<img src="Capteur_AE51_BC.jpg" heigh="220" width="220"> \
+**Photo 1 :** Capteur AE51 conçu pour mesurer le taux de suie dans l'air ambient
+
+<img src="cairsens_VGP.jpg" heigh="220" width="220"> \
+**Photo 2 :** Capteur Cairsens conçu pour mesurer le taux de dioxyde d'azote (NO2) dans l'air ambient
+
+<img src="CanarinII.png" heigh="220" width="220"> \
+**Photo 3 :** Capteur Canarin conçu pour mesurer le taux de micro particules de différente taille dans l'air ambient (un capteur cairsens est attaché à droite)
+
+<img src="pmscan_icon.png" heigh="220" width="220"> \
+**Photo 4 :** Icon du capteur PMScan/Diams conçu pour mesurer les mêmes éléments que le capteur Canarin mais en relevant la position géographique
+
+Celles-ci peuvent ensuite être téléchargées et déposées sur le site internet du projet pour être analysées et mises sous différentes formes. \
 Dans certaines conditions, des stations fixes sont utilisées pour mesurer la pollution de l'air ambiant. Toutefois, dans la mesure où celles-ci sont difficiles à déplacer, elles sont surtout utilisées comme témoins de la pollution dans des zones rurales ou peu urbanisées.
 
 ## <orange>II.B Description du travail réalisé</orange>
 
 Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
-Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichiers de données et le téléchargement des rapports. Une première version du site à été codée en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je créer une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
+Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichiers de données et le téléchargement des rapports. Une première version du site à été codée en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je crée une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
 
 <div style="page-break-after: always"></div>
 
@@ -261,7 +275,7 @@ Comprendre le fonctionnement de la méthode POST m'a permis de d'implémenter un
 ### <violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>
 
 Durant l'analyse de la première version du site internet, j'avais constaté que le programme en PHP permet l'affichage de texte sur les pages web pour indiquer si des erreurs ont eu lieu ou si une action s'est achevée correctement. Afin que cela soit possible dans la nouvelle version de la plateforme je devais trouver un moyen pour passer des éléments en paramètre des fonctions d'affichage des pages web. \
-Pour ce faire, j'ai utilisé des éléments de syntaxe **Jinja** dans les pages web. Cela permet de créer des boucles ou des action conditionnelles dans des pages codées en html. \
+Pour ce faire, j'ai utilisé des éléments de syntaxe **Jinja** dans les pages web. Cela permet de créer des boucles ou des actions conditionnelles dans des pages codées en html. \
 Dans le code [*2.3.1*](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel), si la fonction d'affichage de la page comporte un paramètre ```posts``` portant le label 'text' ([Code *2.3.1* #1](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel)) alors celui-ci est affiché sur la page web ([Code *2.3.1* #2](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel)).
 
 Pour pouvoir passer un paramètre à la fonction d'affichage, un dictionnaire doit être instancié dans le script python ([Code *2.3.2* #1](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)) et les éléments à passer en paramètre doivent être associés à la bonne clé ([Code *2.3.2* #2](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)). Par défaut, l'élément associé à la clé doit être nul ([Code *2.3.2* #3](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)) pour éviter des erreurs. Le dictionnaire doit ensuite être placé en paramètre de la méthode ```render_template()``` avec le nom approprié ([Code *2.3.2* #4](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post)).
@@ -281,7 +295,7 @@ L'affichage conditionnel sur des pages web m'a permis de modifier les pages acce
 
 ### <violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>
 
-La plateforme doit comporter un menu permettant l'accès à différentes pages en fonction des besoins de l'utilisateur et de ses actions à réaliser. Dans la version que j'ai créé, j'ai dû trouver une méthode permettant l'utilisation des liens spécifiés pour chaque fonctions rattachées à chaque page. \
+La plateforme doit comporter un menu permettant l'accès à différentes pages en fonction des besoins de l'utilisateur et de ses actions à réaliser. Dans la version que j'ai créé, j'ai dû trouver une méthode permettant l'utilisation des liens spécifiés pour chaque fonction rattachée à chaque page. \
 Pour ce faire, il faut utiliser un élément de syntaxe **Jinja** associé à la méthode ```url_for()``` ([Code *2.4.1* #1](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2)). Celle-ci doit avoir l'URL de la page souhaitée en paramètre.
 
 Pour qu'une autre page HTML (ici celle du [Code *2.4.2*](#code-242--fichier-page2html-accessible-par-un-lien)) soit accessible par un lien, celle-ci doit être rattachée à une fonction ([Code *2.4.3* #1](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)) et à un chemin d'accès ([Code *2.4.3* #2](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-correspondant-au-fichier-page2html)).
@@ -351,7 +365,7 @@ Pouvoir interagir avec la base de données m'a permis de créer une nouvelle ver
 
 ### <violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>
 
-D'après mon analyse du code source de la première version de la plateforme Polluscope, les requêtes utilisées pour insérer des éléments dans la base de données étaient exécutées sans être préparées. En tant que passionné de cybersécurité, je sais qu'une requête SQL non préparée est une faille de sécurité pouvant être utilisée à des fins malveillantes pour compromettre une base de données grâce à des **injections SQL**. Il était donc primordiale que je corrige cette faille dans la nouvelle version du site internet.
+D'après mon analyse du code source de la première version de la plateforme Polluscope, les requêtes utilisées pour insérer des éléments dans la base de données étaient exécutées sans être préparées. En tant que passionné de cybersécurité, je sais qu'une requête SQL non préparée est une faille de sécurité pouvant être utilisée à des fins malveillantes pour compromettre une base de données grâce à des **injections SQL**. Il était donc primordial que je corrige cette faille dans la nouvelle version du site internet.
 
 Normalement, quand le client d'une page web insère un élément dans un champ prévu à cet effet tel qu'une zone de texte, celui-ci est récupéré et inséré dans la variable de type String qui constitue la commande SQL. Cette commande est ensuite exécutée sur la base de données. \
 Dans les exemples suivants nous utiliserons la table ```personnes``` présentée ci-dessous :
@@ -402,7 +416,7 @@ Concernant la plateforme Polluscope, le nombre de caractères à supprimer est p
 Dans la mesure où les travaux de recherche nécessitent des mesures précises pour être fiables, j'ai considéré que l'insertion de doublons de données de pollution dans la base de données mettrait en péril les résultats des campagnes de recensement de la pollution. Je suis donc parti du principe que les participants des campagnes pouvaient faire l'erreur d'insérer plusieurs fois un même fichier de données et que si cela se produit alors les scripts Python doivent le savoir et ne pas insérer les doublons dans la base de données. C'est un constat qui a été approuvé par mes encadrants.
 
 J'ai considéré que le nom du fichier inséré et contenant les données de pollution n'est pas un élément de décision fiable car celui-ci peut être facilement modifié par le participant. \
-Étant donnée que les fichier inséré par les clients de la plateforme sont enregistrés sur le serveur du laboratoire, dans une première version du programme, pour tester l'existence d'une ligne dans la base de donnée, le script Python testait si elle se trouvait parmis les lignes des fichiers précédemment insérés et stockés sur le serveur. Le pseudo code Python suivant illustre cette première méthode de vérification. La fonction prend en paramètre la ligne à insérer et une liste contenant toutes les lignes enregistrées (#1). Si la nouvelle ligne est présente dans la liste alors la fonction renvoie la valeur booléenne ```False``` (#2) et la valeur ```True``` dans le cas contraire (#3).
+Étant donnée que les fichiers insérés par les clients de la plateforme sont enregistrés sur le serveur du laboratoire, dans une première version du programme, pour tester l'existence d'une ligne dans la base de donnée, le script Python testait si elle se trouvait parmis les lignes des fichiers précédemment insérés et stockés sur le serveur. Le pseudo code Python suivant illustre cette première méthode de vérification. La fonction prend en paramètre la ligne à insérer et une liste contenant toutes les lignes enregistrées (#1). Si la nouvelle ligne est présente dans la liste alors la fonction renvoie la valeur booléenne ```False``` (#2) et la valeur ```True``` dans le cas contraire (#3).
 
 ```py
 def testNew(nouvelleLigne, toutesLesLignes): #1
@@ -422,7 +436,7 @@ if testNew(nouvelleLigne, toutesLesLignes) : #1
 
 Néanmoins, comme l'ont remarqué mes encadrants, cette méthode est très coûteuse en mémoire pour l'ordinateur réalisant l'opération et l'utilisation de cette ressource augmente avec le nombre de ligne à comparer. Étant donné que, dans le cadre du projet Polluscope, ce nombre peut s'élever à plusieurs millions, cette méthode n'est pas applicable pour ce projet. J'ai donc dû trouver une autre méthode.
 
-Mes encadrant m'ont alors suggéré d'utiliser les dates d'utilisation du capteur comme moyen de vérification. En effet, l'ensemble des capteurs, en plus de relever des données de pollution, mémorisent les dates auxquelles les données sont enregistrées. En ayant connaissance de l'identifiant du capteur, de l'intervalle pendant lequel il a été utilisé et en sachant qu'un capteur ne peut être utilisé que par un seul participant à la fois, il est possible de savoir si une ligne à déjà été insérée. \
+Mes encadrants m'ont alors suggéré d'utiliser les dates d'utilisation du capteur comme moyen de vérification. En effet, l'ensemble des capteurs, en plus de relever des données de pollution, mémorisent les dates auxquelles les données sont enregistrées. En ayant connaissance de l'identifiant du capteur, de l'intervalle pendant lequel il a été utilisé et en sachant qu'un capteur ne peut être utilisé que par un seul participant à la fois, il est possible de savoir si une ligne à déjà été insérée. \
 Pour ce faire, le script Python récupère grâce à une requête SQL l'intervalle d'utilisation d'un capteur en fonction de son identifiant.
 
 ```sql
@@ -453,7 +467,7 @@ Aussi, les données utilisées pour générer les graphes proviennent de requêt
 <img src="pollu_graphe.jpg" heigh="300" width="300"> \
 **Page Web 13 :** Exemple de graphe généré sur Grafana
 
-A la demande de ZEITOUNI Karine, la génération des graphes m'a permis de réaliser un contrôle de la qualité des données recueillies par les capteurs PMScan / Diams lors de la campagne de recesement de pollution réalisée durant le mois de mai. Cela a pour objectif de mettre en évidence des disfonctionnements sur certains capteurs. Ceux-ci sont censés fonctionner et recueillir des données de pollution pendant sept jours. Ainsi, des absences de données peuvent être décelées grâces aux graphes et imposé une réparation ou un remplacement de matériel.
+A la demande de ZEITOUNI Karine, la génération des graphes m'a permis de réaliser un contrôle de la qualité des données recueillies par les capteurs PMScan / Diams lors de la campagne de recesement de pollution réalisée durant le mois de mai. Cela a pour objectif de mettre en évidence des dysfonctionnements sur certains capteurs. Ceux-ci sont censés fonctionner et recueillir des données de pollution pendant sept jours. Ainsi, des absences de données peuvent être décelées grâces aux graphes et imposé une réparation ou un remplacement de matériel.
 
 Le rapport sur la qualité des données des capteurs PMScan est disponible dans le répertoire ```quality_check``` sur le dépôt Github du présent rapport (voir [sitographie](#sitographie)).
 
@@ -461,9 +475,9 @@ Le rapport sur la qualité des données des capteurs PMScan est disponible dans 
 
 ## <orange>II.D Les outils informatiques et techniques utilisés</orange>
 
-Dans le cadre de mon travail durant ce stage, l'ordinateur personnel que je possède et utilise au quotidien pour mes études et mes activités dans le domaine de l'informatique est devenu mon principal outils de travail. Étant déjà familiarisé avec les environnements de développement créer par **JetBrains** tel que <und>PyCharm</und> mon choix s'est porté sur ceux-ci pour produire les logiciels et applications durant le stage. \
+Dans le cadre de mon travail durant ce stage, l'ordinateur personnel que je possède et utilise au quotidien pour mes études et mes activités dans le domaine de l'informatique est devenu mon principal outil de travail. Étant déjà familiarisé avec les environnements de développement créer par **JetBrains** tel que <und>PyCharm</und> mon choix s'est porté sur ceux-ci pour produire les logiciels et applications durant le stage. \
 <img src="jblogo.jpg" heigh="220" width="220"> \
-Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentation est disponible [ici](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope) en annexes. \
+Pendant toute la durée du stage, j'ai utilisé <und>Github</und> pour la gestion et le partage de versions des applications avec les membres de l'équipe car ceux-ci l'avait déjà utilisé auparavant. L'historique des implémentations est disponible [ici](#joural-des-mises-à-jour-de-la-plateforme-de-données-polluscope) en annexes. \
 <img src="ghlogo.jpg" heigh="220" width="220"> \
 Comme évoqué dans la partie précédente, l'ensemble des données recueillies lors des campagnes de recensement sont stockées sur une base de données <und>PostgreSQL</und> appartenant au laboratoire. Afin de ne pas endommager, effacer ou modifier ces données lors du développement de la nouvelle version de la plateforme Polluscope, j'ai installé ce même système de gestion de base de données sur mon ordinateur personnel. Celle-ci a été utilisée pendant toute la durée de la création du nouveau site web du projet. \
 <img src="pglogo.jpg" heigh="220" width="220"> \
@@ -475,9 +489,9 @@ Aussi, pour faciliter le déploiement de l'application sur le serveur du laborat
 
 ## <orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>
 
-Comme évoquer auparavant ma première tâche à été de créer un programme générant automatiquement des rapports en <und>Markdown</und> avant de les convertir au format PDF. Étant déjà familiarisée avec ce premier je n'ai pas eu besoin d'apprendre la structure d'un fichier Markdown. En revanche, il a été nécessaire que je trouve des fonctions en Python permettant l'exportation du fichier au format souhaité.
+Comme évoqué auparavant ma première tâche à été de créer un programme générant automatiquement des rapports en <und>Markdown</und> avant de les convertir au format PDF. Étant déjà familiarisé avec ce premier je n'ai pas eu besoin d'apprendre la structure d'un fichier Markdown. En revanche, il a été nécessaire que je trouve des fonctions en Python permettant l'exportation du fichier au format souhaité.
 
-Dans le cadre de la refactorisation de la plateforme Polluscope, je n'avais jusqu'alors jamais créé de site internet avec le framework Flask. Il a donc été nécessaire que j'apprenne et comprenne son fonctionnement avant de commencer à produire le code de la plateforme. Sachant cela et étant donnée que mes seules contraintes étaient l'utilisation d'un langage spécifique et l'achèvement de ce travail avant la fin du stage, j'ai utilisé une méthode de travail semblable à la méthode agile. Cela signifie les membres de l'équipe encadrant mon travail me demandaient régulièrement des retours sur l'avancée de mon travail en me suggérant des modifications ou des améliorations. Par exemple, cette méthode m'a permis de recevoir les retours de mes encadrants concernant une méthode de vérification d'insertion de données que j'avais créé et qui nécessitait des modification (voir [Étape 8 du développement de la plateforme](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)). \
+Dans le cadre de la refactorisation de la plateforme Polluscope, je n'avais jusqu'alors jamais créé de site internet avec le framework Flask. Il a donc été nécessaire que j'apprenne et comprenne son fonctionnement avant de commencer à produire le code de la plateforme. Sachant cela et étant donné que mes seules contraintes étaient l'utilisation d'un langage spécifique et l'achèvement de ce travail avant la fin du stage, j'ai utilisé une méthode de travail semblable à la méthode agile. Cela signifie que les membres de l'équipe encadrant mon travail me demandaient régulièrement des retours sur l'avancée de mon travail en me suggérant des modifications ou des améliorations. Par exemple, cette méthode m'a permis de recevoir les retours de mes encadrants concernant une méthode de vérification d'insertion de données que j'avais créé et qui nécessitait des modification (voir [Étape 8 du développement de la plateforme](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet)). \
 J'ai donc débuté mon travail de développement en contruisant des pages simples et en ajoutant des fonctionnalités au fur et à mesure de mon apprentissage. Toutefois, ayant déjà travaillé avec le langage Python, créer des applications web et étant désireux d'apprendre à utiliser de nouvelles technologies et préparé à cette éventualité, cette tâche s'est avéré être passionnante.
 
 Une autre partie de mon travail a été de déployer la plateforme de données Polluscope sur le serveur du laboratoire en utilisant la technologie **Docker**. Pour comprendre son fonctionnement, j'ai eu recours aux lien présents en [sitographie](#sitographie) et j'ai été aidé par TAHER Yehia. J'ai également eu recours à ma machine virtuelle et à ma clé bootable, toutes deux sous Linux, pour tester le fonctionnement des conteneurs ainsi créés.
@@ -487,16 +501,18 @@ On peut constater que la plupart des tâches qui m'ont été confiée nécessite
 ## <orange>II.F Résultats</orange>
 
 Concernant le programme de génération automatique de rapport, celui-ci a pu être terminé au bout d'une semaine de travail ce qui m'a permis d'entamer très vite la refactorisation de la plateforme Polluscope. \
-Cela a constitué la partie la plus importante de mon travail et également la plus longue. La refactorisation de la plateforme ainsi que l'ajout des pages permettant le chargement des données des nouveaux capteurs a commencé le 11 avril, au début de la deuxième semaine de stage, et s'est déroulé jusqu'à la fin du stage. La création des fichiers permettant le fonctionnement d'une image Docker hébergeant la plateforme a nécessité deux jours de travail durant la semaine de l'Ascension. Néanmoins, ayant peu de connaissances concerant la mise en place de cette technologie, c'est une tâche qui a été remprise par TAHER Yehia. Il m'était également demandé d'intégrer la génération de rapport dans la plateforme de données. Néanmoins, en raison du départ de EL HAFYANI Hafsa et de la complexité de son code intégré dans les scripts Python que j'ai créé, c'est une tâche que je n'ai pu accomplir. \
-Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai été absent pendant cinq jours durant le stage. Mon stage a donc été prolongé d'une semaine en premier lieu, puis de quinze jour. Cela m'a permis d'apporter de nouvelles fonctionnalités à la plateforme et également de corriger des disfonctionnements. La plateforme Polluscope sera sûrement amenée à évoluer pendant la suite du projet de recherche et je reste par conséquent à disposition des membres de l'équipe ADAM pour leur apporter mon aide dans l'amélioration de la plateforme Polluscope
+Cela a constitué la partie la plus importante de mon travail et également la plus longue. La refactorisation de la plateforme ainsi que l'ajout des pages permettant le chargement des données des nouveaux capteurs a commencé le 11 avril, au début de la deuxième semaine de stage, et s'est déroulé jusqu'à la fin du stage. La création des fichiers permettant le fonctionnement d'une image Docker hébergeant la plateforme a nécessité deux jours de travail durant la semaine de l'Ascension. Néanmoins, ayant peu de connaissances concerant la mise en place de cette technologie, c'est une tâche qui a été reprise par TAHER Yehia. Il m'était également demandé d'intégrer la génération de rapport dans la plateforme de données. Néanmoins, en raison du départ de EL HAFYANI Hafsa et de la complexité de son code intégré dans les scripts Python que j'ai créé, c'est une tâche que je n'ai pu accomplir. \
+Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai été absent pendant cinq jours durant le stage. Mon stage a donc été prolongé d'une semaine en premier lieu, puis de quinze jours. Cela m'a permis d'apporter de nouvelles fonctionnalités à la plateforme et également de corriger des dysfonctionnements. La plateforme Polluscope sera sûrement amenée à évoluer pendant la suite du projet de recherche et je reste par conséquent à disposition des membres de l'équipe ADAM pour leur apporter mon aide dans l'amélioration de la plateforme Polluscope
 
 <div style="page-break-after: always"></div>
 
 # <red>Conclusion</red>
 
-Mon choix de stage en entreprise s'est porté sur l'offre proposée par ZEITOUNI Karine car l'utilisation de technologies ou de langages peu connus dans le domaine de l'informatique faisait partie intégrante du sujet du stage et du travail à réaliser durant celui-ci. J'y ai vu une opportunité pour continuer d'acquérir des compétences en informatique tout en participant à un projet de recherche. Il s'agit d'une opportunité dont je n'aurais peu être pas bénéficié dans une autre entreprise. \
+Mon choix de stage en entreprise s'est porté sur l'offre proposée par ZEITOUNI Karine car l'utilisation de technologies ou de langages peu connus dans le domaine de l'informatique faisait partie intégrante du sujet du stage et du travail à réaliser durant celui-ci. J'y ai vu une opportunité pour continuer d'acquérir des compétences en informatique tout en participant à un projet de recherche. Il s'agit d'une opportunité dont je n'aurais peut être pas bénéficié dans une autre entreprise. \
 L'apprentissage de nouvelles technologies a rajouté une difficulé au travail à réaliser car il fallu que je me forme a leurs utilisations. Toutefois, étant avide d'acquérir de nouvelles connaissances et compétences, cette tâche ne m'a pas posé de grandes difficultés et s'est avérée être passionnante. \
-Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution. 
+Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution. \
+À l'heure actuel, j'ai l'intention de poursuivre mes étude en école d'ingénieur. Néanmoins, si j'envisage de réaliser une thèse dans le domaine de l'informatique alors peut être que j'intergrerai le laboratoire DAVID pour mener les travaux de recherche. \
+
 
 <div style="page-break-after: always"></div>
 
@@ -829,537 +845,6 @@ if __name__ == "__main__" :
     - canarinFidas
     - cairsensActris
     - ae51Aethalometer
-
-
-<div style="page-break-after: always"></div>
-
-## **Journal 1 :** Historique des implémentations de la plateforme de données Polluscope
-
-commit c843939f0204418f3522f618a776b8a3aa3f8cad (HEAD -> main, origin/main, origin/HEAD)
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri Jun 3 15:41:24 2022 +0200
-
-    UPDATES :
-    Dashboard creation in progress.
-
-commit 6dfcaf7219951344c5d7f77bbe8b77d06cda9860
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri Jun 3 12:05:04 2022 +0200
-
-    UPDATES :
-    Dashboard creation in progress.
-
-commit d6074c14d7b8c46d476e73ab66b4686c51a7c4a9
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu Jun 2 17:12:56 2022 +0200
-
-    UPDATES :
-    Add the package to create DashBoards with Grafana.
-
-commit aa1dace405619332f076107ac77568104f89aea1
-Merge: 1e8dc75 fd306d8
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu Jun 2 10:41:30 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 1e8dc758de6ee3e2b37984e1d872aa05d4fdc16f
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu Jun 2 10:41:16 2022 +0200
-
-    UPDATES :
-    New documentation.
-
-commit fd306d84486bc3fa437211d7b0e5b14a562fe0d3
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed Jun 1 17:22:21 2022 +0200
-
-    Update README.md
-
-commit 0bc6fa9c8eb9fcd70c558b21db53db3fb903a88a
-Merge: 4874a42 8581bee
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Wed Jun 1 17:20:40 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 4874a42f108cdec16f635772eb647744aa208dbf
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Wed Jun 1 17:20:20 2022 +0200
-
-    UPDATES :
-    Add a page to load data form the GPS Logger app on the participant personal phone.
-
-commit 8581bee6305059e23fe7740285928063d0d365e8
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed Jun 1 10:12:51 2022 +0200
-
-    Update README.md
-
-commit 9ddb35776d793ee9c8a56e75953c23a9f68a1c40
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Tue May 31 15:52:01 2022 +0200
-
-    UPDATES :
-    Modification to raise an error if there's a problem with the database.
-
-commit fbd9d68559828b34ea561624636c3ec53a73da6a
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 30 16:00:49 2022 +0200
-
-    UPDATES :
-    Minor modification.
-
-commit b59bf52a9009eacd7b5dfb303ab26a733f382527
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 30 14:35:30 2022 +0200
-
-    Update README.md
-
-commit 882406a4a46c631699a10427d92d1fe6020d21eb
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 30 14:35:03 2022 +0200
-
-    Update README.md
-
-commit 6904707234d45b22cb003f25f1076f79219f8c94
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 30 14:26:40 2022 +0200
-
-    UPDATES :
-    Addition of SQL script to insert an admin user in the database and a script to drop all tables.
-
-commit 5618cdd24d92fabbcf620fc06f89df6937713ba1
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 30 12:19:57 2022 +0200
-
-    UPDATES :
-    Addition of SQL script to create tables.
-
-commit c2a0f5253e36eba67e20e2e3c11b270703756dd1
-Merge: 508b9ee 7743b0a
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 30 10:47:39 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 508b9ee5b76801ed903543cff07e452d8793d0f5
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 30 10:47:24 2022 +0200
-
-    UPDATES :
-    Some commentaries were delete.
-
-commit 7743b0ad6bda831bafa3863a8a419d9b2404d7d4
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 25 14:03:07 2022 +0000
-
-    Update table_creation_sql
-
-commit 09193840a6eb70a465c3a84160875d9ca87802e9
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 23 16:12:59 2022 +0200
-
-    Update README.md
-
-commit d9a49006f2fa127e1d6176e5cb25a3fac8bbecc7
-Merge: 42debd1 99a7269
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 23 16:07:51 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 42debd11e9a3e1ebb6e9a477b9954595f81d23dd
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 23 16:07:36 2022 +0200
-
-    UPDATES :
-    All pages are now up to upload Flow data and record it.
-    New pages :
-    - ```uploadFlowMeasure```
-
-commit 99a72692c637125ad7f1fd12b1e01d3ad554aa94
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 23 12:07:32 2022 +0200
-
-    Update README.md
-
-commit c0250aaf7279460eb2633a72635305004bbd7cae
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 23 12:06:43 2022 +0200
-
-    Update README.md
-
-commit 370c195ed5a79b7ddc4f956ca8e1fe4ff5fc1d91
-Merge: d21ae7b 5f8227d
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 23 12:01:09 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit d21ae7b565be4921c4dd1584f6f6a81a1b910d44
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 23 12:00:53 2022 +0200
-
-    UPDATES :
-    First modifications to add a flow sensor insert it in a kit and link this kit with a campaign and a participant.
-    New pages :
-    - ```addFlowSensor.html```
-
-commit 5f8227d2e4856033807992abb5bdad06841a2b2e
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:55:45 2022 +0200
-
-    Update wsgi.py
-
-commit 52cc4dfaf9bd6ba02c0e1892b5f2a32ef4c3db37
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:53:02 2022 +0200
-
-    Update README.md
-
-commit d14b5c43f7045d86c6a9d661fcca1c749e112455
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:52:30 2022 +0200
-
-    Update README.md
-
-commit 9c46ebe0ec9a3da36e3f0f31f60cf4c62af00676
-Merge: f3a5b2d 28e4205
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:27:08 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit f3a5b2db5d2eafa04af5e6914d0dd01cc7c6f6d9
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 20 10:26:44 2022 +0200
-
-    UPDATES :
-    Add the file ```wsgi.py```. That's useful to deploy the web application.
-
-commit 28e420507fdfa44d4808a46c79ef690944f52c10
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 20 10:11:10 2022 +0200
-
-    Update README.md
-
-commit 319b5aa955a57c9b8a7989ddc5d6f2f289b27857
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 19 15:00:40 2022 +0200
-
-    Update README.md
-
-commit b58b634d18e0ed949765b3ff499b213e557a3fe7
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 19 14:18:20 2022 +0200
-
-    Update README.md
-
-commit 1bb6eeee81813aff19ccc57bbd40db0980a0cac6
-Merge: 978274e 9de06f3
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu May 19 14:14:55 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 978274e53bb1d50ad87712283036093ad37b244c
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu May 19 14:14:25 2022 +0200
-
-    UPDATES :
-    Minor problem correction.
-
-commit 9de06f34c6e752da12d3bbd8f82b68a80926b030
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 19 12:01:37 2022 +0200
-
-    Update README.md
-
-commit d14f5815377b4706eea4ed32122d3f1cbc145e98
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 19 12:01:12 2022 +0200
-
-    Update README.md
-
-commit a5ae3af39471c6a13e2b611784954c650eb0250e
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 18 17:28:27 2022 +0200
-
-    Update README.md
-
-commit 932ea94e03c32135beff9a6d30064cec52956768
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 18 12:51:57 2022 +0000
-
-    Delete requirement.txt
-
-commit 734a3bf7c37a9c0125bbe0fb3eb0d0fb93bcbcd2
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 18 12:51:44 2022 +0000
-
-    Delete DockerFile
-
-commit d2caa193d0557e089b6b0b2387a1a7321e4bfe5f
-Merge: 178435e e65c939
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 18 12:47:24 2022 +0000
-
-    Merge pull request #1 from yureiiko/docker
-
-    Add files via upload
-
-commit e65c939ba16b0f2a59f37636195406f7c989f4e6
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Wed May 18 12:46:54 2022 +0000
-
-    Add files via upload
-
-    First version of docker.
-    Not complete.
-
-commit 178435ef86259261af418fc2119bdcc03fb7b2e1
-Merge: 15c275d 577f917
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 16 11:13:26 2022 +0200
-
-    Merge remote-tracking branch 'origin/main'
-
-commit 15c275dec590bf56b413dc5be79421407b5da889
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 16 11:11:51 2022 +0200
-
-    UPDATES :
-    Addition of the page ```canarinFidas.html```. This page isn't working.
-    Modifiation of all page's header.
-
-commit 577f9173e9e3239bcead009c5e3de49c9ad0e87a
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 13 11:35:56 2022 +0200
-
-    Update README.md
-
-commit b844daeeb08c43e040fcb228dca7be77ee90e489
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 13 11:33:46 2022 +0200
-
-    UPDATES :
-    Addition of the fonctional page ```uploadFidas.html```
-
-commit ee638a00b0615215f5cf793a6cf9e90a1c6b6a1d
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 12 11:42:02 2022 +0200
-
-    Update README.md
-
-commit e86f45c37cc002c5ec3f30d0953f249f89075e57
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu May 12 11:41:25 2022 +0200
-
-    UPDATES :
-    Addition of the fonctional page ```uploadTeom.html```
-
-commit c04c95fbcf3d06a4823708ee6d749374a798933b
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Tue May 10 11:32:28 2022 +0200
-
-    Update README.md
-
-commit e71c28c67f4d31cf1507ca4e273f88851ae97b92
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Tue May 10 11:31:08 2022 +0200
-
-    Update README.md
-
-commit b413aa08ddfb8e8915b53eb73f5fe3dd868d4202
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Tue May 10 11:15:05 2022 +0200
-
-    Update README.md
-
-commit 347520624453265a36c182d4cb4c7cc9f46e3485
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Tue May 10 11:14:08 2022 +0200
-
-    UPDATES :
-    Addition of the fonctional page ```downloadKitData.html```
-
-commit b2555dddc115cbfcc3c86acac32510eacd555524
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 9 16:22:18 2022 +0200
-
-    Update README.md
-
-commit 21589f36cc7404e8475d3f9a31eecab22cbc6b4e
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Mon May 9 16:21:14 2022 +0200
-
-    UPDATES :
-    Addition of the fonctional page ```downloadCampaignData.html```
-
-commit a75faaf2c57ce109ddb39399e181d947db841840
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 9 14:58:01 2022 +0200
-
-    Update README.md
-
-commit 821a6e42cf7e0cdce3bf7b82c0657660b1d716f7
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri May 6 16:41:28 2022 +0200
-
-    Update README.md
-
-commit d2e4e88e4dbb892c003c7fd4d39d6c9f13da9d55
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 6 16:39:56 2022 +0200
-
-    UPDATES :
-    It's nom possible to use the ```downloadAssignedData.html``` page.
-
-commit c9ae60910febb3e647440caeceb4ad4dabc867b8
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Fri May 6 12:32:46 2022 +0200
-
-    UPDATES :
-    Minor modifications to fix errors.
-
-commit de5fc91cd81a80a06dce367c17432e0a74b67bec
-Author: yureiiko <pierrefcz@gmail.com>
-Date:   Thu May 5 12:01:50 2022 +0200
-
-    UPDATES :
-    Modifications on ```downloadAssignedData.html```.
-
-commit 030f6f5afcd0cdc65f96680ed0232f605289f6dd
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 5 11:37:47 2022 +0200
-
-    Update README.md
-
-commit 4cf594f5affb2fd1d0cb88946a51247ddfbd55a7
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 5 11:10:43 2022 +0200
-
-    Update README.md
-
-commit 2ba62dca514a828a5a305842a525cf2c1d74c8c2
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 5 11:08:26 2022 +0200
-
-    Add files via upload
-
-commit adbc5a91d2e59bc65d065d01819f44ed78e2e128
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Thu May 5 11:06:52 2022 +0200
-
-    Add files via upload
-
-    UPDATE :
-    The way to check if a row was already inserted change. Now the program check in fonction of the device's id and of the date.
-    It's now possible to upload aethalometer, actris, report and to check the history of report uploading.
-
-commit 572ca0e80cb7298128d506449200db9abe14d504
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:35:04 2022 +0200
-
-    Add files via upload
-
-commit 2e847c0528d27a356fea61d06dd840f416458fa0
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:34:31 2022 +0200
-
-    Add files via upload
-
-commit a285b3017d2d1c538e0f4f289d1df3764f897a93
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:33:21 2022 +0200
-
-    Update README.md
-
-commit 9d434b36975f26a4f1e09b07f1c4f890891a6843
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:32:07 2022 +0200
-
-    Add files via upload
-
-    UPDATE
-    It's now possible to load reports, tablet's activity and tablet's events. All history for this loads can be seen by an admin.
-
-commit e9d4405f6b1bd582b243782e4e6edcfef356ec78
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:29:30 2022 +0200
-
-    Add files via upload
-
-commit 885e53518d98a412b0d9a1829428c00fcbcf7718
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 16:28:20 2022 +0200
-
-    Add files via upload
-
-    Update
-    new data folders
-
-commit 9d17074065e3ad05fa1bf50717637f298ddf3766
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 14:33:13 2022 +0200
-
-    Update README.md
-
-commit bc5dcfdadab917203a61ca6b3e428535079f9cc1
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 14:32:55 2022 +0200
-
-    Delete scriptPython directory
-
-commit c1436feacb570ad9e3b3a22917722c6cb4a62bfa
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Mon May 2 14:21:26 2022 +0200
-
-    Update README.md
-
-commit 999905ac6ff31a5778cb79f412018484bdbd1ed5
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri Apr 29 17:37:54 2022 +0200
-
-    Update README.md
-
-commit f8759e0e11e6e561271cca86eb392cbd389b18bf
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri Apr 29 17:37:29 2022 +0200
-
-    Create README.md
-
-commit 310e40980ea4cc5bb0b0358d21f631ca0221573f
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Fri Apr 29 17:33:44 2022 +0200
-
-    Add files via upload
-
-    Updates
-    Kits can be created.
-    It's now possible to create link between campaign, participant and kit. When we associate a kit to a participant the old kit association is erased.
-    The device id seeking is now based on this link.
-    It's also possible to see the history of file uploading.
-
-commit 58d107b8f3dfc7bfc778d2aa3390df5f23852a5d
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Tue Apr 26 16:42:52 2022 +0200
-
-    Add files via upload
-
-    New functionnalities
-    It's possible to add a user, a participant and to upload gps tablet files.
-
-commit 1786bb3707a3c428d0e0e40a0f9cf3e3c9d7c5c4
-Author: yureiiko <101016323+yureiiko@users.noreply.github.com>
-Date:   Sun Apr 24 20:58:14 2022 +0200
-
-    Add files via upload
-
-    First Commit
-    It's possible for the user to upload Diams, Cairsens and AE51 measures. The administrator can download uploaded files.
-
 
 <div style="page-break-after: always"></div>
 
