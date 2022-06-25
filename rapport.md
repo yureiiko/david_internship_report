@@ -70,6 +70,7 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
     - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy) page 29
     - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql) page 30
   - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope) page 31
+  - [**Schéma 2:** Modèle relationnel de a base donnée de la plateforme Polluscope](#schéma-2--modèle-relationnel-de-la-base-de-données-de-la-plateforme-polluscope)
   - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope) page 32
 - [Glossaire](#glossaire) page 46
 - [Sitographie](#sitographie) page 47
@@ -362,6 +363,8 @@ Output :
 ```
 
 Pouvoir interagir avec la base de données m'a permis de créer une nouvelle version de la page de connexion en utilisant les logins et mots de passe stockés dans la base de données. J'ai également pu créer des scripts Python pour enregistrer les données de pollution mais aussi ajouter des utilisateurs, des capteurs, des kits ou des campagnes.
+
+Le schéma de la base de données est disponible [ici](#schéma-2--modèle-relationnel-de-la-base-de-données-de-la-plateforme-polluscope) en annexe.
 
 ### <violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>
 
@@ -798,6 +801,12 @@ if __name__ == "__main__" :
 ## **Schéma 1 :** Structure de la plateforme de données Polluscope
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <img class="resize" src="schemasite.jpg" heigh="11974" width="5412" style="transform:rotate(90deg);">
+
+<div style="page-break-after: always"></div>
+
+## **Schéma 2 :** Modèle relationnel de la base de données de la plateforme Polluscope
+
+<img src="schema_database.png">
 
 <div style="page-break-after: always"></div>
 
