@@ -27,54 +27,54 @@ Alors que le stage au laboratoire DAVID se termine, je tiens à remercier Karine
 
 **Sommaire**
 
-- [Remerciement](#remerciement) page 1
-- [Résumé / Summary](#résumé--summary) page 4
-- [Introduction](#introduction) page 5
-- [<red>I. Présentation de l'organisme d'accueil</red>](#redi-présentation-de-lorganisme-daccueilred) page 6
-  - [<orange>I.A Historique</orange>](#orangeia-historiqueorange) page 6
-  - [<orange>I.B Présentation juridique de l'organisme d'accueil</orange>](#orangeib-présentation-juridique-de-lorganisme-daccueilorange) page 6
-  - [<orange>I.C Structure de l'organisme d'accueil</orange>](#orangeic-structure-de-lorganisme-daccueilorange) page 6
-  - [<orange>I.D Présentation de l'équipe de travail</orange>](#orangeid-présentation-de-léquipe-de-travailorange) page 7
-  - [<orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>](#orangeie-étude-de-lenvironnement-économique-de-lorganisme-daccueilorange) page 8
-    - [<violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet) page 8
-    - [<violet>2) Analyse SWOT du laboratoire DAVID</violet>](#violet2-analyse-swot-du-laboratoire-davidviolet) page 9
-- [<red>II. Présentation du travail accompli durant le stage</red>](#redii-présentation-du-travail-accompli-durant-le-stagered) page 10
-  - [<orange>II.A Présentation du Projet</orange>](#orangeiia-présentation-du-projetorange) page 10
-  - [<orange>II.B Description du travail réalisé</orange>](#orangeiib-description-du-travail-réaliséorange) page 10
-  - [<orange>II.C Description des problèmes à traiter et des solutions</orange>](#orangeiic-description-des-problèmes-à-traiter-et-des-solutionsorange) page 11
-    - [<violet>Étape 1 : Comprendre la structure de la plateforme</violet>](#violetétape-1--comprendre-la-structure-de-la-plateformeviolet) page 11
-    - [<violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>](#violetétape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet) page 11
-    - [<violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>](#violetétape-3--limplémentation-de-la-méthode-post-avec-python-flaskviolet) page 12
-    - [<violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>](#violetétape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet) page 13
-    - [<violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>](#violetétape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet) page 14
-    - [<violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>](#violetétape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-données-postgresqlviolet) page 15
-    - [<violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>](#violetétape-7--sécuriser-les-interactions-avec-la-base-de-donnéesviolet) page 16
-    - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet) page 18
-    - [<violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>](#violetétape-9--créer-et-ajouter-des-graphes-de-visualisation-des-donnéesviolet) page 20
-  - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange) page 21
-  - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange) page 22
-  - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange) page 22
-- [<red>Conclusion</red>](#redconclusionred) page 23
-- [Annexes](#annexes) page 24
-    - [**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david) page 25
-    - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml) page 25
-    - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy) page 25
-    - [**Code 2.2.1 :** fichier ```templates/index.html``` avec un formulaire](#code-221--fichier-templatesindexhtml-avec-un-formulaire) page 26
-    - [**Code 2.2.2 :** fichier ```app.py``` permettant de recevoir des éléments avec la méthode POST](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post) page 26
-    - [**Code 2.3.1 :** fichier ```templates/index.html``` avec un affichage conditionnel](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel) page 27
-    - [**Code 2.3.2 :** fichier ```app.py``` avec passage de paramètre par le dictionnaire ```post```](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post) page 27
-    - [**Code 2.4.1 :** fichier ```index.html``` avec un lien vers la page comportant l'URL ```page2```](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2) page 28
-    - [**Code 2.4.2 :** fichier ```page2.html``` accessible par un lien](#code-242--fichier-page2html-accessible-par-un-lien) page 28
-    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html) page 28
-    - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml) page 29
-    - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy) page 29
-    - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql) page 30
-  - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope) page 31
-  - [**Schéma 2:** Modèle relationnel de a base donnée de la plateforme Polluscope](#schéma-2--modèle-relationnel-de-la-base-de-données-de-la-plateforme-polluscope)
-  - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope) page 32
-- [Glossaire](#glossaire) page 46
-- [Sitographie](#sitographie) page 47
-- [Bibliographie](#bibliographie) page 47
+- [Remerciement](#remerciement) page 2
+- [Résumé / Summary](#résumé--summary) page 5
+- [Introduction](#introduction) page 6
+- [<red>I. Présentation de l'organisme d'accueil</red>](#redi-présentation-de-lorganisme-daccueilred) page 7
+  - [<orange>I.A Historique</orange>](#orangeia-historiqueorange) page 7
+  - [<orange>I.B Présentation juridique de l'organisme d'accueil</orange>](#orangeib-présentation-juridique-de-lorganisme-daccueilorange) page 7
+  - [<orange>I.C Structure de l'organisme d'accueil</orange>](#orangeic-structure-de-lorganisme-daccueilorange) page 7
+  - [<orange>I.D Présentation de l'équipe de travail</orange>](#orangeid-présentation-de-léquipe-de-travailorange) page 8
+  - [<orange>I.E Étude de l'environnement économique de l'organisme d'accueil</orange>](#orangeie-étude-de-lenvironnement-économique-de-lorganisme-daccueilorange) page 9
+    - [<violet>1) Analyse PESTEL de l'environnement du laboratoire DAVID</violet>](#violet1-analyse-pestel-de-lenvironnement-du-laboratoire-davidviolet) page 9
+    - [<violet>2) Analyse SWOT du laboratoire DAVID</violet>](#violet2-analyse-swot-du-laboratoire-davidviolet) page 10
+- [<red>II. Présentation du travail accompli durant le stage</red>](#redii-présentation-du-travail-accompli-durant-le-stagered) page 11
+  - [<orange>II.A Présentation du Projet</orange>](#orangeiia-présentation-du-projetorange) page 11
+  - [<orange>II.B Description du travail réalisé</orange>](#orangeiib-description-du-travail-réaliséorange) page 12
+  - [<orange>II.C Description des problèmes à traiter et des solutions</orange>](#orangeiic-description-des-problèmes-à-traiter-et-des-solutionsorange) page 13
+    - [<violet>Étape 1 : Comprendre la structure de la plateforme</violet>](#violetétape-1--comprendre-la-structure-de-la-plateformeviolet) page 13
+    - [<violet>Étape 2 : Comprendre le fonctionnement basique de Python Flask</violet>](#violetétape-2--comprendre-le-fonctionnement-basique-de-python-flaskviolet) page 13
+    - [<violet>Étape 3 : L'implémentation de la méthode POST avec Python Flask</violet>](#violetétape-3--limplémentation-de-la-méthode-post-avec-python-flaskviolet) page 14
+    - [<violet>Étape 4 : Modifier la page web en fonction des actions de l'utilisateur</violet>](#violetétape-4--modifier-la-page-web-en-fonction-des-actions-de-lutilisateurviolet) page 15
+    - [<violet>Étape 5 : Permettre le changement de page par l'utilisation de liens</violet>](#violetétape-5--permettre-le-changement-de-page-par-lutilisation-de-liensviolet) page 16
+    - [<violet>Étape 6 : Permettre la connexion et les interactions avec la base de données PostgreSQL</violet>](#violetétape-6--permettre-la-connexion-et-les-interactions-avec-la-base-de-données-postgresqlviolet) page 17
+    - [<violet>Étape 7 : Sécuriser les interactions avec la base de données</violet>](#violetétape-7--sécuriser-les-interactions-avec-la-base-de-donnéesviolet) page 18
+    - [<violet>Étape 8 : Vérifier si les données insérée par le client sont déjà dans la base de données</violet>](#violetétape-8--vérifier-si-les-données-insérée-par-le-client-sont-déjà-dans-la-base-de-donnéesviolet) page 20
+    - [<violet>Étape 9 : Créer et ajouter des graphes de visualisation des données</violet>](#violetétape-9--créer-et-ajouter-des-graphes-de-visualisation-des-donnéesviolet) page 22
+  - [<orange>II.D Les outils informatiques et techniques utilisés</orange>](#orangeiid-les-outils-informatiques-et-techniques-utilisésorange) page 23
+  - [<orange>II.E Méthodes, formations et autoformations suivies pour l'obtention de la solution</orange>](#orangeiie-méthodes-formations-et-autoformations-suivies-pour-lobtention-de-la-solutionorange) page 24
+  - [<orange>II.F Résultats</orange>](#orangeiif-résultatsorange) page 24
+- [<red>Conclusion</red>](#redconclusionred) page 25
+- [Annexes](#annexes) page 26
+    - [**Organigramme 1 :** Organigramme du laboratoire DAVID](#organigramme-1--organigramme-du-laboratoire-david) page 27
+    - [**Code 2.1.1 :** fichier ```templates/index.html```](#code-211--fichier-templatesindexhtml) page 27
+    - [**Code 2.1.2 :** fichier ```app.py```](#code-212--fichier-apppy) page 27
+    - [**Code 2.2.1 :** fichier ```templates/index.html``` avec un formulaire](#code-221--fichier-templatesindexhtml-avec-un-formulaire) page 28
+    - [**Code 2.2.2 :** fichier ```app.py``` permettant de recevoir des éléments avec la méthode POST](#code-222--fichier-apppy-permettant-de-recevoir-des-éléments-avec-la-méthode-post) page 28
+    - [**Code 2.3.1 :** fichier ```templates/index.html``` avec un affichage conditionnel](#code-231--fichier-templatesindexhtml-avec-un-affichage-conditionnel) page 29
+    - [**Code 2.3.2 :** fichier ```app.py``` avec passage de paramètre par le dictionnaire ```post```](#code-232--fichier-apppy-avec-passage-de-paramètre-par-le-dictionnaire-post) page 29
+    - [**Code 2.4.1 :** fichier ```index.html``` avec un lien vers la page comportant l'URL ```page2```](#code-241--fichier-indexhtml-avec-un-lien-vers-la-page-comportant-lurl-page2) page 30
+    - [**Code 2.4.2 :** fichier ```page2.html``` accessible par un lien](#code-242--fichier-page2html-accessible-par-un-lien) page 30
+    - [**Code 2.4.3 :** fichier ```app.py``` avec la fonction ```page2``` permettant l'affichage de la page du fichier ```page2.html```](#code-243--fichier-apppy-avec-la-fonction-page2-permettant-laffichage-de-la-page-du-fichier-page2html) page 30
+    - [**Code 2.6.1.1 :** fichier ```index.html```](#code-2611--fichier-indexhtml) page 31
+    - [**Code 2.6.1.2 :** fichier ```app.py```](#code-2612--fichier-apppy) page 31
+    - [**Code 2.6.2.1 :** fichier ```app.py``` avec les éléments pour empêcher une injection SQL](#code-2621--fichier-apppy-avec-les-éléments-pour-empêcher-une-injection-sql) page 32
+  - [**Schéma 1 :** Structure de la plateforme de données Polluscope](#schéma-1--structure-de-la-plateforme-de-données-polluscope) page 33
+  - [**Schéma 2:** Modèle relationnel de a base donnée de la plateforme Polluscope](#schéma-2--modèle-relationnel-de-la-base-de-données-de-la-plateforme-polluscope) page 34
+  - [**Fichier 1 :** Fichier README du dépôt github contenant le code source de la plateforme Polluscope](#fichier-1--fichier-readme-du-dépôt-github-contenant-le-code-source-de-la-plateforme-polluscope) page 35
+- [Glossaire](#glossaire) page 37
+- [Sitographie](#sitographie) page 38
+- [Bibliographie](#bibliographie) page 38
 
 <div style="page-break-after: always"></div>
 
@@ -209,7 +209,7 @@ Dans certaines conditions, des stations fixes sont utilisées pour mesurer la po
 
 ## <orange>II.B Description du travail réalisé</orange>
 
-Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. \
+Mon premier travail durant le stage est de créer le programme permettant la <und>génération des rapports</und>. La création des cartes et des graphes de visualisation de données ayant été réalisée en langage Python par **EL HAFYANI Hafsa**, je dois utiliser ce même langage pour créer des rapports de façon automatique. J'ai également pour contrainte de générer une première version des rapports en Markdown avant de les convertir en PDF. Un exemple de rapport individuel est disponible sur le dépôt Github du présent rapport (voir [sitographie](#sitographie)). \
 Une autre partie de mon travail est de créer une <und>nouvelle version de la plateforme de données Polluscope</und> permettant le dépôt des données de pollution, le téléchargement de fichiers de données et le téléchargement des rapports. Une première version du site à été codée en PHP par **TAHER Yehia**. Cependant, pour répondre à un besoin d'homogénéisation des langages utilisés, notamment par rapport à la génération automatique des rapport, il faut que je crée une version du site internet en utilisant les langages Python et HTML ainsi que le framework Flask et la base de données Postgres du laboratoire sur laquelle sont stockées les données de pollution. Cette refactorisation comprend l'intégration de pages de chargement des données des nouveaux capteurs. Il faut également que je déploie cette nouvelle version de la plateforme sur le serveur du laboratoire en utilisant la technologie Docker.
 
 <div style="page-break-after: always"></div>
@@ -514,7 +514,7 @@ Pour des raisons de santé et d'obligations liées à la poursuite d'étude j'ai
 Mon choix de stage en entreprise s'est porté sur l'offre proposée par ZEITOUNI Karine car l'utilisation de technologies ou de langages peu connus dans le domaine de l'informatique faisait partie intégrante du sujet du stage et du travail à réaliser durant celui-ci. J'y ai vu une opportunité pour continuer d'acquérir des compétences en informatique tout en participant à un projet de recherche. Il s'agit d'une opportunité dont je n'aurais peut être pas bénéficié dans une autre entreprise. \
 L'apprentissage de nouvelles technologies a rajouté une difficulé au travail à réaliser car il fallu que je me forme a leurs utilisations. Toutefois, étant avide d'acquérir de nouvelles connaissances et compétences, cette tâche ne m'a pas posé de grandes difficultés et s'est avérée être passionnante. \
 Le principal objectif du stage était de refactoriser la plateforme de données Polluscope en utilisant la technologie Flask et le langage Python. Celui-ci a été accompli au même titre que le programme permettant la génération automatique des rapport sur l'expostion à la pollution. \
-À l'heure actuel, j'ai l'intention de poursuivre mes étude en école d'ingénieur. Néanmoins, si j'envisage de réaliser une thèse dans le domaine de l'informatique alors peut être que j'intergrerai le laboratoire DAVID pour mener les travaux de recherche. \
+À l'heure actuel, j'ai l'intention de poursuivre mes étude en école d'ingénieur. Néanmoins, si j'envisage de réaliser une thèse dans le domaine de l'informatique alors peut être que j'intergrerai le laboratoire DAVID pour mener les travaux de recherche.
 
 
 <div style="page-break-after: always"></div>
@@ -875,7 +875,7 @@ Site de présentation du projet Polluscope : <http://polluscope.uvsq.fr/index.ph
 
 Dépot Github de la plateforme Polluscope : <https://github.com/yureiiko/pollu.git> (pour des questions de confidentialité, ce dépôt est privé)
 
-Dépôt Github du rapport de stage : <https://github.com/yureiiko/david_internship_report.git> (ce dépôt deviendra privé après la soutenance de stage)
+Dépôt Github du rapport de stage : <https://github.com/yureiiko/david_internship_report.git> (ce dépôt deviendra privé une semaine après la soutenance de stage)
 
 Liens utilisés pour l'apprentisage de **Python Flask** :
 - <https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3>
